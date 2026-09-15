@@ -1,0 +1,323 @@
+usage: main.py [-h] [--listen [IP]] [--port PORT] [--tls-keyfile TLS_KEYFILE]
+               [--tls-certfile TLS_CERTFILE] [--enable-cors-header [ORIGIN]]
+               [--max-upload-size MAX_UPLOAD_SIZE]
+               [--base-directory BASE_DIRECTORY]
+               [--extra-model-paths-config PATH [PATH ...]]
+               [--output-directory OUTPUT_DIRECTORY]
+               [--temp-directory TEMP_DIRECTORY]
+               [--input-directory INPUT_DIRECTORY] [--auto-launch]
+               [--disable-auto-launch] [--cuda-device DEVICE_ID]
+               [--default-device DEFAULT_DEVICE_ID]
+               [--cuda-malloc | --disable-cuda-malloc]
+               [--force-fp32 | --force-fp16]
+               [--fp32-unet | --fp64-unet | --bf16-unet | --fp16-unet | --fp8_e4m3fn-unet | --fp8_e5m2-unet | --fp8_e8m0fnu-unet]
+               [--fp16-vae | --fp32-vae | --bf16-vae] [--cpu-vae]
+               [--fp8_e4m3fn-text-enc | --fp8_e5m2-text-enc | --fp16-text-enc | --fp32-text-enc | --bf16-text-enc]
+               [--fp16-intermediates] [--force-channels-last]
+               [--directml [DIRECTML_DEVICE]]
+               [--oneapi-device-selector SELECTOR_STRING]
+               [--supports-fp8-compute] [--enable-triton-backend]
+               [--disable-triton-backend]
+               [--preview-method [none,auto,latent2rgb,taesd]]
+               [--preview-size PREVIEW_SIZE] [--cache-ram [GB ...] |
+               --cache-classic | --cache-lru CACHE_LRU | --cache-none |
+               --high-ram]
+               [--use-split-cross-attention | --use-quad-cross-attention | --use-pytorch-cross-attention | --use-sage-attention | --use-flash-attention | --use-ck-attention]
+               [--disable-xformers]
+               [--force-upcast-attention | --dont-upcast-attention]
+               [--enable-manager]
+               [--disable-manager-ui | --enable-manager-legacy-ui]
+               [--gpu-only | --highvram | --lowvram | --novram | --cpu]
+               [--reserve-vram RESERVE_VRAM] [--vram-headroom VRAM_HEADROOM]
+               [--disable-nvml-pressure] [--async-offload [NUM_STREAMS]]
+               [--disable-async-offload] [--disable-dynamic-vram]
+               [--enable-dynamic-vram] [--fast-disk] [--disable-cuda-graphs]
+               [--disable-comfy-compiler] [--assert-graph-breaks]
+               [--force-non-blocking]
+               [--default-hashing-function {md5,sha1,sha256,sha512}]
+               [--disable-smart-memory] [--deterministic] [--fast [FAST ...]]
+               [--debug-hang] [--disable-pinned-memory] [--mmap-torch-files]
+               [--disable-mmap] [--dont-print-server] [--quick-test-for-ci]
+               [--windows-standalone-build] [--disable-metadata]
+               [--disable-all-custom-nodes]
+               [--whitelist-custom-nodes WHITELIST_CUSTOM_NODES [WHITELIST_CUSTOM_NODES ...]]
+               [--disable-api-nodes] [--multi-user]
+               [--verbose [LEVEL FILE ...]] [--log-stdout]
+               [--front-end-version FRONT_END_VERSION]
+               [--front-end-root FRONT_END_ROOT]
+               [--user-directory USER_DIRECTORY]
+               [--models-directory MODELS_DIRECTORY]
+               [--enable-compress-response-body]
+               [--comfy-api-base COMFY_API_BASE] [--database-url DATABASE_URL]
+               [--enable-assets] [--enable-asset-hashing]
+               [--feature-flag KEY[=VALUE]] [--list-feature-flags]
+
+options:
+  -h, --help            show this help message and exit
+  --listen [IP]         Specify the IP address to listen on (default:
+                        127.0.0.1). You can give a list of ip addresses by
+                        separating them with a comma like: 127.2.2.2,127.3.3.3
+                        If --listen is provided without an argument, it
+                        defaults to 0.0.0.0,:: (listens on all ipv4 and ipv6)
+  --port PORT           Set the listen port.
+  --tls-keyfile TLS_KEYFILE
+                        Path to TLS (SSL) key file. Enables TLS, makes app
+                        accessible at https://... requires --tls-certfile to
+                        function
+  --tls-certfile TLS_CERTFILE
+                        Path to TLS (SSL) certificate file. Enables TLS, makes
+                        app accessible at https://... requires --tls-keyfile
+                        to function
+  --enable-cors-header [ORIGIN]
+                        Enable CORS (Cross-Origin Resource Sharing) with
+                        optional origin or allow all with default '*'.
+  --max-upload-size MAX_UPLOAD_SIZE
+                        Set the maximum upload size in MB.
+  --base-directory BASE_DIRECTORY
+                        Set the ComfyUI base directory for models,
+                        custom_nodes, input, output, temp, and user
+                        directories.
+  --extra-model-paths-config PATH [PATH ...]
+                        Load one or more extra_model_paths.yaml files.
+  --output-directory OUTPUT_DIRECTORY
+                        Set the ComfyUI output directory. Overrides --base-
+                        directory.
+  --temp-directory TEMP_DIRECTORY
+                        Set the ComfyUI temp directory (default is in the
+                        ComfyUI directory). Overrides --base-directory.
+  --input-directory INPUT_DIRECTORY
+                        Set the ComfyUI input directory. Overrides --base-
+                        directory.
+  --auto-launch         Automatically launch ComfyUI in the default browser.
+  --disable-auto-launch
+                        Disable auto launching the browser.
+  --cuda-device DEVICE_ID
+                        Set the ids of cuda devices this instance will use, as
+                        a comma-separated list (e.g. '0' or '0,1'), or 'all'
+                        to leave all currently visible devices available. All
+                        other devices will not be visible.
+  --default-device DEFAULT_DEVICE_ID
+                        Set the id of the default device, all other devices
+                        will stay visible.
+  --cuda-malloc         Enable cudaMallocAsync (enabled by default for torch
+                        2.0 and up).
+  --disable-cuda-malloc
+                        Disable cudaMallocAsync.
+  --force-fp32          Force fp32 (If this makes your GPU work better please
+                        report it).
+  --force-fp16          Force fp16.
+  --fp32-unet           Run the diffusion model in fp32.
+  --fp64-unet           Run the diffusion model in fp64.
+  --bf16-unet           Run the diffusion model in bf16.
+  --fp16-unet           Run the diffusion model in fp16
+  --fp8_e4m3fn-unet     Store unet weights in fp8_e4m3fn.
+  --fp8_e5m2-unet       Store unet weights in fp8_e5m2.
+  --fp8_e8m0fnu-unet    Store unet weights in fp8_e8m0fnu.
+  --fp16-vae            Run the VAE in fp16, might cause black images.
+  --fp32-vae            Run the VAE in full precision fp32.
+  --bf16-vae            Run the VAE in bf16.
+  --cpu-vae             Run the VAE on the CPU.
+  --fp8_e4m3fn-text-enc
+                        Store text encoder weights in fp8 (e4m3fn variant).
+  --fp8_e5m2-text-enc   Store text encoder weights in fp8 (e5m2 variant).
+  --fp16-text-enc       Store text encoder weights in fp16.
+  --fp32-text-enc       Store text encoder weights in fp32.
+  --bf16-text-enc       Store text encoder weights in bf16.
+  --fp16-intermediates  Experimental: Use fp16 for intermediate tensors
+                        between nodes instead of fp32.
+  --force-channels-last
+                        Force channels last format when inferencing the
+                        models.
+  --directml [DIRECTML_DEVICE]
+                        Use torch-directml.
+  --oneapi-device-selector SELECTOR_STRING
+                        Sets the oneAPI device(s) this instance will use.
+  --supports-fp8-compute
+                        ComfyUI will act like if the device supports fp8
+                        compute.
+  --enable-triton-backend
+                        ComfyUI will enable the use of Triton backend in
+                        comfy-kitchen. Is disabled at launch by default.
+  --disable-triton-backend
+                        Force-disable the comfy-kitchen Triton backend,
+                        overriding --enable-triton-backend.
+  --preview-method [none,auto,latent2rgb,taesd]
+                        Default preview method for sampler nodes.
+  --preview-size PREVIEW_SIZE
+                        Sets the maximum preview size for sampler nodes.
+  --cache-ram [GB ...]  Use RAM pressure caching with the specified headroom
+                        thresholds. This is the default caching mode. The
+                        first value sets the active-cache threshold; the
+                        optional second value sets the inactive-cache/pin
+                        threshold. Defaults when no values are provided:
+                        active 10% of system RAM (min 2GB, max 10GB), inactive
+                        100% of system RAM (max 128GB).
+  --cache-classic       Use the old style (aggressive) caching.
+  --cache-lru CACHE_LRU
+                        Use LRU caching with a maximum of N node results
+                        cached. May use more RAM/VRAM.
+  --cache-none          Reduced RAM/VRAM usage at the expense of executing
+                        every node for each run.
+  --high-ram            Can improve performance slightly on high RAM or on
+                        systems where pagefile use is preferred over model
+                        loading.
+  --use-split-cross-attention
+                        Use the split cross attention optimization. Ignored
+                        when xformers is used.
+  --use-quad-cross-attention
+                        Use the sub-quadratic cross attention optimization .
+                        Ignored when xformers is used.
+  --use-pytorch-cross-attention
+                        Use the new pytorch 2.0 cross attention function.
+  --use-sage-attention  Use sage attention.
+  --use-flash-attention
+                        Use FlashAttention.
+  --use-ck-attention    Use Comfy Kitchen attention.
+  --disable-xformers    Disable xformers.
+  --force-upcast-attention
+                        Force enable attention upcasting, please report if it
+                        fixes black images.
+  --dont-upcast-attention
+                        Disable all upcasting of attention. Should be
+                        unnecessary except for debugging.
+  --enable-manager      Enable the ComfyUI-Manager feature.
+  --disable-manager-ui  Disables only the ComfyUI-Manager UI and endpoints.
+                        Scheduled installations and similar background tasks
+                        will still operate.
+  --enable-manager-legacy-ui
+                        Enables the legacy UI of ComfyUI-Manager. Implies
+                        --enable-manager.
+  --gpu-only            Store and run everything (text encoders/CLIP models,
+                        etc... on the GPU).
+  --highvram            By default models will be unloaded to CPU memory after
+                        being used. This option keeps them in GPU memory.
+  --lowvram             Doesn't do anything if dynamic vram is enabled. If
+                        dynamic vram isn't being used this option makes the
+                        text encoders run on the CPU.
+  --novram              When lowvram isn't enough.
+  --cpu                 To use the CPU for everything (slow).
+  --reserve-vram RESERVE_VRAM
+                        Set the amount of vram in GB you want to reserve for
+                        use by your OS/other software. By default some amount
+                        is reserved depending on your OS.
+  --vram-headroom VRAM_HEADROOM
+                        Set the amount of vram in GB for DynamicVRAM to
+                        maintain as extra headroom above default. ComfyUI will
+                        try and keep this much VRAM completely free and
+                        unused, even counting VRAM from other apps.
+  --disable-nvml-pressure
+                        Use CUDA instead of NVML for DynamicVRAM memory
+                        pressure.
+  --async-offload [NUM_STREAMS]
+                        Use async weight offloading. An optional argument
+                        controls the amount of offload streams. Default is 2.
+                        Enabled by default on Nvidia.
+  --disable-async-offload
+                        Disable async weight offloading.
+  --disable-dynamic-vram
+                        Disable dynamic VRAM and use estimate based model
+                        loading.
+  --enable-dynamic-vram
+                        Enable dynamic VRAM on systems where it's not enabled
+                        by default.
+  --fast-disk           Prefer disk-backed dynamic loading and offload over
+                        unpinned RAM. Can be faster for users with fast NVME
+                        disks.
+  --disable-cuda-graphs
+                        Disable CUDA graphs.
+  --disable-comfy-compiler
+                        Disable the Comfy model compiler, including its CUDA
+                        graph subfeature.
+  --assert-graph-breaks
+                        Fail on Comfy model compiler graph breaks.
+  --force-non-blocking  Force ComfyUI to use non-blocking operations for all
+                        applicable tensors. This may improve performance on
+                        some non-Nvidia systems but can cause issues with some
+                        workflows.
+  --default-hashing-function {md5,sha1,sha256,sha512}
+                        Allows you to choose the hash function to use for
+                        duplicate filename / contents comparison. Default is
+                        sha256.
+  --disable-smart-memory
+                        Force ComfyUI to agressively offload to regular ram
+                        instead of keeping models in vram when it can.
+  --deterministic       Make pytorch use slower deterministic algorithms when
+                        it can. Note that this might not make images
+                        deterministic in all cases.
+  --fast [FAST ...]     Enable some untested and potentially quality
+                        deteriorating optimizations. This is used to test new
+                        features so using it might crash your comfyui. --fast
+                        with no arguments enables everything. You can pass a
+                        list specific optimizations if you only want to enable
+                        specific ones. Current valid optimizations:
+                        fp16_accumulation fp8_matrix_mult cublas_ops autotune
+  --debug-hang          Enable stack trace dumps on Ctrl-C for debugging
+                        hangs.
+  --disable-pinned-memory
+                        Disable pinned memory use.
+  --mmap-torch-files    Use mmap when loading ckpt/pt files.
+  --disable-mmap        Don't use mmap when loading safetensors.
+  --dont-print-server   Don't print server output.
+  --quick-test-for-ci   Quick test for CI.
+  --windows-standalone-build
+                        Windows standalone build: Enable convenient things
+                        that most people using the standalone windows build
+                        will probably enjoy (like auto opening the page on
+                        startup).
+  --disable-metadata    Disable saving prompt metadata in files.
+  --disable-all-custom-nodes
+                        Disable loading all custom nodes.
+  --whitelist-custom-nodes WHITELIST_CUSTOM_NODES [WHITELIST_CUSTOM_NODES ...]
+                        Specify custom node folders to load even when
+                        --disable-all-custom-nodes is enabled.
+  --disable-api-nodes   Disable loading all api nodes. Also prevents the
+                        frontend from communicating with the internet.
+  --multi-user          Enables per-user storage.
+  --verbose [LEVEL FILE ...]
+                        Set console logging with no values or LEVEL, or add a
+                        LEVEL FILE log output. May be repeated.
+  --log-stdout          Send normal process output to stdout instead of stderr
+                        (default).
+  --front-end-version FRONT_END_VERSION
+                        Specifies the version of the frontend to be used. This
+                        command needs internet connectivity to query and
+                        download available frontend implementations from
+                        GitHub releases. The version string should be in the
+                        format of: [repoOwner]/[repoName]@[version] where
+                        version is one of: "latest" or a valid version number
+                        (e.g. "1.0.0")
+  --front-end-root FRONT_END_ROOT
+                        The local filesystem path to the directory where the
+                        frontend is located. Overrides --front-end-version.
+  --user-directory USER_DIRECTORY
+                        Set the ComfyUI user directory with an absolute path.
+                        Overrides --base-directory.
+  --models-directory MODELS_DIRECTORY
+                        Set the ComfyUI models directory. Overrides the models
+                        folder in --base-directory.
+  --enable-compress-response-body
+                        Enable compressing response body.
+  --comfy-api-base COMFY_API_BASE
+                        Set the base URL for the ComfyUI API. (default:
+                        https://api.comfy.org)
+  --database-url DATABASE_URL
+                        Specify the database URL, e.g. for an in-memory
+                        database you can use 'sqlite:///:memory:'. Defaults to
+                        'comfyui.db' in the effective user directory.
+  --enable-assets       Enable the assets system (API routes, database
+                        synchronization, and background scanning).
+  --enable-asset-hashing
+                        Compute blake3 content hashes when scanning assets.
+                        Hashing enables future asset-portability features
+                        (deduplication, cross-machine model resolution) but
+                        adds startup cost and per-output cost on large models
+                        directories. Off by default; enable to opt in.
+  --feature-flag KEY[=VALUE]
+                        Set a server feature flag. Use KEY=VALUE to set an
+                        explicit value, or bare KEY to set it to true. Can be
+                        specified multiple times. Boolean values (true/false)
+                        and numbers are auto-converted. Examples: --feature-
+                        flag show_signin_button=true or --feature-flag
+                        show_signin_button
+  --list-feature-flags  Print the registry of known CLI-settable feature flags
+                        as JSON and exit.

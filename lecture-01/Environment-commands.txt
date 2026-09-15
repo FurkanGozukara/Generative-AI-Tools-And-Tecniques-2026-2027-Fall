@@ -1,0 +1,33 @@
+LECTURE 1 - PYTHON ENVIRONMENT ISOLATION
+
+Install Python 3.12 and Python 3.11 first. Open an empty exercise folder in
+File Explorer, type cmd in the address bar, and press Enter. These commands
+use Windows Command Prompt, not PowerShell. Run one line at a time.
+
+Create two independent environments:
+py -3.12 -m venv ai312
+py -3.11 -m venv legacy311
+
+Activate the Python 3.12 environment and install its exercise package:
+ai312\Scripts\python.exe --version
+ai312\Scripts\activate.bat
+where python
+python -m pip --version
+python -m pip install numpy==2.1.3
+python -c "import sys, numpy; print(sys.executable); print(numpy.__version__)"
+python -m pip check
+python -m pip freeze > requirements-ai312.txt
+deactivate
+
+Use the second environment's executable without activating it:
+legacy311\Scripts\python.exe -m pip install numpy==1.26.4
+legacy311\Scripts\python.exe -c "import sys, numpy; print(sys.executable); print(numpy.__version__)"
+legacy311\Scripts\python.exe -m pip check
+
+The first environment still has its own NumPy version:
+ai312\Scripts\python.exe -c "import numpy; print(numpy.__version__)"
+
+Expected NumPy versions: ai312 has 2.1.3; legacy311 has 1.26.4.
+The printed Python paths should point inside the corresponding environment.
+These are exercise pins, not ComfyUI dependencies. Install ComfyUI into its
+own venv using Week01_ComfyUI_commands.txt.

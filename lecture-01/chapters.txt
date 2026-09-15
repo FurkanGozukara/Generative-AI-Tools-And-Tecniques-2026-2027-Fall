@@ -1,0 +1,78 @@
+0:00 Windows setup to your first AI image
+0:31 How Windows, Python and models connect
+2:34 CPU, RAM, VRAM and storage explained
+3:46 Resolution, quantization and memory
+4:28 Plan apps, models and output folders
+5:43 Show file extensions and full paths
+6:24 Local PC or cloud GPU: costs
+7:25 Official downloads and compatible versions
+8:29 Choose an NVIDIA Studio driver
+9:15 Install 7-Zip and extract archives
+11:25 Python interpreters and packages
+11:58 Download Python 3.12.10 for Windows
+12:53 Customize Python components and paths
+14:23 Finish Python setup and enable long paths
+15:13 Install Python 3.10 alongside 3.12
+16:11 Add Python 3.11 and 3.13
+16:51 List versions with the py launcher
+17:58 Find your Python executable and pip
+18:59 Keep global Python packages separate
+21:22 Set PATH and choose default Python
+22:57 Why PATH changes need a fresh terminal
+23:56 Install Git for Windows
+26:02 Clone a repository and inspect commits
+27:21 Why AI packages need C++ tools
+28:08 Download compatible Visual Studio 2022
+29:44 Select the C++ workload and components
+31:48 Export your Visual Studio configuration
+32:08 Open the x64 Native Tools prompt
+33:11 Compile and run a C++ program
+35:30 Driver, Toolkit and PyTorch CUDA versions
+37:09 Download compatible CUDA Toolkits
+38:24 Install CUDA 12.9: custom components
+39:37 Install CUDA 13.1 alongside 12.9
+40:18 Download and install cuDNN
+41:33 Set cuDNN folders and library paths
+43:15 Fix missing or incompatible libraries
+44:26 Page file, RAM and VRAM differences
+45:27 Set a custom Windows page file
+47:29 Enable Windows long-path support
+48:55 Download and extract FFmpeg
+49:43 Add FFmpeg to PATH; check versions
+51:13 Test FFmpeg, FFprobe and FFplay
+52:51 Install Node.js, npm and npx
+53:54 Download and extract TensorRT
+54:55 TensorRT libraries, wheels and PATH
+55:39 Create Python virtual environments
+56:52 Activate a venv; locate its Python
+58:05 Isolate different NumPy versions
+58:52 Use pip check, deactivate and freeze
+59:42 Fix Python mismatches; rebuild a venv
+1:01:04 Clone ComfyUI and select its source
+1:02:00 Create ComfyUI's venv; upgrade pip
+1:02:54 Install PyTorch and CUDA packages
+1:03:46 Install ComfyUI and Manager requirements
+1:05:04 Start ComfyUI and open its interface
+1:06:15 Download Z-Image Turbo model files
+1:07:35 Place the VAE, encoder and model
+1:09:12 Load the Z-Image Turbo template
+1:10:06 Set prompt, resolution, steps and seed
+1:11:01 Generate your first local AI image
+1:11:39 Restore the seed before saving
+1:12:29 Load a workflow from its original PNG
+1:13:38 Reload and run after restarting
+1:14:20 Fix missing-model names and folders
+1:14:36 Move models into a shared library
+1:15:13 Configure extra_model_paths.yaml
+1:16:32 ComfyUI memory and startup flags
+1:17:28 Back up workflows and environment files
+1:19:28 Update ComfyUI and its packages
+1:20:35 Save versions for update recovery
+1:21:42 Troubleshoot startup and generation
+1:23:47 AI image models and FLUX.2
+1:24:36 Video models: Wan 2.2 and LTX
+1:25:26 Speech, music and 3D tools
+1:26:31 Open weights, APIs and model licenses
+1:27:05 Local GPUs, RunPod and Comfy Cloud
+1:28:27 Interfaces and custom-node sources
+1:29:00 Model formats, access and next steps

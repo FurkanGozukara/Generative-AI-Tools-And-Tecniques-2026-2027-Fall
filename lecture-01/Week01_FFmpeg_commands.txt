@@ -1,0 +1,35 @@
+WEEK 01 - FFMPEG COMMANDS
+
+1. Extract the archive, open its versioned folder, then open bin.
+Recorded bin directory:
+C:\FFmpeg_Week01\ffmpeg-9.0.1-essentials_build\bin
+
+2. Copy that directory from Explorer's address bar. Search Windows for
+environment variables, open Environment Variables, edit Path, and add the
+bin directory. If an older FFmpeg entry comes first in the system Path,
+replace that entry with the new bin directory. Keep other required entries.
+Save the Path editor, Environment Variables and System Properties with OK.
+
+3. Open C:\FFmpeg_Week01 in Explorer. Type cmd in its address bar and press
+Enter. Run these commands in the fresh Command Prompt:
+
+where ffmpeg
+ffmpeg -version
+where ffprobe
+ffprobe -version
+
+The recorded results use the 9.0.1 essentials build from the directory above.
+
+4. Create, inspect and play the sample file. Run one command at a time.
+
+ffmpeg -f lavfi -i "sine=frequency=440:duration=2" -ar 48000 -ac 1 week01_440hz_demo.wav
+ffprobe -hide_banner -show_entries format=duration:stream=codec_name,sample_rate,channels week01_440hz_demo.wav
+ffplay -nodisp -autoexit week01_440hz_demo.wav
+
+Expected file properties: PCM s16le, 48,000 Hz, one channel, two seconds.
+Set a comfortable speaker volume before running ffplay.
+Find week01_440hz_demo.wav in the same folder in Explorer.
+
+Official download page: https://ffmpeg.org/download.html
+For an application's shared-library requirements, use that application's
+supported FFmpeg library versions and installation instructions.

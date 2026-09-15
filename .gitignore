@@ -1,0 +1,23 @@
+# Learner-generated environments, downloads and results are not course sources.
+venv/
+.venv/
+ai312/
+legacy311/
+__pycache__/
+*.pyc
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.gguf
+*.wav
+*.mp4
+*.mkv
+.env
+.env.*
+Thumbs.db
+.DS_Store

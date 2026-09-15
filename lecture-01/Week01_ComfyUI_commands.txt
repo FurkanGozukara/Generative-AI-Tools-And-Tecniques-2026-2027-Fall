@@ -1,0 +1,80 @@
+WEEK 01 - COMFYUI SOURCE INSTALLATION
+
+Course companion commands. Type each command in Command Prompt and press Enter.
+Open your installation parent folder in Explorer, type cmd in its address bar,
+and press Enter. This public guide uses C:\AI as the example parent; the
+lecture uses G:\educational_videos. Choose your own writable parent folder.
+Keep the downloaded course companion outside this ComfyUI application folder.
+Run one command at a time, stopping if a command fails.
+
+Official installation guide: https://docs.comfy.org/installation/manual_install
+Official repository: https://github.com/Comfy-Org/ComfyUI
+
+1. Clone the official repository.
+git clone https://github.com/Comfy-Org/ComfyUI.git ComfyUI_Week01
+cd ComfyUI_Week01
+
+2. Select the course snapshot so the source matches this lesson.
+git switch --detach d43a5fa20c8547ff42d13232f589a06536c42b97
+git rev-parse HEAD
+
+3. Create an isolated Python 3.12 environment and activate it.
+py -3.12 -m venv venv
+venv\Scripts\activate.bat
+python --version
+
+4. Update pip and install the NVIDIA packages from the official guide.
+This follows the Windows + NVIDIA route; do not use these CUDA packages for
+another GPU backend. The source is pinned, but pip resolves the packages
+available at installation time. See references/README.md for the recorded
+package versions and recovery notes.
+python -m pip install --upgrade pip
+python -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130
+
+5. Install the application and Manager requirements supplied in the repository.
+python -m pip install -r requirements.txt
+python -m pip install -r manager_requirements.txt
+
+6. Check package consistency and save the installed package list.
+python -m pip check
+python -m pip freeze > week01-requirements-lock.txt
+git rev-parse HEAD > week01-source-install.txt
+python -c "import torch; print('PyTorch:', torch.__version__); print('Built for CUDA:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available())"
+For this NVIDIA route, expect CUDA available: True before running the workflow.
+
+7. Start ComfyUI from its folder after activating the environment.
+python main.py --enable-manager --port 8189
+Open the local address printed by the server. Keep the Command Prompt open.
+With the default loopback address and this port, it is http://127.0.0.1:8189.
+Follow Week01_Model_Downloads.md to place the models and load the workflow.
+Press Ctrl+C in that Command Prompt to stop the server.
+
+8. Explore supported launch parameters in this installed version.
+python main.py --help
+python main.py --help > week01-startup-options.txt
+Optional memory/compiler example:
+python main.py --enable-manager --port 8189 --disable-smart-memory --lowvram --disable-comfy-compiler
+Stop the server before changing launch options. Keep the basic launch for
+normal use; memory-mode changes can trade speed for lower memory use.
+The recorded help says --lowvram has no effect while dynamic VRAM is enabled.
+Use only flags listed by your installed version's --help output and read
+their descriptions before combining options.
+
+9. OPTIONAL MAINTENANCE - NOT NEEDED FOR THE FIRST GENERATION.
+Follow Week01_Backup_and_Recovery.md before updating the source. If using a
+new terminal, open this ComfyUI folder and activate venv again first.
+Run git status --short and review any local source changes. Do not discard
+them to make an update proceed.
+The course snapshot above is detached. Switch to the tracked branch first:
+git switch master
+git pull --ff-only
+python -m pip install -r requirements.txt
+python -m pip install -r manager_requirements.txt
+python -m pip check
+python -m pip freeze > week01-requirements-after-update.txt
+git rev-parse HEAD > week01-source-after-update.txt
+
+If an update fails, stop there, read its error and keep the backup intact.
+The drive letter and folder name can differ; always run from your own clone.
+
+Official startup options: https://docs.comfy.org/development/comfyui-server/startup-flags

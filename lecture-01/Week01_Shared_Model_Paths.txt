@@ -1,0 +1,6 @@
+shared_models:
+    base_path: C:/AI/Shared_Models_Week01/
+    is_default: true
+    diffusion_models: models/diffusion_models/
+    text_encoders: models/text_encoders/
+    vae: models/vae/

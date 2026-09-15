@@ -1,0 +1,58 @@
+LECTURE 1 - READ-ONLY SYSTEM CHECKS
+
+Run each command separately. These checks do not install or update packages.
+Run a tool's check after installing that tool; not every tool is required for
+the first ComfyUI image. A command-not-found error means you need to check the
+installation, terminal and PATH before continuing.
+
+1. FRESH WINDOWS COMMAND PROMPT (cmd)
+
+Python launcher's interpreter list and the two exercise versions:
+py -0p
+py -3.12 --version
+py -3.11 --version
+where py
+where python
+
+Git:
+git --version
+where git
+
+NVIDIA driver and optional CUDA Toolkit compiler:
+nvidia-smi
+where nvcc
+nvcc --version
+
+Supporting tools, after installing them:
+where ffmpeg
+ffmpeg -version
+where ffprobe
+ffprobe -version
+node --version
+npm --version
+
+2. X64 NATIVE TOOLS COMMAND PROMPT FOR VS 2022
+
+where cl
+where link
+cl
+
+Running cl without a source filename prints the compiler banner and usage.
+Use examples/README.md for the actual compile-and-run exercise.
+
+3. COMFYUI FOLDER, AFTER ACTIVATING ITS VIRTUAL ENVIRONMENT
+
+venv\Scripts\activate.bat
+where python
+python -c "import sys; print(sys.executable); print(sys.version)"
+python -m pip --version
+python -m pip check
+git rev-parse HEAD
+python -c "import torch; print('PyTorch:', torch.__version__); print('Built for CUDA:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'No CUDA device available')"
+
+For this NVIDIA route, expect CUDA available: True. If it is False, use the
+GPU section in Week01_Troubleshooting.md. The Python executable should be
+inside this ComfyUI installation's venv, not a global Python installation.
+
+These sheets use Command Prompt syntax. In PowerShell, where is an alias;
+use where.exe for command discovery, or open cmd to follow the lecture.
