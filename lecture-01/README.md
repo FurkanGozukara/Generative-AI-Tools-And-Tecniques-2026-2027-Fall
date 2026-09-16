@@ -1,6 +1,8 @@
 # Lecture 1 — Windows Setup, ComfyUI and Your First AI Image
 
-**Generative AI Full Course — Lecture 1: Complete Windows & ComfyUI Setup Tutorial**
+**Generative AI Tutorial - Full Course, Lecture 1: Python, CUDA, C++ & ComfyUI on Windows**
+
+▶️ **[Watch Lecture 1](https://youtu.be/KgUhPAOjagI)** · 📺 **[Full course playlist](https://www.youtube.com/playlist?list=PLUMEJUep1hiI)**
 
 You will build an isolated Python environment, prepare Windows development tools, install ComfyUI from source and generate an image with Z-Image Turbo. You will also save the workflow, recover its settings from the original PNG, share models between installations and back up before updating.
 
@@ -18,6 +20,8 @@ Download the [complete companion ZIP](https://github.com/FurkanGozukara/Generati
 Use the [troubleshooting guide](Week01_Troubleshooting.md) when a command or workflow differs from the lecture.
 
 The [78-chapter list](chapters.txt) follows the finished lecture timeline, so you can find the relevant section when watching the video.
+
+Read the [emoji-formatted video description](youtube_description.txt) for the complete chapter list and resource links. The [published video title](youtube_title.txt) is also included as plain text.
 
 ## First-image workflow
 
@@ -50,6 +54,7 @@ The graph is based on the [official ComfyUI Z-Image Turbo example](https://docs.
 | [sources.md](sources.md) | Official sources and dated course references |
 | [SHA256SUMS.txt](SHA256SUMS.txt) | File-integrity checksums for this companion |
 | [chapters.txt](chapters.txt) | All 78 lecture chapter timestamps |
+| [youtube_description.txt](youtube_description.txt), [youtube_title.txt](youtube_title.txt) | Video description, chapters, resources and published title |
 
 ## Before you start
 

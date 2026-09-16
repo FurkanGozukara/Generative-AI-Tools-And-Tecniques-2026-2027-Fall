@@ -1,0 +1,37 @@
+🎓 Learn generative AI from the foundations to advanced creative workflows in this 14-lecture full course from SECourses. ComfyUI is the main environment for connecting image, video, audio and 3D tools into workflows you can understand, customize and reuse.
+
+We begin with Windows setup, Python, CUDA and your first locally generated image. You do not need previous Python or command-line experience to start. The course then progresses through image creation and editing, workflow automation, LoRA training, video, speech, music and 3D asset generation.
+
+🎯 You will learn how to choose models and settings, control composition, edit specific areas, improve image quality, build reusable workflows, prepare training data, manage GPU memory, diagnose failures and evaluate your results. Local and cloud execution options are discussed alongside practical licensing and source-tracking considerations.
+
+🗺️ COURSE ROADMAP — 14 LECTURES
+Lecture 1: Windows Setup, ComfyUI Installation & Your First AI Image
+Lecture 2: ComfyUI Nodes, Diffusion & Building Your First Workflow
+Lecture 3: Text-to-Image: Prompting, Models, LoRAs & Precision
+Lecture 4: AI Image Editing & Instruction-Based Transformation
+Lecture 5: Masks, Inpainting, Outpainting, Segmentation & Compositing
+Lecture 6: ControlNet, Depth, Pose & Composition Control
+Lecture 7: Upscaling, Restoration, Detailing & Image Delivery
+Lecture 8: Workflow Engineering, Automation, APIs & Custom Nodes
+Lecture 9: LoRA Training, Datasets, Captioning & Personalization
+Lecture 10: AI Video Generation: Foundations & GPU Performance
+Lecture 11: Video Control, Character Animation & Longer Videos
+Lecture 12: Audio, Speech, Voice & Music Generation
+Lecture 13: Image-to-3D & Textured Asset Generation
+Lecture 14: Quality Evaluation, Licensing, Provenance & Production Delivery
+
+The course covers techniques such as prompting, diffusion, model precision, LoRAs, ControlNet, segmentation, inpainting, outpainting, upscaling, API automation and character animation. Image, video, speech, music and 3D examples show how these ideas connect across different types of media.
+
+Start with Lecture 1 and follow the playlist in order. Each lecture builds on earlier concepts, with its own chapters and resource links in the video description. Return to individual chapters when you need a setup step, workflow technique or troubleshooting explanation.
+
+🔗 Resources & support:
+▶️ Watch Lecture 1: [ https://youtu.be/KgUhPAOjagI ]
+📦 Course repository & lecture companion files: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
+Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
+ComfyUI installer (optional): [ https://www.patreon.com/posts/105023709 ]
+Official ComfyUI documentation: [ https://docs.comfy.org/ ]
+SECourses Discord: [ https://discord.com/invite/software-engineering-courses-secourses-772774097734074388 ]
+
+💬 For questions, check the pinned comment on the relevant lecture, join our Discord or leave a comment. Support SECourses on Patreon for more tutorials, guides, scripts and resources.
+
+#GenerativeAI #ComfyUI #FullCourse
