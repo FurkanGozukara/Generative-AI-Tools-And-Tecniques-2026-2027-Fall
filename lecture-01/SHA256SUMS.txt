@@ -1,4 +1,4 @@
-# SHA-256 checksums for the Lecture 1 companion, September 16, 2026.
+# SHA-256 checksums for the Lecture 1 companion, updated September 19, 2026.
 # Paths are relative to this lecture-01 folder; this checksum file excludes itself.
 46845426cf258cc13822ef5cfbbdab7458640397c51959c6ef5235396aa95a17  chapters.txt
 e5a4d0250a55b1dd68f34524bdf4a98ea81b6c721a7c3bfd8ac904db661c196c  Environment-commands.txt
@@ -14,7 +14,7 @@ f62ace695600d95e27ef9779d454fa7ee3eb19f7c502e6ac953035ad75b7d84a  references/REA
 cd57f2a073650ed8dbea87a43722d9538f85f3900864b08e2306fa97d0655ca7  references/week01-source-after-update.txt
 367269506f28f3c46f4e19585afa50dca5f0ce0fcd4af85d3f796eea0e607dfc  references/week01-source-install.txt
 0a4d6ae79e8b8d19ab12c48d9fd751f85d95bd6655612813b87d72656b444946  references/week01-startup-options.txt
-0d2df2bf95aaa80441854e438830793795db605a142a4aa13ad3650f68c2b697  sources.md
+450a364611094f2cb28aed5dbb27597ea45e2515b9ae2ade3748b58dc73f7884  sources.md
 162ad7907440dbd7b349ca18a02594633b875d72619385f3e001baf188060022  Visual_Studio_Cpp_Checklist.md
 e40b4881866cfae57aa401d1ad1b91790d88352e92fe7456e593592d5879bd9b  Week01_Backup_and_Recovery.md
 617a168983bc8a7b73c3b554ecd90490ec8cd913dffc88ce2fdc797cda1d68e3  Week01_ComfyUI_commands.txt

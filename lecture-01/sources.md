@@ -22,7 +22,7 @@ Checked and recorded 13 September 2026. These are dated observations. Prices, re
 | [FLUX.2](https://github.com/black-forest-labs/flux2) | Image generation/editing; inspect the exact variant and weight license |
 | [Wan2.2](https://github.com/Wan-Video/Wan2.2) | Video family with variant-specific tasks and requirements |
 | [LTX-2 family](https://github.com/Lightricks/LTX-2) | Joint audio-video example; no inference performed in this lecture |
-| [IndexTTS](https://github.com/index-tts/index-tts) | 2.5 dated 10 August 2026; recorded language list did not include Turkish |
+| [IndexTTS](https://github.com/index-tts/index-tts) | 2.5 dated 10 August 2026; recorded language list: Chinese, English, Japanese, Spanish and Arabic |
 | [ACE-Step 1.5](https://github.com/ace-step/ACE-Step-1.5) | Music generation example |
 | [TRELLIS.2](https://github.com/microsoft/TRELLIS.2) | Image-to-3D example |
 
