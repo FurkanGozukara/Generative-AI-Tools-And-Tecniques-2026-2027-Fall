@@ -1,0 +1,18 @@
+0:00 From the first image to its workflow
+1:06 Update ComfyUI and its matching Python dependencies
+3:53 Open the packaged workflow and trace its stages
+5:21 Refresh model files without restarting the server
+6:35 Load the three models and connect their roles
+8:41 Turn the prompt into conditioning for the model
+10:00 Connect the latent and choose the sampling settings
+12:50 Decode the sampled latent and save the image
+14:21 Run the complete graph and inspect the result
+15:40 Change the prompt and watch cached stages
+16:44 Compare resolution and the actual computation cost
+20:07 Test fixed seeds and explore with random seeds
+23:00 Compare sampling steps on the Turbo model
+25:21 Inspect guidance changes on this distilled model
+27:33 Test the negative branch at guidance one
+29:19 Change one variable and explain the difference
+30:41 Recover the workflow from PNG and export JSON
+33:02 Follow the restored graph to the saved image

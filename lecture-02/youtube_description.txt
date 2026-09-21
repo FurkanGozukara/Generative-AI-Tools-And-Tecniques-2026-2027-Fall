@@ -1,0 +1,48 @@
+Build a ComfyUI image workflow from individual nodes and follow the data from a written prompt to saved pixels. In Lecture 2 of this 14-lecture Generative AI course, we use Z-Image-Turbo on Windows to connect the model loaders, conditioning, latent, sampler and decoder, then test the controls on real outputs.
+
+🔗 Links:
+
+Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
+
+📦 Full course resource repository: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
+
+▶️ Lecture 1 — Windows setup and your first image: [ https://youtu.be/KgUhPAOjagI ]
+
+📺 Full course playlist: [ https://www.youtube.com/playlist?list=PLUMEJUep1hiI ]
+
+Official ComfyUI manual installation: [ https://docs.comfy.org/installation/manual_install ]
+
+Z-Image Turbo workflow and model downloads: [ https://docs.comfy.org/tutorials/image/z-image/z-image-turbo ]
+
+SECourses Discord: [ https://discord.com/invite/software-engineering-courses-secourses-772774097734074388 ]
+
+🎯 You will learn how to update an existing ComfyUI installation, inspect a grouped template, refresh model files, build and connect the graph, read socket types, measure warm generation time, test repeatability, compare resolution, sampling steps and guidance, and recover a workflow from its original PNG.
+
+🧩 Main topics include CLIP conditioning, latent images, ModelSamplingAuraFlow, KSampler, VAE Decode, fixed and random seeds, execution caching, CFG, controlled comparisons, PNG metadata and workflow JSON.
+Use the chapters to follow the build or jump to a particular setting and comparison.
+
+⏱️ Chapters:
+0:00 From the first image to its workflow
+1:06 Update ComfyUI and its matching Python dependencies
+3:53 Open the packaged workflow and trace its stages
+5:21 Refresh model files without restarting the server
+6:35 Load the three models and connect their roles
+8:41 Turn the prompt into conditioning for the model
+10:00 Connect the latent and choose the sampling settings
+12:50 Decode the sampled latent and save the image
+14:21 Run the complete graph and inspect the result
+15:40 Change the prompt and watch cached stages
+16:44 Compare resolution and the actual computation cost
+20:07 Test fixed seeds and explore with random seeds
+23:00 Compare sampling steps on the Turbo model
+25:21 Inspect guidance changes on this distilled model
+27:33 Test the negative branch at guidance one
+29:19 Change one variable and explain the difference
+30:41 Recover the workflow from PNG and export JSON
+33:02 Follow the restored graph to the saved image
+
+This video is for anyone who has a working ComfyUI installation and wants to understand the graph behind an image. Follow Lecture 1 first if you need the Windows setup.
+
+💬 For help, check the pinned comment, join our Discord, or leave a comment. Support SECourses on Patreon for more guides, scripts and resources.
+
+#ComfyUI #GenerativeAI #ZImageTurbo

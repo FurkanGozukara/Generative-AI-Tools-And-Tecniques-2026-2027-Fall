@@ -26,6 +26,7 @@ Start with Lecture 1 and follow the playlist in order. Each lecture builds on ea
 
 🔗 Resources & support:
 ▶️ Watch Lecture 1: [ https://youtu.be/KgUhPAOjagI ]
+▶️ Watch Lecture 2: [ https://youtu.be/T2_z7ZaffyI ]
 📦 Course repository & lecture companion files: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
 Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
 ComfyUI installer (optional): [ https://www.patreon.com/posts/105023709 ]

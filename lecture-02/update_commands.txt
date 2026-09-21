@@ -1,0 +1,13 @@
+ComfyUI manual-installation update
+
+Open the existing ComfyUI folder in File Explorer. Enter cmd in its address bar.
+
+venv\Scripts\activate
+where python
+git pull --ff-only --no-stat
+python -m pip install -r requirements.txt
+
+After activation, the prompt starts with (venv), identifying the active virtual environment in that window. The first where python result must point into this installation's venv. Run the requirements command with normal output so the complete installation logs remain visible. Wait for the prompt to return, restart the server, then refresh its browser page.
+
+The revised update demonstration fast-forwarded from c194dd00cd42aa18d9dbf27d977bf6b85d9ea565 to b0f4b7b294ce482a2e071d9d762c133d38c7aa07 on September 21, 2026.
+The workflow comparisons were recorded earlier, on the runtime listed at the end of the companion README. Versions will change.
