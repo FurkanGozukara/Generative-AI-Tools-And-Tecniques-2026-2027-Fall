@@ -20,6 +20,18 @@ Extract the ZIP, then open `lecture-02/README.md`. It contains the reference wor
 
 The model weights are separate downloads; their publisher links are in the Lecture 1 model guide.
 
+## Lecture 3
+
+**[Download Lecture_03_Companion_Files.zip](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_03_Companion_Files.zip)**
+
+Extract the ZIP, then open `lecture-03/README.md`. It contains 22 editable workflows, prompts and settings, commands and shortcuts, model download links and hashes, chapter list and video description. Model weights remain separate publisher downloads.
+
+## Lecture 4
+
+**[Download Lecture_04_Companion_Files.zip](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_04_Companion_Files.zip)**
+
+Extract the ZIP, then open `lecture-04/README.md`. It contains two visual-editor workflows, 24 intermediate API recipes, eight input images, seven dependency/continuation images, edit instructions, commands, model sources, measurements and chapters. Model weights remain separate publisher downloads.
+
 ## Check a download
 
 The [SHA256SUMS.txt](SHA256SUMS.txt) file gives the ZIP's SHA-256 hash. In **PowerShell**, run this command from the folder containing your download:
@@ -28,6 +40,6 @@ The [SHA256SUMS.txt](SHA256SUMS.txt) file gives the ZIP's SHA-256 hash. In **Pow
 Get-FileHash -LiteralPath '.\Lecture_01_Companion_Files.zip' -Algorithm SHA256
 ```
 
-Compare the returned hash with the published checksum; pass the Lecture 2 filename to the same command for that download. Each extracted folder's `SHA256SUMS.txt` also lists the individual companion-file hashes. Hashes are case-insensitive. To check a particular extracted file, pass its path to the same command.
+Compare the returned hash with the published checksum; pass the matching Lecture 2, 3 or 4 filename to the same command for those downloads. Each extracted folder's `SHA256SUMS.txt` also lists the individual companion-file hashes. Hashes are case-insensitive. To check a particular extracted file, pass its path to the same command.
 
 For the immutable source of a particular revision, open the repository's commit history and browse the desired commit. The `main` download link points to the current companion revision.

@@ -1,0 +1,59 @@
+Turn a vague image request into a deliberate, reproducible ComfyUI recipe. In Lecture 3 of this 14-lecture Generative AI course, we improve poster prompts, compare layouts at fixed seeds, generate text with Qwen Image, explore guidance, then install a Civitai fine-tune and watercolor LoRA and compare its strengths. Follow the complete Windows workflow from prompt to saved result.
+
+🔗 Links:
+
+Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
+
+📦 Full course resource repository: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
+
+▶️ Lecture 1 — Windows setup and your first image: [ https://youtu.be/KgUhPAOjagI ]
+
+▶️ Lecture 2 — ComfyUI workflows and updating: [ https://youtu.be/T2_z7ZaffyI ]
+
+📺 Full course playlist: [ https://www.youtube.com/playlist?list=PLUMEJUep1hiI ]
+
+SECourses Discord: [ https://discord.com/invite/software-engineering-courses-secourses-772774097734074388 ]
+
+🎯 You will learn how to trace prompt conditioning, give explicit layout instructions, compare fixed seeds, inspect generated text, distinguish conventional CFG from embedded guidance, choose compatible Civitai versions, read an author recipe and license, install models in the right folders, connect a LoRA, compare strengths while keeping the other settings fixed, and compare weight precision with the same text encoders.
+
+🧩 Main topics include ComfyUI, Z-Image Turbo, illustrative tokenization, Qwen Image, FLUX, Klein 9B, Civitai fine-tunes, LoRA adapters, trigger words, watercolor style, seeds, CFG, samplers, schedulers, scaled FP8 and workflow JSON.
+Use the chapters to jump to prompt layout, generated text, guidance, Civitai installation or the watercolor LoRA comparison.
+
+⏱️ Chapters:
+0:00 Turn a vague request into a directed image
+1:01 Reuse the update route from Lecture Two
+2:31 Follow text through the encoder into conditioning
+3:47 Inspect token pieces with the illustrative tokenizer
+5:31 Generate a poster from the vague prompt
+6:41 Specify the subject, layout and quoted title
+8:04 Reserve clear sky above the focal subject
+9:34 Test the same instruction on more seeds
+12:48 Load the matching Qwen Image components together
+14:18 Generate the exact title and ticket price
+15:39 Trace positive and negative predictions through guidance
+17:33 Compare warm sampling at two guidance values
+19:58 Separate embedded guidance from conventional two-branch CFG
+21:01 Find the exact compatible community model version
+24:02 Install the diffusion model and matched components
+25:40 Inspect the fine-tuned model on a product brief
+27:05 Find the watercolor adapter for FLUX dev
+29:18 Connect the adapter to its own FLUX graph
+30:30 Keep the prompt fixed while bypassing the adapter
+31:39 Compare three strengths around the author setting
+34:05 Compare weight precision with the encoder held fixed
+36:24 Identify the sampler and its noise schedule
+37:23 Choose the workflow for the actual brief
+38:59 Save the graph and exact source versions
+39:57 Use deliberate prompts and reproducible model choices
+
+Use the supplied workflows and model source manifest. Community weights are not included; model_sources.md lists the Civitai pages, exact files, hashes and terms. The exact local FLUX FP8 download is unverified; the materials provide a verified BF16 route.
+
+The tokenizer demonstration is illustrative; its token counts are not the image models’ counts.
+
+After git pull --ff-only and python -m pip install -r requirements.txt, restart ComfyUI using the startup route from Lecture 2, then refresh the browser. A browser refresh alone does not load updated backend code.
+
+This video is for anyone who wants more control over local AI images and a repeatable way to compare prompts, models and adapters.
+
+💬 Check the pinned comment for resources and updates. Support the course on Patreon, join the SECourses Discord, or leave your workflow questions in the comments.
+
+#ComfyUI #GenerativeAI #Civitai #LoRA #FLUX

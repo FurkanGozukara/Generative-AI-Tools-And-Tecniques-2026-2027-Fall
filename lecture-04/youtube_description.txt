@@ -1,0 +1,53 @@
+Edit a photo by describing the change, then inspect what changed around it. In Lecture 4 of this 14-lecture Generative AI course, we turn text-to-image into image-to-image, compare denoise strengths in one grid, switch to Qwen Image 2.1 instruction editing, inspect a difference map, replace words on a sign, transfer a jacket from a second photo, build a character storyboard and relight a portrait. The demonstrations run locally in ComfyUI on Windows.
+
+🔗 Links:
+
+Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
+
+📦 Full course resource repository: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
+
+▶️ Lecture 1 — Windows setup and your first image: [ https://youtu.be/KgUhPAOjagI ]
+
+▶️ Lecture 2 — ComfyUI workflows and updating: [ https://youtu.be/T2_z7ZaffyI ]
+
+📺 Full course playlist: [ https://www.youtube.com/playlist?list=PLUMEJUep1hiI ]
+
+SECourses Discord: [ https://discord.com/invite/software-engineering-courses-secourses-772774097734074388 ]
+
+🎯 You will learn how to replace an empty latent with an encoded photograph, read the denoise schedule, and compare 0.2, 0.4, 0.6 and 0.8 with a VAE round-trip reference in one grid. Then connect the photo to the instruction encoder, compare a short edit request with a preservation clause, build a difference map from core nodes and check the effect of the pixel budget. For multi-image work, name the image1 and image2 roles so the scene and character references have different jobs. Make a turnaround sheet, place the explorer in three scenes, compare a text-only description with image references, and combine several changes into one instruction after sequential edits drift.
+
+🧩 Main topics include ComfyUI, Qwen Image 2.1, instruction image editing, image-to-image, denoise, KSampler, conditioning, VAE round trip, difference maps, bypass (Ctrl+B), clipspace, character consistency, storyboards, relighting and workflow JSON. Examples include a navy-to-green sweater, HARBOR BAKERY sign text, a jacket transfer, front/three-quarter/side character views, a railway platform, a sunrise hilltop and a lantern-lit workshop.
+Use the chapters to jump to the denoise grid, instruction editing, the difference map, sign text, two references, the storyboard or relighting.
+
+⏱️ Chapters:
+0:00 Edit photos by instruction: today's results
+0:40 Update ComfyUI with the Lecture Two route
+1:48 Turn text-to-image into image-to-image
+4:50 Compare four denoise strengths in one grid
+7:54 Edit with the photo in the conditioning
+10:00 Why denoise one is still editing
+11:14 Measure changed pixels with a difference map
+15:16 Pixel budget: detail versus time
+17:30 Replace words on a photographed sign
+18:59 Two references with named roles
+20:29 One character: a turnaround sheet
+21:51 Place the explorer in three storyboard scenes
+25:15 Five sequential edits and a clean rollback
+28:37 Relight a portrait by instruction
+29:42 Export the workflow and recap
+
+Follow the course resource repository for released companion files. The Lecture 4 learner package contains the start and final workflows, 24 API graphs, eight input photos, all 24 results, the exact instructions, update commands and measurements. Start with README.md; model_sources.md lists the three model files and download folders. Model weights are downloaded separately.
+
+The comparison graph highlights a thresholded, one-sided green-channel difference; it is a diagnostic view, not a complete measure of identity or image quality. Compare it with the VAE round trip and inspect the face, clothes and background in the pictures themselves. A preservation clause can guide an edit without locking every pixel.
+
+For sign edits, quote the replacement words and specify what to keep. For characters, reuse the anchor image with the scene reference. If several edits accumulate unwanted changes, return to the clean references and combine the requested changes in one pass. The saved final graph opens on the portrait-relighting example; the chapter files identify the other examples.
+
+The shown setup uses Qwen Image 2.1 INT8, 25 steps, CFG 1, Euler/simple and seed 314159. The 1024 pixel-budget setting and full 2048 input are compared in chapter 8. Measurements from the RTX 5090 setup are included with their settings; use them to understand that comparison rather than predict your own hardware.
+
+After git pull --ff-only and python -m pip install -r requirements.txt, restart ComfyUI using the startup route from Lecture 2, then refresh the browser. The commands sheet includes environment activation; the learner guide explains the saved workflow state and API image paths.
+
+For anyone who wants repeatable photo edits, character references and reusable local AI workflows.
+
+💬 Check the pinned comment for resources and updates. Support the course on Patreon, join the SECourses Discord, or leave your workflow questions in the comments.
+
+#ComfyUI #GenerativeAI #QwenImage #AIImageEditing #StableDiffusion

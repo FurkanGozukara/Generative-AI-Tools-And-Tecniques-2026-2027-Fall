@@ -1,0 +1,25 @@
+0:00 Turn a vague request into a directed image
+1:01 Reuse the update route from Lecture Two
+2:31 Follow text through the encoder into conditioning
+3:47 Inspect token pieces with the illustrative tokenizer
+5:31 Generate a poster from the vague prompt
+6:41 Specify the subject, layout and quoted title
+8:04 Reserve clear sky above the focal subject
+9:34 Test the same instruction on more seeds
+12:48 Load the matching Qwen Image components together
+14:18 Generate the exact title and ticket price
+15:39 Trace positive and negative predictions through guidance
+17:33 Compare warm sampling at two guidance values
+19:58 Separate embedded guidance from conventional two-branch CFG
+21:01 Find the exact compatible community model version
+24:02 Install the diffusion model and matched components
+25:40 Inspect the fine-tuned model on a product brief
+27:05 Find the watercolor adapter for FLUX dev
+29:18 Connect the adapter to its own FLUX graph
+30:30 Keep the prompt fixed while bypassing the adapter
+31:39 Compare three strengths around the author setting
+34:05 Compare weight precision with the encoder held fixed
+36:24 Identify the sampler and its noise schedule
+37:23 Choose the workflow for the actual brief
+38:59 Save the graph and exact source versions
+39:57 Use deliberate prompts and reproducible model choices

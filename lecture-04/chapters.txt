@@ -1,0 +1,15 @@
+0:00 Edit photos by instruction: today's results
+0:40 Update ComfyUI with the Lecture Two route
+1:48 Turn text-to-image into image-to-image
+4:50 Compare four denoise strengths in one grid
+7:54 Edit with the photo in the conditioning
+10:00 Why denoise one is still editing
+11:14 Measure changed pixels with a difference map
+15:16 Pixel budget: detail versus time
+17:30 Replace words on a photographed sign
+18:59 Two references with named roles
+20:29 One character: a turnaround sheet
+21:51 Place the explorer in three storyboard scenes
+25:15 Five sequential edits and a clean rollback
+28:37 Relight a portrait by instruction
+29:42 Export the workflow and recap

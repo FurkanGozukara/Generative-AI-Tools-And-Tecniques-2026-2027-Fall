@@ -1,0 +1,76 @@
+{
+ "gpu": "NVIDIA GeForce RTX 5090 (32 GB), ComfyUI 0.37.0, frontend 1.53.6, Qwen Image 2.1 int8, 25 steps, euler/simple, CFG 1, seed 314159",
+ "recorded_runs_while_screen_recording": {
+  "edit_at_1024_budget_seconds": 8.79,
+  "edit_at_1024_steps_per_second": 4.14,
+  "edit_at_full_2048_seconds": 75.07,
+  "edit_at_full_2048_seconds_per_step": 2.29
+ },
+ "idle_evidence_runs": {
+  "edit_bare": {
+   "seconds": 7.11,
+   "peak_gpu_mib": 19702,
+   "size": [
+    1024,
+    1024
+   ]
+  },
+  "size_1024": {
+   "seconds": 7.28,
+   "peak_gpu_mib": 19702,
+   "size": [
+    1024,
+    1024
+   ]
+  },
+  "size_full": {
+   "seconds": 55.22,
+   "peak_gpu_mib": 20470,
+   "size": [
+    2048,
+    2048
+   ]
+  },
+  "sign_word": {
+   "seconds": 6.89,
+   "peak_gpu_mib": 19702,
+   "size": [
+    1248,
+    832
+   ]
+  },
+  "jacket": {
+   "seconds": 9.41,
+   "peak_gpu_mib": 22454,
+   "size": [
+    1024,
+    1024
+   ]
+  },
+  "sheet": {
+   "seconds": 6.83,
+   "peak_gpu_mib": 19638,
+   "size": [
+    1344,
+    768
+   ]
+  },
+  "scene_workshop": {
+   "seconds": 9.48,
+   "peak_gpu_mib": 22374,
+   "size": [
+    1344,
+    768
+   ]
+  },
+  "relight": {
+   "seconds": 7.2,
+   "peak_gpu_mib": 19734,
+   "size": [
+    1024,
+    1024
+   ]
+  }
+ },
+ "note": "Peak GPU memory is the whole device as reported by nvidia-smi while the run executed (about 19.7 GB at 1024, 20.5 GB at full size)."
+}

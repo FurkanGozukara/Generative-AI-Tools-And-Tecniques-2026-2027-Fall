@@ -1,0 +1,22 @@
+{
+  "Lecture04/drift_00001_.png [output]": {
+    "included_image": "images/13_drift_step1_smile.png",
+    "copy_to": "ComfyUI/output/Lecture04/drift_00001_.png"
+  },
+  "Lecture04/drift_00002_.png [output]": {
+    "included_image": "images/13_drift_step2_lantern.png",
+    "copy_to": "ComfyUI/output/Lecture04/drift_00002_.png"
+  },
+  "Lecture04/drift_00003_.png [output]": {
+    "included_image": "images/13_drift_step3_evening.png",
+    "copy_to": "ComfyUI/output/Lecture04/drift_00003_.png"
+  },
+  "Lecture04/drift_00004_.png [output]": {
+    "included_image": "images/13_drift_step4_map.png",
+    "copy_to": "ComfyUI/output/Lecture04/drift_00004_.png"
+  },
+  "Lecture04/storyboard_00004_.png [output]": {
+    "included_image": "images/12_storyboard_workshop.png",
+    "copy_to": "ComfyUI/output/Lecture04/storyboard_00004_.png"
+  }
+}

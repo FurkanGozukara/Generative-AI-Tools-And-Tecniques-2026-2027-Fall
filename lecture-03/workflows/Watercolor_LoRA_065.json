@@ -1,0 +1,560 @@
+{
+ "id": "34885409-58fd-4066-8698-55c70b1dd8f5",
+ "revision": 0,
+ "last_node_id": 11,
+ "last_link_id": 12,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "UNETLoader",
+   "pos": [
+    0,
+    0
+   ],
+   "size": [
+    310,
+    90
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      11
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "UNETLoader"
+   },
+   "widgets_values": [
+    "FLUX_Dev.safetensors",
+    "default"
+   ],
+   "widgets_values_named": {
+    "unet_name": "FLUX_Dev.safetensors",
+    "weight_dtype": "default"
+   }
+  },
+  {
+   "id": 2,
+   "type": "DualCLIPLoader",
+   "pos": [
+    0,
+    150
+   ],
+   "size": [
+    310,
+    140
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": [
+      1
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "DualCLIPLoader"
+   },
+   "widgets_values": [
+    "clip_l.safetensors",
+    "t5xxl_enconly.safetensors",
+    "flux",
+    "default"
+   ],
+   "widgets_values_named": {
+    "clip_name1": "clip_l.safetensors",
+    "clip_name2": "t5xxl_enconly.safetensors",
+    "type": "flux",
+    "device": "default"
+   }
+  },
+  {
+   "id": 3,
+   "type": "VAELoader",
+   "pos": [
+    0,
+    350
+   ],
+   "size": [
+    310,
+    80
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      9
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "VAELoader"
+   },
+   "widgets_values": [
+    "ae.safetensors"
+   ],
+   "widgets_values_named": {
+    "vae_name": "ae.safetensors"
+   }
+  },
+  {
+   "id": 4,
+   "type": "CLIPTextEncode",
+   "pos": [
+    335,
+    0
+   ],
+   "size": [
+    360,
+    300
+   ],
+   "flags": {},
+   "order": 5,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 1
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      2,
+      3
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "CLIPTextEncode"
+   },
+   "widgets_values": [
+    "AquarelleIV, a stone lighthouse on a rocky coast, soft blue sea, loose watercolor washes on paper"
+   ],
+   "widgets_values_named": {
+    "text": "AquarelleIV, a stone lighthouse on a rocky coast, soft blue sea, loose watercolor washes on paper"
+   }
+  },
+  {
+   "id": 5,
+   "type": "EmptySD3LatentImage",
+   "pos": [
+    0,
+    500
+   ],
+   "size": [
+    310,
+    110
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      7
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "EmptySD3LatentImage"
+   },
+   "widgets_values": [
+    1536,
+    1024,
+    1
+   ],
+   "widgets_values_named": {
+    "width": 1536,
+    "height": 1024,
+    "batch_size": 1
+   }
+  },
+  {
+   "id": 8,
+   "type": "FluxGuidance",
+   "pos": [
+    335,
+    350
+   ],
+   "size": [
+    280,
+    80
+   ],
+   "flags": {},
+   "order": 6,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 2
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      5
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "FluxGuidance"
+   },
+   "widgets_values": [
+    3.5
+   ],
+   "widgets_values_named": {
+    "guidance": 3.5
+   }
+  },
+  {
+   "id": 9,
+   "type": "ConditioningZeroOut",
+   "pos": [
+    335,
+    480
+   ],
+   "size": [
+    280,
+    60
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 3
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      6
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "ConditioningZeroOut"
+   }
+  },
+  {
+   "id": 6,
+   "type": "KSampler",
+   "pos": [
+    730,
+    0
+   ],
+   "size": [
+    290,
+    325
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 12
+    },
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "link": 5
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "link": 6
+    },
+    {
+     "name": "latent_image",
+     "type": "LATENT",
+     "link": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      8
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "KSampler"
+   },
+   "widgets_values": [
+    271828,
+    "fixed",
+    25,
+    1,
+    "dpmpp_2m",
+    "sgm_uniform",
+    1
+   ],
+   "widgets_values_named": {
+    "seed": 271828,
+    "control_after_generate": "fixed",
+    "steps": 25,
+    "cfg": 1,
+    "sampler_name": "dpmpp_2m",
+    "scheduler": "sgm_uniform",
+    "denoise": 1
+   }
+  },
+  {
+   "id": 7,
+   "type": "VAEDecode",
+   "pos": [
+    1060,
+    0
+   ],
+   "size": [
+    325,
+    90
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 8
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 9
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      10
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "VAEDecode"
+   }
+  },
+  {
+   "id": 10,
+   "type": "SaveImage",
+   "pos": [
+    1060,
+    145
+   ],
+   "size": [
+    325,
+    415
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 10
+    }
+   ],
+   "outputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "links": []
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "SaveImage"
+   },
+   "widgets_values": [
+    "Lecture03/Watercolor_065"
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "Lecture03/Watercolor_065"
+   }
+  },
+  {
+   "id": 11,
+   "type": "LoraLoaderModelOnly",
+   "pos": [
+    765.0504927201704,
+    390.25251908735794
+   ],
+   "size": [
+    270,
+    82
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 11
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      12
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "LoraLoaderModelOnly"
+   },
+   "widgets_values": [
+    "Aquarelle_IV-8.safetensors",
+    0.65
+   ],
+   "widgets_values_named": {
+    "lora_name": "Aquarelle_IV-8.safetensors",
+    "strength_model": 0.65
+   }
+  }
+ ],
+ "links": [
+  [
+   1,
+   2,
+   0,
+   4,
+   0,
+   "CLIP"
+  ],
+  [
+   2,
+   4,
+   0,
+   8,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   3,
+   4,
+   0,
+   9,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   5,
+   8,
+   0,
+   6,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   6,
+   9,
+   0,
+   6,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   7,
+   5,
+   0,
+   6,
+   3,
+   "LATENT"
+  ],
+  [
+   8,
+   6,
+   0,
+   7,
+   0,
+   "LATENT"
+  ],
+  [
+   9,
+   3,
+   0,
+   7,
+   1,
+   "VAE"
+  ],
+  [
+   10,
+   7,
+   0,
+   10,
+   0,
+   "IMAGE"
+  ],
+  [
+   11,
+   1,
+   0,
+   11,
+   0,
+   "MODEL"
+  ],
+  [
+   12,
+   11,
+   0,
+   6,
+   0,
+   "MODEL"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 1.1,
+   "offset": [
+    85,
+    125
+   ]
+  },
+  "frontendVersion": "1.53.6"
+ },
+ "version": 0.4
+}

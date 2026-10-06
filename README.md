@@ -13,9 +13,11 @@ Start with Windows setup and your first local image. Then progress through image
 - **[Lecture 2 guide and companion files](lecture-02/README.md)**
 - **[Download the Lecture 1 companion ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_01_Companion_Files.zip)** — commands, setup guides, model-folder template, workflow JSON and original generated PNG.
 - **[Download the Lecture 2 companion ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_02_Companion_Files.zip)** — the reference workflow, the original generated PNG, the update commands, the model-folder guide, the baseline prompt and settings, and the chapter guide.
+- **[Lecture 3 guide and companion files](lecture-03/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_03_Companion_Files.zip)
+- **[Lecture 4 guide and companion files](lecture-04/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_04_Companion_Files.zip)
 - [Download checksums and extraction instructions](downloads/README.md)
 
-Lectures 1 and 2 and their companion materials are available now. Lectures 3–14 below are the planned sequence; their materials will be added as each lecture is released. The ZIP contains learner resources and the video description, not the video, installers or model weights.
+Companion materials for completed Lectures 1–4 are available now. Watch links for Lectures 1–2 are listed above; Lectures 3–4 currently link to their materials. Lectures 5–14 remain the planned sequence. Each ZIP contains learner resources and the video description; videos, installers and model weights are separate.
 
 ## Course roadmap — 14 lectures
 
@@ -23,8 +25,8 @@ Lectures 1 and 2 and their companion materials are available now. Lectures 3–1
 |---|---|---|
 | 1 | Windows Setup, ComfyUI Installation & Your First AI Image | [Watch](https://youtu.be/KgUhPAOjagI) · [Companion files](lecture-01/README.md) |
 | 2 | ComfyUI Nodes, Diffusion & Building Your First Workflow | [Watch](https://youtu.be/T2_z7ZaffyI) · [Companion files](lecture-02/README.md) |
-| 3 | Text-to-Image: Prompting, Models, LoRAs & Precision | Planned |
-| 4 | AI Image Editing & Instruction-Based Transformation | Planned |
+| 3 | Text-to-Image: Prompting, Models, LoRAs & Precision | [Companion files](lecture-03/README.md) |
+| 4 | AI Image Editing & Instruction-Based Transformation | [Companion files](lecture-04/README.md) |
 | 5 | Masks, Inpainting, Outpainting, Segmentation & Compositing | Planned |
 | 6 | ControlNet, Depth, Pose & Composition Control | Planned |
 | 7 | Upscaling, Restoration, Detailing & Image Delivery | Planned |

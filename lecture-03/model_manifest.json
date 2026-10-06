@@ -1,0 +1,431 @@
+{
+  "status": "9 of 10 local model files mapped to verified public downloads; 6 byte-identical and 3 Qwen tensor-equivalent. The measured local FLUX FP8 public source remains unverified and is explicitly distinguished from an optional public alternative. The Civitai insertion adds the fine-tune (FasciumKLEIN9B fp8) and the watercolor LoRA (Aquarelle_IV-8), both SHA256-verified against their saved Civitai records, and the resolved ae.safetensors hash.",
+  "files": [
+    {
+      "local_filename": "qwen_image_2.1_int8_convrot.safetensors",
+      "bytes": 7256848843,
+      "sha256": "0cd29629f2d83e239e6f86b895f5deaf7de7995ed513af6fb84c980669baa4b7",
+      "source": {
+        "repo": "Comfy-Org/Qwen-Image-2.1",
+        "revision": "9a44dbdb47cefd046be9c0a13476192f34c8db8e",
+        "remote_filename": "diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+        "model_card": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+        "download_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/9a44dbdb47cefd046be9c0a13476192f34c8db8e/diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+        "pointer_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/raw/9a44dbdb47cefd046be9c0a13476192f34c8db8e/diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+        "source_sha256": "cb74113cb03faecd79611b01fd7fd642f0aa60d6f0b95086abee214d75eaa57d",
+        "source_bytes": 7256783064,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "Comfy-Org/Qwen-Image-2.1",
+            "remote_filename": "diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+            "status": 200,
+            "content_length": "7256783064",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "qwen-research",
+        "repository_license_link": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE"
+      },
+      "install_folder": "ComfyUI/models/diffusion_models",
+      "source_byte_identical": false,
+      "source_relationship": "Same tensor payload verified by reconstruction; local metadata header was repacked. See qwen_tensor_verification."
+    },
+    {
+      "local_filename": "FLUX_Dev.safetensors",
+      "bytes": 23802932552,
+      "sha256": "4610115bb0c89560703c892c59ac2742fa821e60ef5871b33493ba544683abd7",
+      "source": {
+        "repo": "Comfy-Org/flux1-dev",
+        "revision": "83c446ef27a6ac1e9e36ecf13257283aa12cf22a",
+        "remote_filename": "flux1-dev.safetensors",
+        "model_card": "https://huggingface.co/Comfy-Org/flux1-dev",
+        "download_url": "https://huggingface.co/Comfy-Org/flux1-dev/resolve/83c446ef27a6ac1e9e36ecf13257283aa12cf22a/flux1-dev.safetensors",
+        "pointer_url": "https://huggingface.co/Comfy-Org/flux1-dev/raw/83c446ef27a6ac1e9e36ecf13257283aa12cf22a/flux1-dev.safetensors",
+        "source_sha256": "4610115bb0c89560703c892c59ac2742fa821e60ef5871b33493ba544683abd7",
+        "source_bytes": 23802932552,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "Comfy-Org/flux1-dev",
+            "remote_filename": "flux1-dev.safetensors",
+            "status": 200,
+            "content_length": "23802932552",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "flux-1-dev-non-commercial-license",
+        "repository_license_link": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/LICENSE.md"
+      },
+      "install_folder": "ComfyUI/models/diffusion_models",
+      "source_byte_identical": true,
+      "source_relationship": "Byte-identical download; use the local filename saved in the chosen workflow or change its loader selection."
+    },
+    {
+      "local_filename": "FLUX_Dev_fp8_scaled.safetensors",
+      "bytes": 11957054118,
+      "sha256": "b540f2eab895cae3de875488b629f3572687f99dde48f0a555eca0c896a6e78b",
+      "install_folder": "ComfyUI/models/diffusion_models",
+      "source_byte_identical": false,
+      "source_relationship": "Exact public source and conversion recipe not established for this existing local quantization. Do not present another FP8 download as the measured file.",
+      "local_provenance": "Copied from the existing SwarmUI model library; recorded hash retained above. Embedded metadata names FLUX.1-dev and its non-commercial license.",
+      "upstream_model_card": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+      "upstream_license_link": "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21/LICENSE.md",
+      "public_alternative_not_equivalent": {
+        "repo": "comfyanonymous/flux_dev_scaled_fp8_test",
+        "revision": "594059e8b11432ceaf2d7cf2e95f9eb1c0ecd3ed",
+        "remote_filename": "flux_dev_fp8_scaled_diffusion_model.safetensors",
+        "model_card": "https://huggingface.co/comfyanonymous/flux_dev_scaled_fp8_test",
+        "download_url": "https://huggingface.co/comfyanonymous/flux_dev_scaled_fp8_test/resolve/594059e8b11432ceaf2d7cf2e95f9eb1c0ecd3ed/flux_dev_fp8_scaled_diffusion_model.safetensors",
+        "pointer_url": "https://huggingface.co/comfyanonymous/flux_dev_scaled_fp8_test/raw/594059e8b11432ceaf2d7cf2e95f9eb1c0ecd3ed/flux_dev_fp8_scaled_diffusion_model.safetensors",
+        "source_sha256": "358fff9355c962532593898b10436f13e6f9bfb0389f36df03c6e55fe7c9cbfe",
+        "source_bytes": 11901607560,
+        "access": {
+          "gated": false,
+          "private": false
+        },
+        "repository_license_label": "flux-1-dev-non-commercial-license",
+        "repository_license_link": "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/LICENSE.md"
+      },
+      "learner_route": "Use warm_flux_bf16.json with the verified BF16 file for the reproducible FLUX recipe. A separately downloaded FP8 variant is a new experiment requiring its own outputs and timings."
+    },
+    {
+      "local_filename": "FLUX-2-Klein-Base-9b-Quant-FP8.safetensors",
+      "bytes": 9433179544,
+      "sha256": "bfc6100c448d5bb9024ff8f39076704bf51a53d1be1b9f0ea768495fe13a46d1",
+      "source": {
+        "repo": "MonsterMMORPG/Wan_GGUF",
+        "revision": "01ae33b2eabe3dd001397bff1bd84c48c64db507",
+        "remote_filename": "FLUX-2-Klein-Base-9b-Quant-FP8.safetensors",
+        "model_card": "https://huggingface.co/MonsterMMORPG/Wan_GGUF",
+        "download_url": "https://huggingface.co/MonsterMMORPG/Wan_GGUF/resolve/01ae33b2eabe3dd001397bff1bd84c48c64db507/FLUX-2-Klein-Base-9b-Quant-FP8.safetensors",
+        "pointer_url": "https://huggingface.co/MonsterMMORPG/Wan_GGUF/raw/01ae33b2eabe3dd001397bff1bd84c48c64db507/FLUX-2-Klein-Base-9b-Quant-FP8.safetensors",
+        "source_sha256": "bfc6100c448d5bb9024ff8f39076704bf51a53d1be1b9f0ea768495fe13a46d1",
+        "source_bytes": 9433179544,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "MonsterMMORPG/Wan_GGUF",
+            "remote_filename": "FLUX-2-Klein-Base-9b-Quant-FP8.safetensors",
+            "status": 200,
+            "content_length": "9433179544",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": null,
+        "repository_license_link": null,
+        "upstream_model_card": "https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9B",
+        "upstream_license_label": "FLUX Non-Commercial License",
+        "upstream_license_link": "https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9B/blob/32773329fbe7e81a90ef971740e8ba4b0364ecf3/LICENSE.md",
+        "publisher_note": "SECourses author quantization. Public ungated file; the repository provides no separate quantization license label. Consult upstream terms."
+      },
+      "install_folder": "ComfyUI/models/diffusion_models",
+      "source_byte_identical": true,
+      "source_relationship": "Byte-identical download; use the local filename saved in the chosen workflow or change its loader selection."
+    },
+    {
+      "local_filename": "qwen3vl_8b.safetensors",
+      "bytes": 9350864125,
+      "sha256": "564acc9eb73d54efbaf21fc3be98af1e2f286c5634785854d0cc239ac5baa918",
+      "source": {
+        "repo": "Comfy-Org/Qwen-Image-2.1",
+        "revision": "9a44dbdb47cefd046be9c0a13476192f34c8db8e",
+        "remote_filename": "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+        "model_card": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+        "download_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/9a44dbdb47cefd046be9c0a13476192f34c8db8e/text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+        "pointer_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/raw/9a44dbdb47cefd046be9c0a13476192f34c8db8e/text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+        "source_sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f",
+        "source_bytes": 9350798360,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "Comfy-Org/Qwen-Image-2.1",
+            "remote_filename": "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+            "status": 200,
+            "content_length": "9350798360",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "qwen-research",
+        "repository_license_link": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE"
+      },
+      "install_folder": "ComfyUI/models/text_encoders",
+      "source_byte_identical": false,
+      "source_relationship": "Same tensor payload verified by reconstruction; local metadata header was repacked. See qwen_tensor_verification."
+    },
+    {
+      "local_filename": "qwen_3_8b.safetensors",
+      "bytes": 8664848742,
+      "sha256": "abad16806e0cbabc54e0325d6565847443fe396d5f0be38bb3cd3fe75a1201d6",
+      "source": {
+        "repo": "Comfy-Org/flux2-klein-9B",
+        "revision": "3f62d9d8ae1fec33c6e91453d5c712855b096b55",
+        "remote_filename": "split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+        "model_card": "https://huggingface.co/Comfy-Org/flux2-klein-9B",
+        "download_url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/3f62d9d8ae1fec33c6e91453d5c712855b096b55/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+        "pointer_url": "https://huggingface.co/Comfy-Org/flux2-klein-9B/raw/3f62d9d8ae1fec33c6e91453d5c712855b096b55/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+        "source_sha256": "abad16806e0cbabc54e0325d6565847443fe396d5f0be38bb3cd3fe75a1201d6",
+        "source_bytes": 8664848742,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "Comfy-Org/flux2-klein-9B",
+            "remote_filename": "split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors",
+            "status": 200,
+            "content_length": "8664848742",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "flux-non-commercial-license",
+        "repository_license_link": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/blob/main/LICENSE.md"
+      },
+      "install_folder": "ComfyUI/models/text_encoders",
+      "source_byte_identical": true,
+      "source_relationship": "Byte-identical download; use the local filename saved in the chosen workflow or change its loader selection."
+    },
+    {
+      "local_filename": "clip_l.safetensors",
+      "bytes": 246144152,
+      "sha256": "660c6f5b1abae9dc498ac2d21e1347d2abdb0cf6c0c0c8576cd796491d9a6cdd",
+      "source": {
+        "repo": "comfyanonymous/flux_text_encoders",
+        "revision": "6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5",
+        "remote_filename": "clip_l.safetensors",
+        "model_card": "https://huggingface.co/comfyanonymous/flux_text_encoders",
+        "download_url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5/clip_l.safetensors",
+        "pointer_url": "https://huggingface.co/comfyanonymous/flux_text_encoders/raw/6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5/clip_l.safetensors",
+        "source_sha256": "660c6f5b1abae9dc498ac2d21e1347d2abdb0cf6c0c0c8576cd796491d9a6cdd",
+        "source_bytes": 246144152,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "comfyanonymous/flux_text_encoders",
+            "remote_filename": "clip_l.safetensors",
+            "status": 200,
+            "content_length": "246144152",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "apache-2.0",
+        "repository_license_link": null
+      },
+      "install_folder": "ComfyUI/models/text_encoders",
+      "source_byte_identical": true,
+      "source_relationship": "Byte-identical download; use the local filename saved in the chosen workflow or change its loader selection."
+    },
+    {
+      "local_filename": "t5xxl_enconly.safetensors",
+      "bytes": 4893934904,
+      "sha256": "7d330da4816157540d6bb7838bf63a0f02f573fc48ca4d8de34bb0cbfd514f09",
+      "source": {
+        "repo": "comfyanonymous/flux_text_encoders",
+        "revision": "6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5",
+        "remote_filename": "t5xxl_fp8_e4m3fn.safetensors",
+        "model_card": "https://huggingface.co/comfyanonymous/flux_text_encoders",
+        "download_url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5/t5xxl_fp8_e4m3fn.safetensors",
+        "pointer_url": "https://huggingface.co/comfyanonymous/flux_text_encoders/raw/6af2a98e3f615bdfa612fbd85da93d1ed5f69ef5/t5xxl_fp8_e4m3fn.safetensors",
+        "source_sha256": "7d330da4816157540d6bb7838bf63a0f02f573fc48ca4d8de34bb0cbfd514f09",
+        "source_bytes": 4893934904,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "comfyanonymous/flux_text_encoders",
+            "remote_filename": "t5xxl_fp8_e4m3fn.safetensors",
+            "status": 200,
+            "content_length": "4893934904",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "apache-2.0",
+        "repository_license_link": null
+      },
+      "install_folder": "ComfyUI/models/text_encoders",
+      "source_byte_identical": true,
+      "source_relationship": "Byte-identical download; use the local filename saved in the chosen workflow or change its loader selection."
+    },
+    {
+      "local_filename": "qwen_image_2.1_vae_bf16.safetensors",
+      "bytes": 675575419,
+      "sha256": "392d5b22904e852455b5d9746bee925229a8165caa30d3f1ac88e0f6f7459a87",
+      "source": {
+        "repo": "Comfy-Org/Qwen-Image-2.1",
+        "revision": "9a44dbdb47cefd046be9c0a13476192f34c8db8e",
+        "remote_filename": "vae/qwen_image_2.1_vae_bf16.safetensors",
+        "model_card": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+        "download_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/9a44dbdb47cefd046be9c0a13476192f34c8db8e/vae/qwen_image_2.1_vae_bf16.safetensors",
+        "pointer_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/raw/9a44dbdb47cefd046be9c0a13476192f34c8db8e/vae/qwen_image_2.1_vae_bf16.safetensors",
+        "source_sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9",
+        "source_bytes": 675509688,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "Comfy-Org/Qwen-Image-2.1",
+            "remote_filename": "vae/qwen_image_2.1_vae_bf16.safetensors",
+            "status": 200,
+            "content_length": "675509688",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "qwen-research",
+        "repository_license_link": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE"
+      },
+      "install_folder": "ComfyUI/models/vae",
+      "source_byte_identical": false,
+      "source_relationship": "Same tensor payload verified by reconstruction; local metadata header was repacked. See qwen_tensor_verification."
+    },
+    {
+      "local_filename": "flux2-vae.safetensors",
+      "bytes": 336213556,
+      "sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5",
+      "source": {
+        "repo": "Comfy-Org/flux2-dev",
+        "revision": "ed33133cd56476eac818c0943b6f9419b3e4a3a1",
+        "remote_filename": "split_files/vae/flux2-vae.safetensors",
+        "model_card": "https://huggingface.co/Comfy-Org/flux2-dev",
+        "download_url": "https://huggingface.co/Comfy-Org/flux2-dev/resolve/ed33133cd56476eac818c0943b6f9419b3e4a3a1/split_files/vae/flux2-vae.safetensors",
+        "pointer_url": "https://huggingface.co/Comfy-Org/flux2-dev/raw/ed33133cd56476eac818c0943b6f9419b3e4a3a1/split_files/vae/flux2-vae.safetensors",
+        "source_sha256": "d64f3a68e1cc4f9f4e29b6e0da38a0204fe9a49f2d4053f0ec1fa1ca02f9c4b5",
+        "source_bytes": 336213556,
+        "access": {
+          "gated": false,
+          "private": false,
+          "anonymous_head": {
+            "repo": "Comfy-Org/flux2-dev",
+            "remote_filename": "split_files/vae/flux2-vae.safetensors",
+            "status": 200,
+            "content_length": "336213556",
+            "authenticated": false,
+            "method": "HEAD; no weights downloaded"
+          }
+        },
+        "repository_license_label": "flux-1-dev-non-commercial-license",
+        "repository_license_link": "https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev/blob/main/LICENSE.md"
+      },
+      "install_folder": "ComfyUI/models/vae",
+      "source_byte_identical": true,
+      "source_relationship": "Byte-identical download; use the local filename saved in the chosen workflow or change its loader selection."
+    },
+    {
+      "local_filename": "fasciumklein9b_lastMERGE_fp8.safetensors",
+      "bytes": 9112692432,
+      "sha256": "e4ad926b9ce1ca92749d091f14ecf1a23bb48f4837aa14ace3b16b60ec23bf8a",
+      "source": {
+        "site": "Civitai",
+        "model_id": 2387901,
+        "version_id": 2955596,
+        "version_name": "LAST_MERGE",
+        "file_id": 2835049,
+        "civitai_file_name": "fasciumklein9b_lastMERGE_2835049.safetensors",
+        "variant": "fp8 (8-bit, smaller file; not the primary fp16 file 2835106)",
+        "page": "https://civitai.com/models/2387901/fasciumklein9b?modelVersionId=2955596",
+        "download_url": "https://civitai.com/api/download/models/2955596?fileId=2835049",
+        "access": "Civitai requires a signed-in account to download; the recorded download used the browser session.",
+        "base_model": "Flux.2 Klein 9B",
+        "type": "Checkpoint merge; files typed UNet",
+        "install_folder": "ComfyUI/models/diffusion_models",
+        "author_recipe": "CFG 2.0, 15 steps, Euler Ancestral, 1536x1024 (model description, Recommended Settings; step-distilled).",
+        "license": "FLUX.1 [dev] Non-Commercial License (linked on the model page); the base model license applies to the merge."
+      },
+      "relationship": "The recorded on-camera download; SHA256 matches the saved Civitai record."
+    },
+    {
+      "local_filename": "Aquarelle_IV-8.safetensors",
+      "bytes": 19289400,
+      "sha256": "af3102a51b4854a8ef576a0adbe68e4f0b21ee9d8560aca902ad68d35bc4e042",
+      "source": {
+        "site": "Civitai",
+        "model_id": 749060,
+        "version_id": 1782702,
+        "version_name": "4",
+        "file_id": 1683372,
+        "page": "https://civitai.com/models/749060/watercolor-painting?modelVersionId=1782702",
+        "download_url": "https://civitai.com/api/download/models/1782702?fileId=1683372",
+        "base_model": "Flux.1 D",
+        "type": "LoRA",
+        "install_folder": "ComfyUI/models/loras",
+        "trigger": "AquarelleIV",
+        "author_settings": "Weighting around 0.65; 25 steps; dpmpp_2m or heunpp2 with sgm_uniform; guidance 3.5 (version notes). The author examples use the Fluxmania merge; the lecture uses the original FLUX.1 dev.",
+        "tensors": "912 tensors, all lora_unet_*: the adapter patches only the diffusion model (no text-encoder weights), so the model-only Load LoRA node is used and only model strength changes between 0.4, 0.65 and 0.8."
+      },
+      "relationship": "The recorded on-camera download; SHA256 matches the saved Civitai record."
+    },
+    {
+      "local_filename": "ae.safetensors",
+      "bytes": 335304388,
+      "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+      "source": {
+        "note": "FLUX.1 VAE, the Lecture 1 prerequisite; the file the watercolor graph resolved (shared Lecture 1 models folder)."
+      },
+      "relationship": "Resolved VAE of the FLUX.1 dev watercolor recipe."
+    }
+  ],
+  "encoder_aliases": {
+    "qwen3vl_8b_int8_convrot.safetensors": "qwen3vl_8b.safetensors",
+    "qwen_3_8b_fp8mixed.safetensors": "qwen_3_8b.safetensors"
+  },
+  "qwen_tensor_verification": [
+    {
+      "local_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "source_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/raw/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+      "source_sha256": "cb74113cb03faecd79611b01fd7fd642f0aa60d6f0b95086abee214d75eaa57d",
+      "source_bytes": 7256783064,
+      "byte_identical": false,
+      "local_sha256": "0cd29629f2d83e239e6f86b895f5deaf7de7995ed513af6fb84c980669baa4b7",
+      "local_bytes": 7256848843,
+      "remote_header_bytes": 74448,
+      "local_header_bytes": 140227,
+      "tensor_layout_identical": true,
+      "reconstructed_official_sha256": "cb74113cb03faecd79611b01fd7fd642f0aa60d6f0b95086abee214d75eaa57d",
+      "tensor_payload_verified": true,
+      "method": "SHA256 of exact official header plus complete local tensor payload equals published official file SHA256. No weight substitution."
+    },
+    {
+      "local_name": "qwen3vl_8b.safetensors",
+      "source_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/raw/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+      "source_sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f",
+      "source_bytes": 9350798360,
+      "byte_identical": false,
+      "local_sha256": "564acc9eb73d54efbaf21fc3be98af1e2f286c5634785854d0cc239ac5baa918",
+      "local_bytes": 9350864125,
+      "remote_header_bytes": 140992,
+      "local_header_bytes": 206757,
+      "tensor_layout_identical": true,
+      "reconstructed_official_sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f",
+      "tensor_payload_verified": true,
+      "method": "SHA256 of exact official header plus complete local tensor payload equals published official file SHA256. No weight substitution."
+    },
+    {
+      "local_name": "qwen_image_2.1_vae_bf16.safetensors",
+      "source_url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/raw/main/vae/qwen_image_2.1_vae_bf16.safetensors",
+      "source_sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9",
+      "source_bytes": 675509688,
+      "byte_identical": false,
+      "local_sha256": "392d5b22904e852455b5d9746bee925229a8165caa30d3f1ac88e0f6f7459a87",
+      "local_bytes": 675575419,
+      "remote_header_bytes": 28872,
+      "local_header_bytes": 94603,
+      "tensor_layout_identical": true,
+      "reconstructed_official_sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9",
+      "tensor_payload_verified": true,
+      "method": "SHA256 of exact official header plus complete local tensor payload equals published official file SHA256. No weight substitution."
+    }
+  ],
+  "verified_utc": "2026-09-24T10:55:52.838402+00:00",
+  "download_note": "Use resolve URLs for model bytes. Raw URLs identify Git LFS pointer text only. Public access does not replace the linked source license terms."
+}

@@ -1,0 +1,211 @@
+{
+ "1": {
+  "inputs": {
+   "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  },
+  "class_type": "UNETLoader",
+  "_meta": {
+   "title": "Load Diffusion Model"
+  }
+ },
+ "2": {
+  "inputs": {
+   "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+   "type": "qwen_image",
+   "device": "default"
+  },
+  "class_type": "CLIPLoader",
+  "_meta": {
+   "title": "Load CLIP"
+  }
+ },
+ "3": {
+  "inputs": {
+   "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+  },
+  "class_type": "VAELoader",
+  "_meta": {
+   "title": "Load VAE"
+  }
+ },
+ "4": {
+  "inputs": {
+   "prompt": "Make him turn his head to look toward the window on the left.",
+   "negative_prompt": "",
+   "resolution": 1024,
+   "clip": [
+    "2",
+    0
+   ],
+   "images.image_1": [
+    "11",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  },
+  "class_type": "TextEncodeQwenImage21",
+  "_meta": {
+   "title": "Text Encode Qwen Image 2.1"
+  }
+ },
+ "6": {
+  "inputs": {
+   "seed": 314159,
+   "steps": 25,
+   "cfg": 1.0,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "denoise": 1.0,
+   "model": [
+    "1",
+    0
+   ],
+   "positive": [
+    "4",
+    0
+   ],
+   "negative": [
+    "4",
+    1
+   ],
+   "latent_image": [
+    "4",
+    2
+   ]
+  },
+  "class_type": "KSampler",
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "7": {
+  "inputs": {
+   "samples": [
+    "6",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ },
+ "10": {
+  "inputs": {
+   "filename_prefix": "Lecture04/drift",
+   "images": [
+    "7",
+    0
+   ]
+  },
+  "class_type": "SaveImage",
+  "_meta": {
+   "title": "Save Image"
+  }
+ },
+ "11": {
+  "inputs": {
+   "image": "Lecture04/drift_00004_.png [output]"
+  },
+  "class_type": "LoadImage",
+  "_meta": {
+   "title": "Load Image"
+  }
+ },
+ "25": {
+  "inputs": {
+   "blend_factor": 1,
+   "blend_mode": "difference",
+   "image1": [
+    "31",
+    0
+   ],
+   "image2": [
+    "11",
+    0
+   ]
+  },
+  "class_type": "ImageBlend",
+  "_meta": {
+   "title": "Blend Images"
+  }
+ },
+ "26": {
+  "inputs": {
+   "channel": "green",
+   "image": [
+    "25",
+    0
+   ]
+  },
+  "class_type": "ImageToMask",
+  "_meta": {
+   "title": "Convert Image to Mask"
+  }
+ },
+ "27": {
+  "inputs": {
+   "value": 0.04,
+   "mask": [
+    "26",
+    0
+   ]
+  },
+  "class_type": "ThresholdMask",
+  "_meta": {
+   "title": "Threshold Mask"
+  }
+ },
+ "28": {
+  "inputs": {
+   "mask": [
+    "27",
+    0
+   ]
+  },
+  "class_type": "MaskToImage",
+  "_meta": {
+   "title": "Convert Mask to Image"
+  }
+ },
+ "30": {
+  "inputs": {
+   "pixels": [
+    "11",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  },
+  "class_type": "VAEEncode",
+  "_meta": {
+   "title": "VAE Encode"
+  }
+ },
+ "31": {
+  "inputs": {
+   "samples": [
+    "30",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ }
+}

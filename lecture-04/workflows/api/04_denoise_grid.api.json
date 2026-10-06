@@ -1,0 +1,265 @@
+{
+ "1": {
+  "inputs": {
+   "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  },
+  "class_type": "UNETLoader",
+  "_meta": {
+   "title": "Load Diffusion Model"
+  }
+ },
+ "2": {
+  "inputs": {
+   "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+   "type": "qwen_image",
+   "device": "default"
+  },
+  "class_type": "CLIPLoader",
+  "_meta": {
+   "title": "Load CLIP"
+  }
+ },
+ "3": {
+  "inputs": {
+   "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+  },
+  "class_type": "VAELoader",
+  "_meta": {
+   "title": "Load VAE"
+  }
+ },
+ "4": {
+  "inputs": {
+   "prompt": "A realistic candid photograph of a man in his thirties sitting at a wooden table in a cozy cafe. He has short dark curly hair, a neatly trimmed dark beard, brown eyes and round tortoiseshell glasses. He wears a dark green knitted wool sweater over a white collared shirt and holds a white ceramic coffee cup with both hands. Behind him is a red brick wall with wooden shelves holding books, glass jars and small potted plants. Soft warm window light comes from the left.",
+   "negative_prompt": "",
+   "resolution": 1024,
+   "clip": [
+    "2",
+    0
+   ]
+  },
+  "class_type": "TextEncodeQwenImage21",
+  "_meta": {
+   "title": "Text Encode Qwen Image 2.1"
+  }
+ },
+ "6": {
+  "inputs": {
+   "seed": 314159,
+   "steps": 25,
+   "cfg": 1.0,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "denoise": 0.2,
+   "model": [
+    "1",
+    0
+   ],
+   "positive": [
+    "4",
+    0
+   ],
+   "negative": [
+    "4",
+    1
+   ],
+   "latent_image": [
+    "12",
+    0
+   ]
+  },
+  "class_type": "KSampler",
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "7": {
+  "inputs": {
+   "samples": [
+    "20",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ },
+ "10": {
+  "inputs": {
+   "filename_prefix": "Lecture04/denoise_grid",
+   "images": [
+    "21",
+    0
+   ]
+  },
+  "class_type": "SaveImage",
+  "_meta": {
+   "title": "Save Image"
+  }
+ },
+ "11": {
+  "inputs": {
+   "image": "portrait_cafe.png"
+  },
+  "class_type": "LoadImage",
+  "_meta": {
+   "title": "Load Image"
+  }
+ },
+ "12": {
+  "inputs": {
+   "pixels": [
+    "11",
+    0
+   ],
+   "vae": [
+    "3",
+    0
+   ]
+  },
+  "class_type": "VAEEncode",
+  "_meta": {
+   "title": "VAE Encode"
+  }
+ },
+ "17": {
+  "inputs": {
+   "seed": 314159,
+   "steps": 25,
+   "cfg": 1.0,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "denoise": 0.4,
+   "model": [
+    "1",
+    0
+   ],
+   "positive": [
+    "4",
+    0
+   ],
+   "negative": [
+    "4",
+    1
+   ],
+   "latent_image": [
+    "12",
+    0
+   ]
+  },
+  "class_type": "KSampler",
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "18": {
+  "inputs": {
+   "seed": 314159,
+   "steps": 25,
+   "cfg": 1.0,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "denoise": 0.6,
+   "model": [
+    "1",
+    0
+   ],
+   "positive": [
+    "4",
+    0
+   ],
+   "negative": [
+    "4",
+    1
+   ],
+   "latent_image": [
+    "12",
+    0
+   ]
+  },
+  "class_type": "KSampler",
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "19": {
+  "inputs": {
+   "seed": 314159,
+   "steps": 25,
+   "cfg": 1.0,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "denoise": 0.8,
+   "model": [
+    "1",
+    0
+   ],
+   "positive": [
+    "4",
+    0
+   ],
+   "negative": [
+    "4",
+    1
+   ],
+   "latent_image": [
+    "12",
+    0
+   ]
+  },
+  "class_type": "KSampler",
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "20": {
+  "inputs": {
+   "latents.latent0": [
+    "12",
+    0
+   ],
+   "latents.latent1": [
+    "6",
+    0
+   ],
+   "latents.latent2": [
+    "17",
+    0
+   ],
+   "latents.latent3": [
+    "18",
+    0
+   ],
+   "latents.latent4": [
+    "19",
+    0
+   ]
+  },
+  "class_type": "BatchLatentsNode",
+  "_meta": {
+   "title": "Batch Latents"
+  }
+ },
+ "21": {
+  "inputs": {
+   "columns": 5,
+   "cell_width": 1024,
+   "cell_height": 1024,
+   "padding": 4,
+   "images": [
+    "7",
+    0
+   ]
+  },
+  "class_type": "ImageGrid",
+  "_meta": {
+   "title": "Make Image Grid"
+  }
+ }
+}

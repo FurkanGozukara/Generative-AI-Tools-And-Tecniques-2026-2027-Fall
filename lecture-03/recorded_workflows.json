@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "file": "workflows/Qwen_exact_text.json",
+      "sha256": "4039545ade1ddab6b71ccd4075703a7ebf4e8e7f36a729a24779cb5511111bf6"
+    },
+    {
+      "file": "workflows/Klein_guidance_comparison.json",
+      "sha256": "41e67f91454b20156d97202273d421aa0a60833c78e9cad1f4dc15df61a8ad93"
+    },
+    {
+      "file": "workflows/FLUX_product_BF16.json",
+      "sha256": "265b432f5291ba20ffdb612d309d24baf7817aff6301fc9ebb436b65f8b67d84"
+    },
+    {
+      "file": "workflows/Lecture03_FLUX_product_workflow.json",
+      "sha256": "7ac45dc778922d8625263bb5f0bcf989ed7629ca4a0d1ecf846bd1419313be8c"
+    },
+    {
+      "file": "workflows/Fascium_fine_tune_teapot.json",
+      "sha256": "d1d2b708d587e3a2548c806fceff1c22c5f184c660263386e39708ff686482a6"
+    },
+    {
+      "file": "workflows/Watercolor_bypass.json",
+      "sha256": "05da720d652d325d1fcd423827c072509f278724da7335f2aefc6e49b3d770a5"
+    },
+    {
+      "file": "workflows/Watercolor_LoRA_040.json",
+      "sha256": "6e22adf0b47b15da4bd3a5ed03d7df7da1bcdd35938a19db3854a92dc8ffd97f"
+    },
+    {
+      "file": "workflows/Watercolor_LoRA_065.json",
+      "sha256": "8d22d6cdf6058dc88dff48375bf1e85baf2cf887eca3b2f9aa42289feb48b1a9"
+    },
+    {
+      "file": "workflows/Watercolor_LoRA_080.json",
+      "sha256": "e6f60a0afc637ee012526329966feb9d8153bf53f49f201225cb9b41a9c43677"
+    }
+  ],
+  "note": "Exact JSON files opened or exported in the retained recording. Reference and recorded files retain local diffusion-model names; reference Qwen/Klein encoder names are normalized. Consult model_sources.md for exact mappings and the explicit local FLUX FP8 provenance limitation. The Civitai insertion workflows are the exact UI workflows ComfyUI embedded in the recorded outputs (Fascium_fine_tune_teapot, Watercolor_bypass/040/065/080)."
+}
