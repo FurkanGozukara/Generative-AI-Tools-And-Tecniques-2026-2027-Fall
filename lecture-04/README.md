@@ -1,5 +1,9 @@
 # Lecture 4 — Image Editing and Instruction Models
 
+**Generative AI Full Course - Lecture 4: Consistent Characters & Storyboards with AI Image Editing**
+
+▶️ **[Watch Lecture 4](https://youtu.be/abWxRSQFQz8)** · 📺 **[Full course playlist](https://www.youtube.com/playlist?list=PLUMEJUep1hiI)**
+
 Companion files for the completed 30:48 lecture: image-to-image denoise, instruction edits, preservation, difference maps, text replacement, two references, character consistency, sequential edits and relighting.
 
 Download the [companion ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_04_Companion_Files.zip), extract it and open `lecture-04/README.md`. Use the ComfyUI installation from [Lectures 1–3](../lecture-03/README.md).
@@ -10,7 +14,7 @@ Download the [companion ZIP](https://github.com/FurkanGozukara/Generative-AI-Too
 2. Upload the eight pictures from [inputs/](inputs/) through Load Image, or copy them to your installation's `ComfyUI/input` folder.
 3. Open [Qwen_text_to_image_start.json](workflows/Qwen_text_to_image_start.json) for the starting graph. It retains Lecture 3's travel-poster prompt and output prefix; chapter 3 converts it to image-to-image.
 4. Open [Qwen_image_edit_lecture04.json](workflows/Qwen_image_edit_lecture04.json) for the final graph exported in chapter 15. It opens on portrait relighting with `portrait_cafe.png` selected. It also contains the difference-map branch and a second Load Image node. Change the image selections and instruction for another chapter.
-5. Follow the [chapter list](chapters.txt) and copy the matching text from [instructions.md](instructions.md). The [video description](youtube_description.txt) also lists the chapters and resources.
+5. Follow the [chapter list](chapters.txt) and copy the matching text from [instructions.md](instructions.md). The [video description](youtube_description.txt) also lists the chapters and resources, and the [published video title](youtube_title.txt) is saved as plain text.
 
 The package contains two visual-editor workflows, 24 API graphs with the intermediate recipes, eight input images and seven result images used as inputs or continuation assets. Model weights are separate publisher downloads.
 

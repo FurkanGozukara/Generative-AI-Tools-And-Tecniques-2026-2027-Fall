@@ -1,0 +1,289 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen_image_layered_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_layered_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "An antique brass camping lantern in front of a dark teal canvas travel case on a walnut wood tabletop, warm beige plaster wall behind, soft light from upper left.",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "image": "lantern_product_source.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "7": {
+    "inputs": {
+      "upscale_method": "area",
+      "width": 624,
+      "height": 416,
+      "crop": "disabled",
+      "image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "8": {
+    "inputs": {
+      "pixels": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "conditioning": [
+        "4",
+        0
+      ],
+      "latent": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "10": {
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ],
+      "latent": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ReferenceLatent",
+    "_meta": {
+      "title": "Set Reference Latent"
+    }
+  },
+  "11": {
+    "inputs": {
+      "shift": 1.0,
+      "sampling": "flow",
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "12": {
+    "inputs": {
+      "width": 624,
+      "height": 416,
+      "layers": 3,
+      "batch_size": 1
+    },
+    "class_type": "EmptyQwenImageLayeredLatentImage",
+    "_meta": {
+      "title": "Empty Qwen Image Layered Latent"
+    }
+  },
+  "13": {
+    "inputs": {
+      "seed": 50331728,
+      "steps": 50,
+      "cfg": 4.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "11",
+        0
+      ],
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "14": {
+    "inputs": {
+      "dim": "t",
+      "slice_size": 1,
+      "samples": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "LatentCutToBatch",
+    "_meta": {
+      "title": "LatentCutToBatch"
+    }
+  },
+  "15": {
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "16": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Layer_Ordered_RGBA",
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "SAVE ORDERED RGBA LAYERS"
+    }
+  },
+  "19": {
+    "inputs": {
+      "dim": "t",
+      "index": 0,
+      "amount": 1,
+      "samples": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LatentCut",
+    "_meta": {
+      "title": "Keep full reconstruction: index 0"
+    }
+  },
+  "20": {
+    "inputs": {
+      "samples": [
+        "19",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "21": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Layer_Full_Reconstruction",
+      "images": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "SAVE FULL RECONSTRUCTION"
+    }
+  },
+  "22": {
+    "inputs": {
+      "dim": "t",
+      "index": 1,
+      "amount": 16384,
+      "samples": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "LatentCut",
+    "_meta": {
+      "title": "Keep ordered layers: index 1 onward"
+    }
+  }
+}

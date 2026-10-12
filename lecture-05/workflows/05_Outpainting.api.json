@@ -1,0 +1,194 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "prompt": "Extend the existing stone workshop and quiet street naturally into the blank area on the left. Continue the pavement, stone wall, roofline, foliage and soft overcast lighting. Keep the existing man and red car in their current positions. No text or logos.",
+      "negative_prompt": "",
+      "resolution": 0,
+      "clip": [
+        "2",
+        0
+      ],
+      "images.image_1": [
+        "12",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImage21",
+    "_meta": {
+      "title": "Text Encode Qwen Image 2.1"
+    }
+  },
+  "5": {
+    "inputs": {
+      "seed": 50314159,
+      "steps": 25,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "6": {
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Outpaint_Decoded",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "GENERATED — inspect boundary continuity"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": "workshop_selection_source.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "ORIGINAL SCENE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 1664,
+      "height": 928,
+      "crop": "center",
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "left": 320,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "feathering": 32,
+      "image": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ImagePadForOutpaint",
+    "_meta": {
+      "title": "Pad Image for Outpainting"
+    }
+  },
+  "16": {
+    "inputs": {
+      "mask": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "17": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Outpaint_Padded",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "PADDED CONTEXT"
+    }
+  },
+  "18": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Outpaint_Pad_Mask",
+      "images": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "PAD MASK"
+    }
+  }
+}

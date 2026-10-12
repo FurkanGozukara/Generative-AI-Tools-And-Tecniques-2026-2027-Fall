@@ -1,0 +1,78 @@
+{
+  "1": {
+    "inputs": {
+      "image": "outpaint_padded_saved.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "PADDED ORIGINAL — destination"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "outpaint_generated_saved.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "GENERATED EXTENSION — source"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": "outpaint_mask_saved.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "PAD MASK — selection"
+    }
+  },
+  "4": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "5": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "1",
+        0
+      ],
+      "source": [
+        "2",
+        0
+      ],
+      "mask": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Image Composite Masked"
+    }
+  },
+  "6": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Outpaint_Final_Composite",
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "SAVED FINAL COMPOSITE"
+    }
+  }
+}

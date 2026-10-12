@@ -1,0 +1,78 @@
+{
+  "1": {
+    "inputs": {
+      "image": "watercolor_week03_original.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "ORIGINAL / DESTINATION"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "signature_hard_denoise1.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "CHOSEN HARD REPAIR — denoise 1.0"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": "signature_graded_mask.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "ACCEPTED GRADED MASK"
+    }
+  },
+  "4": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "5": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "1",
+        0
+      ],
+      "source": [
+        "2",
+        0
+      ],
+      "mask": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Image Composite Masked"
+    }
+  },
+  "6": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Signature_Final_Composite",
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "FINAL SAVED COMPOSITE"
+    }
+  }
+}

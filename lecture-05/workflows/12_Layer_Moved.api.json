@@ -1,0 +1,172 @@
+{
+  "1": {
+    "inputs": {
+      "image": "layer_order_00001.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "01 BACKGROUND"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "layer_order_00002.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "02 TRAVEL CASE"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": "layer_order_00003.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "03 FOREGROUND LANTERN"
+    }
+  },
+  "4": {
+    "inputs": {
+      "mask": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "Invert Mask"
+    }
+  },
+  "5": {
+    "inputs": {
+      "mask": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "Invert Mask"
+    }
+  },
+  "6": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "1",
+        0
+      ],
+      "source": [
+        "2",
+        0
+      ],
+      "mask": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Image Composite Masked"
+    }
+  },
+  "7": {
+    "inputs": {
+      "x": 72,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "6",
+        0
+      ],
+      "source": [
+        "3",
+        0
+      ],
+      "mask": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Image Composite Masked"
+    }
+  },
+  "8": {
+    "inputs": {
+      "image": "lantern_product_source.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "9": {
+    "inputs": {
+      "upscale_method": "area",
+      "width": 624,
+      "height": 416,
+      "crop": "disabled",
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Layer_Lantern_Moved",
+      "images": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "ORDERED RECOMPOSITE"
+    }
+  },
+  "11": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Layer_Source_624",
+      "images": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Layer_Background_And_Case",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "BACKGROUND + CASE"
+    }
+  },
+  "13": {
+    "inputs": {
+      "image": "layer_full_reconstruction.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "MODEL RECONSTRUCTION"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Lecture 1 — Windows Setup, ComfyUI and Your First AI Image
 
-**Generative AI Tutorial - Full Course, Lecture 1: Python, CUDA, C++ & ComfyUI on Windows**
+**Generative AI Full Course - Lecture 1: From a Fresh Windows PC to Your First AI Image**
 
 ▶️ **[Watch Lecture 1](https://youtu.be/KgUhPAOjagI)** · 📺 **[Full course playlist](https://www.youtube.com/playlist?list=PLUMEJUep1hiI)**
 

@@ -1,12 +1,10 @@
-Build your Windows generative AI environment from scratch and generate your first local image with ComfyUI and Z-Image Turbo. This is Lecture 1 of the 14-lecture Generative AI full course. No previous Python or command-line experience is needed.
+Build your Windows generative AI environment from scratch and generate your first local image with ComfyUI and Z-Image Turbo. This is Lecture 1 of the 14-lecture Generative AI Tools and Techniques full course. I explain the setup and how to save a reusable workflow. No previous Python or command-line experience is needed.
 
 🔗 Links:
 
 Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
 
 📦 Full course & Lecture 1 companion files: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
-
-▶️ Full course playlist: [ https://www.youtube.com/playlist?list=PLUMEJUep1hiI ]
 
 ComfyUI auto installer (optional): [ https://www.patreon.com/posts/105023709 ]
 

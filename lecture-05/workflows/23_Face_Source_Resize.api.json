@@ -1,0 +1,38 @@
+{
+  "1": {
+    "inputs": {
+      "image": "portrait_toan_van_original.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "upscale_method": "area",
+      "largest_size": 4096,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToMaxDimension",
+    "_meta": {
+      "title": "Scale Image to Max Dimension"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filename_prefix": "Lecture05/Face_Source_4096",
+      "images": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}

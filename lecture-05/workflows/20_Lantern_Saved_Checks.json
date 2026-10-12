@@ -1,0 +1,527 @@
+{
+  "id": "6f547635-6d08-53ec-a86a-63aa0c4871d1",
+  "revision": 0,
+  "last_node_id": 10,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        180
+      ],
+      "size": [
+        570,
+        1020
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            6
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "lantern_colour_saved.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "lantern_colour_saved.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 2,
+      "type": "InvertMask",
+      "pos": [
+        680,
+        180
+      ],
+      "size": [
+        440,
+        230
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            4,
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      }
+    },
+    {
+      "id": 3,
+      "type": "EmptyImage",
+      "pos": [
+        680,
+        450
+      ],
+      "size": [
+        440,
+        230
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1,
+        15921906
+      ],
+      "widgets_values_named": {
+        "width": 1024,
+        "height": 1024,
+        "batch_size": 1,
+        "color": 15921906
+      }
+    },
+    {
+      "id": 4,
+      "type": "EmptyImage",
+      "pos": [
+        680,
+        800
+      ],
+      "size": [
+        440,
+        230
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1,
+        2105376
+      ],
+      "widgets_values_named": {
+        "width": 1024,
+        "height": 1024,
+        "batch_size": 1,
+        "color": 2105376
+      }
+    },
+    {
+      "id": 5,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        1220,
+        450
+      ],
+      "size": [
+        440,
+        230
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ],
+      "widgets_values_named": {
+        "x": 0,
+        "y": 0,
+        "resize_source": false
+      }
+    },
+    {
+      "id": 6,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        1220,
+        800
+      ],
+      "size": [
+        440,
+        230
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 6
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ],
+      "widgets_values_named": {
+        "x": 0,
+        "y": 0,
+        "resize_source": false
+      }
+    },
+    {
+      "id": 7,
+      "type": "SaveImage",
+      "pos": [
+        1770,
+        180
+      ],
+      "size": [
+        600,
+        770
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Lantern_Colour_Light"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Lantern_Colour_Light"
+      }
+    },
+    {
+      "id": 8,
+      "type": "SaveImage",
+      "pos": [
+        2440,
+        180
+      ],
+      "size": [
+        600,
+        770
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Lantern_Colour_Dark"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Lantern_Colour_Dark"
+      }
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        1770,
+        1050
+      ],
+      "size": [
+        600,
+        550
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "lantern_colour_scene_saved.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "lantern_colour_scene_saved.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        2440,
+        1050
+      ],
+      "size": [
+        600,
+        550
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "lantern_workshop_background.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "lantern_workshop_background.png",
+        "upload": "image"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      1,
+      2,
+      0,
+      "MASK"
+    ],
+    [
+      2,
+      3,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      1,
+      0,
+      5,
+      1,
+      "IMAGE"
+    ],
+    [
+      4,
+      2,
+      0,
+      5,
+      2,
+      "MASK"
+    ],
+    [
+      5,
+      4,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      1,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      7,
+      2,
+      0,
+      6,
+      2,
+      "MASK"
+    ],
+    [
+      8,
+      5,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      6,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.47,
+      "offset": [
+        140,
+        150
+      ]
+    },
+    "frontendVersion": "1.55.14",
+    "lecture_provenance": {
+      "recorded_run": "lantern_colour_light_dark",
+      "status": "successful_recorded_prompt",
+      "input_filename_adaptations": {
+        "lantern_colour_saved.png": "lantern_colour_saved.png",
+        "lantern_colour_scene_saved.png": "lantern_colour_scene_saved.png",
+        "lantern_workshop_background.png": "lantern_workshop_background.png"
+      }
+    }
+  },
+  "version": 0.4
+}

@@ -1,0 +1,682 @@
+{
+  "id": "29adceb0-12ab-58b2-b45b-92bb8aa920a2",
+  "revision": 0,
+  "last_node_id": 13,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        180
+      ],
+      "size": [
+        620,
+        560
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "01 BACKGROUND",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "layer_order_00001.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "layer_order_00001.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        780
+      ],
+      "size": [
+        620,
+        560
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "02 TRAVEL CASE",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "layer_order_00002.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "layer_order_00002.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        1380
+      ],
+      "size": [
+        620,
+        560
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "03 FOREGROUND LANTERN",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "layer_order_00003.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "layer_order_00003.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 4,
+      "type": "InvertMask",
+      "pos": [
+        730,
+        780
+      ],
+      "size": [
+        430,
+        230
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      }
+    },
+    {
+      "id": 5,
+      "type": "InvertMask",
+      "pos": [
+        730,
+        1380
+      ],
+      "size": [
+        430,
+        230
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      }
+    },
+    {
+      "id": 6,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        1280,
+        520
+      ],
+      "size": [
+        430,
+        230
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6,
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ],
+      "widgets_values_named": {
+        "x": 0,
+        "y": 0,
+        "resize_source": false
+      }
+    },
+    {
+      "id": 7,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        1830,
+        520
+      ],
+      "size": [
+        430,
+        230
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ],
+      "widgets_values_named": {
+        "x": 0,
+        "y": 0,
+        "resize_source": false
+      }
+    },
+    {
+      "id": 8,
+      "type": "LoadImage",
+      "pos": [
+        730,
+        180
+      ],
+      "size": [
+        430,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "lantern_product_source.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "lantern_product_source.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 9,
+      "type": "ImageScale",
+      "pos": [
+        1280,
+        180
+      ],
+      "size": [
+        430,
+        230
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "area",
+        624,
+        416,
+        "disabled"
+      ],
+      "widgets_values_named": {
+        "upscale_method": "area",
+        "width": 624,
+        "height": 416,
+        "crop": "disabled"
+      }
+    },
+    {
+      "id": 10,
+      "type": "SaveImage",
+      "pos": [
+        2390,
+        180
+      ],
+      "size": [
+        700,
+        650
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "ORDERED RECOMPOSITE",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Layer_Recomposed"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Layer_Recomposed"
+      }
+    },
+    {
+      "id": 11,
+      "type": "SaveImage",
+      "pos": [
+        2390,
+        930
+      ],
+      "size": [
+        700,
+        650
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Layer_Source_624"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Layer_Source_624"
+      }
+    },
+    {
+      "id": 12,
+      "type": "SaveImage",
+      "pos": [
+        1280,
+        980
+      ],
+      "size": [
+        480,
+        520
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "BACKGROUND + CASE",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Layer_Background_And_Case"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Layer_Background_And_Case"
+      }
+    },
+    {
+      "id": 13,
+      "type": "LoadImage",
+      "pos": [
+        1830,
+        1080
+      ],
+      "size": [
+        480,
+        520
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "MODEL RECONSTRUCTION",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "layer_full_reconstruction.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "layer_full_reconstruction.png",
+        "upload": "image"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      1,
+      4,
+      0,
+      "MASK"
+    ],
+    [
+      2,
+      3,
+      1,
+      5,
+      0,
+      "MASK"
+    ],
+    [
+      3,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      7,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      9,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      6,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      1,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      2,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      9,
+      4,
+      0,
+      6,
+      2,
+      "MASK"
+    ],
+    [
+      10,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      3,
+      0,
+      7,
+      1,
+      "IMAGE"
+    ],
+    [
+      12,
+      5,
+      0,
+      7,
+      2,
+      "MASK"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.43,
+      "offset": [
+        140,
+        150
+      ]
+    },
+    "frontendVersion": "1.55.14",
+    "lecture_provenance": {
+      "recorded_run": "layered_recomposition",
+      "status": "successful_recorded_prompt",
+      "input_filename_adaptations": {
+        "layer_order_00001.png": "layer_order_00001.png",
+        "layer_order_00002.png": "layer_order_00002.png",
+        "layer_order_00003.png": "layer_order_00003.png",
+        "lantern_product_source.png": "lantern_product_source.png",
+        "layer_full_reconstruction.png": "layer_full_reconstruction.png"
+      }
+    }
+  },
+  "version": 0.4
+}

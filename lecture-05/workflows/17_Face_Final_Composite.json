@@ -1,0 +1,791 @@
+{
+  "id": "173b95ac-bd22-593d-af85-8ee2909f8196",
+  "revision": 0,
+  "last_node_id": 15,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        590,
+        470
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6,
+            14
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "face_compare_original.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "face_compare_original.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        520
+      ],
+      "size": [
+        590,
+        470
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7,
+            15
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "face_compare_crop.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "face_compare_crop.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        1040
+      ],
+      "size": [
+        590,
+        470
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "face_mask_4096.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "face_mask_4096.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 4,
+      "type": "ImageToMask",
+      "pos": [
+        660,
+        1100
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "red"
+      ],
+      "widgets_values_named": {
+        "channel": "red"
+      }
+    },
+    {
+      "id": 5,
+      "type": "GrowMask",
+      "pos": [
+        660,
+        1330
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            3,
+            4,
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GrowMask"
+      },
+      "widgets_values": [
+        16,
+        false
+      ],
+      "widgets_values_named": {
+        "expand": 16,
+        "tapered_corners": false
+      }
+    },
+    {
+      "id": 6,
+      "type": "InvertMask",
+      "pos": [
+        1120,
+        1330
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      }
+    },
+    {
+      "id": 7,
+      "type": "MaskToImage",
+      "pos": [
+        1120,
+        1070
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 8,
+      "type": "SaveImage",
+      "pos": [
+        1610,
+        980
+      ],
+      "size": [
+        500,
+        730
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "ACCEPTED SUPPORT: selection + 16 px",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Face_Accepted_Support"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Face_Accepted_Support"
+      }
+    },
+    {
+      "id": 9,
+      "type": "ImageBlend",
+      "pos": [
+        660,
+        0
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 6
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9,
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBlend"
+      },
+      "widgets_values": [
+        1,
+        "difference"
+      ],
+      "widgets_values_named": {
+        "blend_factor": 1,
+        "blend_mode": "difference"
+      }
+    },
+    {
+      "id": 10,
+      "type": "EmptyImage",
+      "pos": [
+        660,
+        330
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyImage"
+      },
+      "widgets_values": [
+        2732,
+        4096,
+        1,
+        0
+      ],
+      "widgets_values_named": {
+        "width": 2732,
+        "height": 4096,
+        "batch_size": 1,
+        "color": 0
+      }
+    },
+    {
+      "id": 11,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        1120,
+        330
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ],
+      "widgets_values_named": {
+        "x": 0,
+        "y": 0,
+        "resize_source": false
+      }
+    },
+    {
+      "id": 12,
+      "type": "SaveImage",
+      "pos": [
+        1610,
+        0
+      ],
+      "size": [
+        500,
+        730
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "OUTSIDE DIFFERENCE",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Face_Outside_Difference"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Face_Outside_Difference"
+      }
+    },
+    {
+      "id": 13,
+      "type": "SaveImage",
+      "pos": [
+        2170,
+        0
+      ],
+      "size": [
+        500,
+        730
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "FULL DIFFERENCE",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Face_Full_Difference"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Face_Full_Difference"
+      }
+    },
+    {
+      "id": 14,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        1120,
+        660
+      ],
+      "size": [
+        410,
+        200
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ],
+      "widgets_values_named": {
+        "x": 0,
+        "y": 0,
+        "resize_source": false
+      }
+    },
+    {
+      "id": 15,
+      "type": "SaveImage",
+      "pos": [
+        2170,
+        980
+      ],
+      "size": [
+        500,
+        730
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "FINAL SAVED COMPOSITE",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Face_Final_Composite"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Face_Final_Composite"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      4,
+      0,
+      5,
+      0,
+      "MASK"
+    ],
+    [
+      3,
+      5,
+      0,
+      6,
+      0,
+      "MASK"
+    ],
+    [
+      4,
+      5,
+      0,
+      7,
+      0,
+      "MASK"
+    ],
+    [
+      5,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      1,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      2,
+      0,
+      9,
+      1,
+      "IMAGE"
+    ],
+    [
+      8,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      9,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      10,
+      6,
+      0,
+      11,
+      2,
+      "MASK"
+    ],
+    [
+      11,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      9,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      14,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      1,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      2,
+      0,
+      14,
+      1,
+      "IMAGE"
+    ],
+    [
+      16,
+      5,
+      0,
+      14,
+      2,
+      "MASK"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.49,
+      "offset": [
+        100,
+        100
+      ]
+    },
+    "frontendVersion": "1.55.14",
+    "lecture_provenance": {
+      "recorded_run": "face_final_composite_verified",
+      "status": "successful_recorded_prompt",
+      "input_filename_adaptations": {
+        "face_compare_original.png": "face_compare_original.png",
+        "face_compare_crop.png": "face_compare_crop.png",
+        "face_mask_4096.png": "face_mask_4096.png"
+      }
+    }
+  },
+  "version": 0.4
+}

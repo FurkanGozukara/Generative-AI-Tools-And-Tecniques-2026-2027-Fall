@@ -1,8 +1,12 @@
 # Lecture 3 — text-to-image experiments
 
+**Generative AI Full Course - Lecture 3: Control AI Images with Prompts, CFG & Model Recipes**
+
+▶️ **[Watch Lecture 3](https://youtu.be/A6s6Qhl9YBk)** · 📺 **[Full course playlist](https://www.youtube.com/playlist?list=PLUMEJUep1hiI)**
+
 Companion files for the completed 40:42 lecture, including the Civitai fine-tune and watercolor LoRA chapters 14–20.
 
-Download the [companion ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_03_Companion_Files.zip), extract it and open `lecture-03/README.md`. Follow [Lecture 1](../lecture-01/README.md) and [Lecture 2](../lecture-02/README.md) for setup and graph fundamentals. The [chapter list](chapters.txt), [commands and shortcuts](commands_and_shortcuts.md) and [video description](youtube_description.txt) follow the completed lecture.
+Download the [companion ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_03_Companion_Files.zip), extract it and open `lecture-03/README.md`. Follow [Lecture 1](../lecture-01/README.md) and [Lecture 2](../lecture-02/README.md) for setup and graph fundamentals. The [chapter list](chapters.txt), [commands and shortcuts](commands_and_shortcuts.md) and [video description](youtube_description.txt) follow the completed lecture. The [published video title](youtube_title.txt) is also included as plain text.
 
 Open an ordinary JSON file from [workflows/](workflows/) using ComfyUI **File → Open**. The 22 editable graphs preserve the demonstrated prompts, seeds, settings and connections. Install the matching model components before running, then refresh model definitions. Keep each seed fixed for comparisons and generate your own outputs.
 

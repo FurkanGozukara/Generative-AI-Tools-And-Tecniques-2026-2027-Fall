@@ -1,0 +1,160 @@
+{
+  "id": "d4cfa66c-422b-5c89-8bc6-ef5d01bceff6",
+  "revision": 0,
+  "last_node_id": 3,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        180
+      ],
+      "size": [
+        700,
+        1080
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "image": "clipspace-painted-masked-1791397091804.png [input]"
+      },
+      "widgets_values": [
+        "face_painted_rgba_4096.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "face_painted_rgba_4096.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 2,
+      "type": "MaskToImage",
+      "pos": [
+        850,
+        180
+      ],
+      "size": [
+        400,
+        100
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 3,
+      "type": "SaveImage",
+      "pos": [
+        1470,
+        180
+      ],
+      "size": [
+        700,
+        1080
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture05/Face_Selection_Mask"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture05/Face_Selection_Mask"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      1,
+      2,
+      0,
+      "MASK"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.55,
+      "offset": [
+        180,
+        160
+      ]
+    },
+    "frontendVersion": "1.55.14",
+    "lecture_provenance": {
+      "recorded_run": "face_selection_mask",
+      "status": "successful_recorded_prompt",
+      "input_filename_adaptations": {
+        "clipspace-painted-masked-1791397091804.png [input]": "face_painted_rgba_4096.png"
+      }
+    }
+  },
+  "version": 0.4
+}

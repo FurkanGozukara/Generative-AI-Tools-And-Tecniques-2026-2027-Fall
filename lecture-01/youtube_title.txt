@@ -1,1 +1,1 @@
-Generative AI Tutorial - Full Course, Lecture 1: Python, CUDA, C++ & ComfyUI on Windows
+Generative AI Full Course - Lecture 1: From a Fresh Windows PC to Your First AI Image

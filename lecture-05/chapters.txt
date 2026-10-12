@@ -1,0 +1,83 @@
+0:00 Choose where an image changes
+0:59 Update the existing ComfyUI installation
+1:30 Activate the correct environment
+1:43 Update source, packages and restart
+2:26 Save the installation state before a custom node
+3:30 Install Crop-and-Stitch from the Registry
+4:48 Separate instruction editing from exact preservation
+5:14 Sampling masks versus pixel composites
+5:55 Paint and inspect a hard selection
+6:22 Brush hardness, size and erasing
+7:05 Mask pen versus image paint pen
+7:19 Save and preview the actual mask
+7:44 Compare brush hardness and selection edges
+8:16 Alt-drag brush shortcut
+8:42 Select a garment by colour
+8:55 Tolerance and unwanted selections
+9:51 Paint Bucket versus Color Select
+10:59 Inspect the actual Week 3 signature
+11:26 Cover every signature stroke
+12:15 Build the masked latent path
+12:29 VAE Encode and Set Latent Noise Mask
+13:13 Fill prompt, fixed seed and denoise
+14:24 Run and inspect the hard-mask repair
+14:47 Inspect the repair boundary
+15:27 Grow and blur the selection with Differential Diffusion
+15:55 Blur radius, sigma and mask conversion
+16:28 Connect Differential Diffusion
+17:38 Compare the patch and restore outside pixels
+18:06 Aligned before-and-after slider
+18:19 Remaining fragments at denoise 0.75
+18:33 Repeat both repairs at denoise 1.0
+19:16 Composite onto the original pixels
+19:39 Check outside the complete soft edge
+20:22 Read a grey mask as a start-time map
+20:56 Grey values and denoising strength
+21:26 Run and inspect the ramp result
+22:09 Extend a canvas with a matched editing graph
+22:22 Padding, feathering and alignment
+23:04 Run and inspect the extended scene
+23:48 Preserve the original region
+24:17 Load the segmentation model and its encoder
+24:43 SAM3.1 download and loader wiring
+25:37 Short phrases and token context
+25:50 Select objects and inspect individual masks
+26:19 Select the jacket by text
+26:53 Individual windows and count limits
+28:00 Detection threshold and refinement
+28:30 Prepare a large photograph for a local edit
+28:59 Glasses instruction and face mask
+29:43 Inspect the whole-frame editing route
+30:26 Run and inspect the whole-frame edit
+31:10 Build and run the crop-and-stitch path
+32:00 Crop context and output size
+32:49 Mask expansion versus blend width
+33:03 Connect and run Inpaint Stitch
+34:03 Compare detail, timing and outside pixels
+34:31 Actual timings and run conditions
+34:45 Restore pixels outside the face edit
+36:01 Generate a lantern with real transparency
+36:57 Inspect light and dark backgrounds
+37:31 Reload the saved transparent PNG
+37:45 Trace opacity and inverted masks through the nodes
+38:03 Invert the loader mask for compositing
+38:48 Join Image with Alpha conventions
+39:29 Place the transparent asset on a background
+39:57 Offsets, source size and mask alignment
+40:45 Generated alpha versus segmentation
+41:55 Match colour and inspect alpha interpretation
+42:20 Color Transfer method and strength
+43:02 Straight versus premultiplied alpha
+44:07 Prepare the separate layer-decomposition workflow
+44:36 Layered model files and folders
+45:43 Working resolution and layer count
+46:37 Inspect and recombine the ordered RGBA layers
+47:07 Composite the layers in order
+47:50 Reconstruction versus original source
+48:29 Move the lantern and inspect the revealed background
+48:47 Inspect the newly revealed background
+49:16 Check old shadows and reflections
+49:45 Save and reopen the editable result
+50:21 Choose the selection method and save a reusable result
+51:06 Lesson files and model instructions
+51:24 Practice and Lecture 6 preview

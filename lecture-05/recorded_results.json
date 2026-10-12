@@ -1,0 +1,592 @@
+{
+  "recorded_local_workflows": [
+    {
+      "workflow": "01_Mask_Editor",
+      "recorded_run": "mask_hard",
+      "input_filename_adaptations": {
+        "clipspace-painted-masked-1791390260691.png [input]": "selection_hard_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/ComfyUI_temp_rfecc_00001_.png",
+          "sha256": "eeea08fb3f345bce01f0bfca3b1fe590c7265ecea80479d58ee695670718f679"
+        }
+      ]
+    },
+    {
+      "workflow": "02_Signature_Hard",
+      "recorded_run": "signature_hard_generation",
+      "input_filename_adaptations": {
+        "watercolor_week03_original.png": "watercolor_week03_original.png",
+        "signature_mask.png": "signature_mask.png"
+      },
+      "results": [
+        {
+          "file": "results/Signature_Hard_Mask_00001_.png",
+          "sha256": "95df25146df32d781b5761c6282df41f55f806061a0bbf6fb8c158b2ae967846"
+        },
+        {
+          "file": "results/Signature_Hard_00001_.png",
+          "sha256": "ac7ce69b52a329f8ce4e7144b73559d7a0cb3c7c657c36464d6f59769ca7125f"
+        }
+      ]
+    },
+    {
+      "workflow": "03_Signature_Graded",
+      "recorded_run": "signature_graded_generation",
+      "input_filename_adaptations": {
+        "watercolor_week03_original.png": "watercolor_week03_original.png",
+        "signature_mask.png": "signature_mask.png"
+      },
+      "results": [
+        {
+          "file": "results/Signature_Graded_Mask_00001_.png",
+          "sha256": "a932c84ab10903af439d3e8659790c952487c5f3fca07e5c036b50391ff5d4f2"
+        },
+        {
+          "file": "results/Signature_Graded_00001_.png",
+          "sha256": "77d7d234ba4b98d7d0d9ea533d7b02ea6c55689af6db1963228f966a828f6bef"
+        }
+      ]
+    },
+    {
+      "workflow": "04_Ramp",
+      "recorded_run": "ramp_differential_generation",
+      "input_filename_adaptations": {
+        "watercolor_week03_original.png": "watercolor_week03_original.png"
+      },
+      "results": [
+        {
+          "file": "results/Ramp_Mask_00001_.png",
+          "sha256": "6f39f836cd08e40d8d79a5d259995305b6764067a23e5315cec5834db6a1a054"
+        },
+        {
+          "file": "results/Ramp_Result_00001_.png",
+          "sha256": "716599e40ee94a225e501994f13ccd9c13f59000a30a6132316a3157d25277c6"
+        }
+      ]
+    },
+    {
+      "workflow": "05_Outpainting",
+      "recorded_run": "outpaint_qwen_generation",
+      "input_filename_adaptations": {
+        "workshop_selection_source.png": "workshop_selection_source.png"
+      },
+      "results": [
+        {
+          "file": "results/Outpaint_Padded_00001_.png",
+          "sha256": "c77fc738a0877da2124038c1d2794c01b809e6b4914cfd28e6aad59d17885259"
+        },
+        {
+          "file": "results/Outpaint_Pad_Mask_00001_.png",
+          "sha256": "539056a84f7382dbd35465ddb08d35c9896eefd88664894942f48b30dad45237"
+        },
+        {
+          "file": "results/Outpaint_Decoded_00001_.png",
+          "sha256": "cf255d068de671551fcef409e06e1e73a60a5ba2bac0e8f5c784df83c75ca900"
+        }
+      ]
+    },
+    {
+      "workflow": "06_SAM_Car",
+      "recorded_run": "sam_car_detection",
+      "input_filename_adaptations": {
+        "workshop_selection_source.png": "workshop_selection_source.png"
+      },
+      "results": [
+        {
+          "file": "results/SAM_Car_Mask_00001_.png",
+          "sha256": "80aa81e508a3040a3c0077d13adeb2d89558fc9e8bf1df071b8920a1ea3633bb"
+        }
+      ]
+    },
+    {
+      "workflow": "06_SAM_Jacket",
+      "recorded_run": "sam_jacket_detection",
+      "input_filename_adaptations": {
+        "workshop_selection_source.png": "workshop_selection_source.png"
+      },
+      "results": [
+        {
+          "file": "results/SAM_Jacket_Mask_00001_.png",
+          "sha256": "e28215ad2e17ebcdd6da49c28adb78eb969bf5318389cbe36c711d93231609c7"
+        }
+      ]
+    },
+    {
+      "workflow": "06_SAM_Windows",
+      "recorded_run": "sam_window_instances",
+      "input_filename_adaptations": {
+        "workshop_selection_source.png": "workshop_selection_source.png"
+      },
+      "results": [
+        {
+          "file": "results/SAM_Window_Mask_00001_.png",
+          "sha256": "f526c55304251d3f96ab4071c35e84313875852a2638490c5bafbc0c88676663"
+        },
+        {
+          "file": "results/SAM_Window_Mask_00002_.png",
+          "sha256": "66a5c0849c1db7c5a0d377d7e0fec1a9b2cab6cbe8ce0e63d167a364b8b8c377"
+        },
+        {
+          "file": "results/SAM_Window_Mask_00003_.png",
+          "sha256": "ee70099867e3279fb946270f411a1637f24f02be8fe0686419fe52efb719488a"
+        },
+        {
+          "file": "results/SAM_Window_Mask_00004_.png",
+          "sha256": "e5dcaf344a449d3d94df211121f37e9529aad4de091b6203dcade36d0988615e"
+        },
+        {
+          "file": "results/SAM_Window_Mask_00005_.png",
+          "sha256": "2c1a08476ac3516de92b4459c2e79d92189ab1c951b68064da536c46a4709b37"
+        }
+      ]
+    },
+    {
+      "workflow": "07_Face_WholeFrame",
+      "recorded_run": "face_whole_frame",
+      "input_filename_adaptations": {
+        "face_source_4096_saved.png": "face_compare_original.png"
+      },
+      "results": [
+        {
+          "file": "results/Face_WholeFrame_Native_00001_.png",
+          "sha256": "df247a82ad1409a71c175058fe03d669d7dc0a1b9a3fd6e91bf9472426a2e416"
+        },
+        {
+          "file": "results/Face_WholeFrame_4096_00001_.png",
+          "sha256": "6dd2ee69d0d436bd605a33c8c0152d19d117aa7e485e2c40a8990a3a0b36f223"
+        }
+      ]
+    },
+    {
+      "workflow": "08_Face_Crop_Stitch",
+      "recorded_run": "face_crop_edit",
+      "input_filename_adaptations": {
+        "face_source_4096_saved.png": "face_compare_original.png",
+        "face_mask_4096.png": "face_mask_4096.png"
+      },
+      "results": [
+        {
+          "file": "results/Face_Crop_Context_00003_.png",
+          "sha256": "eadf0c0bcbc8a9c40fd0dd48526312774fd71d8989ccf0d4d4a989335bd8a1f8"
+        },
+        {
+          "file": "results/Face_Cropped_Mask_00003_.png",
+          "sha256": "00df81313be23516d459f98b120eed412a6fffd80f59d45587418077fb76a848"
+        },
+        {
+          "file": "results/Face_Crop_Decoded_00001_.png",
+          "sha256": "a85c979a132e2d4e4fbe5351192c9edd6d6ce7edfbf4bc93f3eea116a80e4070"
+        },
+        {
+          "file": "results/Face_Stitched_00001_.png",
+          "sha256": "4116671a95b457d93008be1e3f91b69bb57779d1b38c75ffdbac764c6d7085ac"
+        }
+      ]
+    },
+    {
+      "workflow": "09_Native_Alpha",
+      "recorded_run": "lantern_native_rgba",
+      "input_filename_adaptations": {},
+      "results": [
+        {
+          "file": "results/Lantern_RGBA_00001_.png",
+          "sha256": "5cd15161897b8511a309f93bb702a6e1ffa841268fdb1944293bac39596e3824"
+        },
+        {
+          "file": "results/Lantern_InverseAlpha_00001_.png",
+          "sha256": "3db3eb4ea5bac775cfd87984bffd5690bf2dd0c1db53479df91619b5007abfd9"
+        },
+        {
+          "file": "results/Lantern_Over_Light_00001_.png",
+          "sha256": "afa6c437deb046284bf352f0d0764f386a41889231c97c1e5b6c24972b8ee48d"
+        },
+        {
+          "file": "results/Lantern_Over_Dark_00001_.png",
+          "sha256": "b9bada4c81e8dc03d83f94d841cd97d889b345f09d4f0c8ec6ea1ef32644a4c9"
+        }
+      ]
+    },
+    {
+      "workflow": "10_Layer_Decomposition",
+      "recorded_run": "layered_product_decomposition",
+      "input_filename_adaptations": {
+        "lantern_product_source.png": "lantern_product_source.png"
+      },
+      "results": [
+        {
+          "file": "results/Layer_Full_Reconstruction_00001_.png",
+          "sha256": "0a467c28a997e54074a8d213119b45349a37305d94876cfa043fbc5bc06ab8ea"
+        },
+        {
+          "file": "results/Layer_Ordered_RGBA_00001_.png",
+          "sha256": "68cbfe1567bcfbcfbf374da15f3ee24ad45618fdb2dde8140eb4eed0e4f4ca8d"
+        },
+        {
+          "file": "results/Layer_Ordered_RGBA_00002_.png",
+          "sha256": "54a83ef93be585d054ff8dbe76f8463687513ecbae8464a240acb6a5053f64bc"
+        },
+        {
+          "file": "results/Layer_Ordered_RGBA_00003_.png",
+          "sha256": "fe187f7aae00efd24252b16d3ba1f6c844d7a0719792e2aac477a26c679d160f"
+        }
+      ]
+    },
+    {
+      "workflow": "11_Layer_Recomposition",
+      "recorded_run": "layered_recomposition",
+      "input_filename_adaptations": {
+        "layer_order_00001.png": "layer_order_00001.png",
+        "layer_order_00002.png": "layer_order_00002.png",
+        "layer_order_00003.png": "layer_order_00003.png",
+        "lantern_product_source.png": "lantern_product_source.png",
+        "layer_full_reconstruction.png": "layer_full_reconstruction.png"
+      },
+      "results": [
+        {
+          "file": "results/Layer_Source_624_00001_.png",
+          "sha256": "b1b14caa98c391df637614127518a739dbb73d00305e0bd8353c6603fab5e0e5"
+        },
+        {
+          "file": "results/Layer_Background_And_Case_00001_.png",
+          "sha256": "4e965d8cce091489e9658c12eb2abea5afbd6c3ba332c8c5d1134bddf63146e3"
+        },
+        {
+          "file": "results/Layer_Recomposed_00001_.png",
+          "sha256": "c495e2542af41deafbac7c7910847061bbdcb6a95db89accd0f6995418658c1f"
+        }
+      ]
+    },
+    {
+      "workflow": "12_Layer_Moved",
+      "recorded_run": "layered_lantern_moved",
+      "input_filename_adaptations": {
+        "layer_order_00001.png": "layer_order_00001.png",
+        "layer_order_00002.png": "layer_order_00002.png",
+        "layer_order_00003.png": "layer_order_00003.png",
+        "lantern_product_source.png": "lantern_product_source.png",
+        "layer_full_reconstruction.png": "layer_full_reconstruction.png"
+      },
+      "results": [
+        {
+          "file": "results/Layer_Source_624_00001_.png",
+          "sha256": "b1b14caa98c391df637614127518a739dbb73d00305e0bd8353c6603fab5e0e5"
+        },
+        {
+          "file": "results/Layer_Background_And_Case_00001_.png",
+          "sha256": "4e965d8cce091489e9658c12eb2abea5afbd6c3ba332c8c5d1134bddf63146e3"
+        },
+        {
+          "file": "results/Layer_Lantern_Moved_00001_.png",
+          "sha256": "90f2ecc808bdebfa520f76d8fcd9fe71ebcdcd26ff0030f13b3b1218662207b3"
+        }
+      ]
+    },
+    {
+      "workflow": "13_Signature_Hard_Denoise1",
+      "recorded_run": "signature_hard_denoise1",
+      "input_filename_adaptations": {
+        "watercolor_week03_original.png": "watercolor_week03_original.png",
+        "signature_mask.png": "signature_mask.png"
+      },
+      "results": [
+        {
+          "file": "results/Signature_Hard_Mask_00002_.png",
+          "sha256": "063d180b28fd84e0fc30f33d58832b6a6b9f2d0a6e890211f34765bd8bff948d"
+        },
+        {
+          "file": "results/Signature_Hard_Denoise1_00001_.png",
+          "sha256": "d982c9ae074c06ebb1a8899190468c7e7f23eb62d0391a11bdb06598a49f417c"
+        }
+      ]
+    },
+    {
+      "workflow": "14_Signature_Graded_Denoise1",
+      "recorded_run": "signature_graded_denoise1",
+      "input_filename_adaptations": {
+        "watercolor_week03_original.png": "watercolor_week03_original.png",
+        "signature_mask.png": "signature_mask.png"
+      },
+      "results": [
+        {
+          "file": "results/Signature_Graded_Mask_00002_.png",
+          "sha256": "649c99223294fa31bc016ad1b55c41ec691f2a57aaea627faa9ae85391e4dbb1"
+        },
+        {
+          "file": "results/Signature_Graded_Denoise1_00001_.png",
+          "sha256": "51583d2415f9f270161b947d9483ad56de2ea6c9145d457ddc2089d8bb147e94"
+        }
+      ]
+    },
+    {
+      "workflow": "15_Signature_Final_Composite",
+      "recorded_run": "signature_final_composite",
+      "input_filename_adaptations": {
+        "watercolor_week03_original.png": "watercolor_week03_original.png",
+        "signature_hard_denoise1.png": "signature_hard_denoise1.png",
+        "signature_graded_mask.png": "signature_graded_mask.png"
+      },
+      "results": [
+        {
+          "file": "results/Signature_Final_Composite_00001_.png",
+          "sha256": "89dd116e8eab7c8bd75ebea21bf5838f6dd969008f66f201daa9be7b3f8cc575"
+        }
+      ]
+    },
+    {
+      "workflow": "16_Outpaint_Final_Composite",
+      "recorded_run": "outpaint_final_composite",
+      "input_filename_adaptations": {
+        "outpaint_padded_saved.png": "outpaint_padded_saved.png",
+        "outpaint_generated_saved.png": "outpaint_generated_saved.png",
+        "outpaint_mask_saved.png": "outpaint_mask_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/Outpaint_Final_Composite_00001_.png",
+          "sha256": "3b096cd0f3575a8da979280ce4611b48279b4656d73dcb32d997abfaf17a81a4"
+        }
+      ]
+    },
+    {
+      "workflow": "17_Face_Final_Composite",
+      "recorded_run": "face_final_composite_verified",
+      "input_filename_adaptations": {
+        "face_compare_original.png": "face_compare_original.png",
+        "face_compare_crop.png": "face_compare_crop.png",
+        "face_mask_4096.png": "face_mask_4096.png"
+      },
+      "results": [
+        {
+          "file": "results/Face_Outside_Difference_00002_.png",
+          "sha256": "cf4d0f6a5bd55a3135507cd2c06ad44f0ba006274798137de0e0c4e8824e85f8"
+        },
+        {
+          "file": "results/Face_Accepted_Support_00002_.png",
+          "sha256": "21797c38d3c37f839bf198ae4c2eab86c6962cf22f2d7a12266007ab2a2ee06d"
+        },
+        {
+          "file": "results/Face_Full_Difference_00002_.png",
+          "sha256": "6b20a2ec9473d6ef20d3d7fafab39df6c297edcf8fa7dc3f96fe2a01a80d9505"
+        },
+        {
+          "file": "results/Face_Final_Composite_00002_.png",
+          "sha256": "faeb217b0378f520dbdba1eaf19dcad69987dc34ead2b2320aa29bd5dd73b1f9"
+        }
+      ]
+    },
+    {
+      "workflow": "18_Lantern_Placement",
+      "recorded_run": "lantern_composite_sized",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png",
+        "lantern_workshop_background.png": "lantern_workshop_background.png"
+      },
+      "results": [
+        {
+          "file": "results/Lantern_Placement_Opacity_00002_.png",
+          "sha256": "aa67650ecb64f79bb66e8fa97d451a0859b0d4aaad7c93c46c8deaf8e24ef068"
+        },
+        {
+          "file": "results/Lantern_Placed_00003_.png",
+          "sha256": "d420af052ba2cfda37454e1e56fd0ff427bcc11ad183c3fce44313d86cc2cb29"
+        }
+      ]
+    },
+    {
+      "workflow": "19_Lantern_Colour",
+      "recorded_run": "lantern_colour_final",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png",
+        "lantern_workshop_background.png": "lantern_workshop_background.png"
+      },
+      "results": [
+        {
+          "file": "results/Lantern_Placement_Opacity_00003_.png",
+          "sha256": "28bb2d5c25413951a53b42183f5a922a79688e517609f1500372ed21809e1ce0"
+        },
+        {
+          "file": "results/Lantern_Colour_RGBA_00003_.png",
+          "sha256": "c0de50e5568d9000bf87ea2ac7a9411813134187e7f887bba6654de268e6adad"
+        },
+        {
+          "file": "results/Lantern_Colour_Placed_00003_.png",
+          "sha256": "ae67f2d2f033ae4f1c2d4dafe24fb01585cc1028a53b5f3ba18a1186d8bd79f1"
+        }
+      ]
+    },
+    {
+      "workflow": "20_Lantern_Saved_Checks",
+      "recorded_run": "lantern_colour_light_dark",
+      "input_filename_adaptations": {
+        "lantern_colour_saved.png": "lantern_colour_saved.png",
+        "lantern_colour_scene_saved.png": "lantern_colour_scene_saved.png",
+        "lantern_workshop_background.png": "lantern_workshop_background.png"
+      },
+      "results": [
+        {
+          "file": "results/Lantern_Colour_Light_00001_.png",
+          "sha256": "234f6c72ca91021a5882863c77c9af406e81c978a300e70e975981dfc191f9dc"
+        },
+        {
+          "file": "results/Lantern_Colour_Dark_00001_.png",
+          "sha256": "be1cb9b41679229f6baae512727cacb5a3847ef290414743cdba3d36fc2fbe5f"
+        }
+      ]
+    },
+    {
+      "workflow": "21_Hard_Soft_Mask_Preview",
+      "recorded_run": "mask_soft",
+      "input_filename_adaptations": {
+        "clipspace-painted-masked-1791391255383.png [input]": "selection_hard_soft_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/ComfyUI_temp_rfecc_00002_.png",
+          "sha256": "8b2fc75f33ff9fa5a277e9e54d72e9d9da460010baa169d7577af00e14b837a2"
+        }
+      ]
+    },
+    {
+      "workflow": "22_Colour_Selection",
+      "recorded_run": "mask_colour_final",
+      "input_filename_adaptations": {
+        "clipspace-painted-masked-1791392054082.png [input]": "clipspace-painted-masked-1791392054082.png"
+      },
+      "results": [
+        {
+          "file": "results/ComfyUI_temp_rfecc_00004_.png",
+          "sha256": "68528c48ddb5817d85bd6d930be0fb174b6e27977d0cfbe30979d042c4a539d7"
+        }
+      ]
+    },
+    {
+      "workflow": "23_Face_Source_Resize",
+      "recorded_run": "face_source_resize",
+      "input_filename_adaptations": {
+        "portrait_toan_van_original.jpg": "portrait_toan_van_original.jpg"
+      },
+      "results": [
+        {
+          "file": "results/Face_Source_4096_00001_.png",
+          "sha256": "89810153ac1299694825ce3fada068337160ac222cd4df1879b644af62d49084"
+        }
+      ]
+    },
+    {
+      "workflow": "24_Face_Selection_Mask",
+      "recorded_run": "face_selection_mask",
+      "input_filename_adaptations": {
+        "clipspace-painted-masked-1791397091804.png [input]": "face_painted_rgba_4096.png"
+      },
+      "results": [
+        {
+          "file": "results/Face_Selection_Mask_00001_.png",
+          "sha256": "f0a3a1a40e223ee3217ae2270bd9b5bb980faf73126aa9c0ad9a523fd304153c"
+        }
+      ]
+    },
+    {
+      "workflow": "25_Loader_Mask",
+      "recorded_run": "alpha_loader_mask",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/Reloaded_Transparency_00001_.png",
+          "sha256": "dee166c4676110f509bf2866e7de5c20fd20de4bac31b2f36c2a6547ab1cf54f"
+        }
+      ]
+    },
+    {
+      "workflow": "26_Inverted_Loader_Mask",
+      "recorded_run": "alpha_inverted_mask",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/Reloaded_Transparency_00001_.png",
+          "sha256": "dee166c4676110f509bf2866e7de5c20fd20de4bac31b2f36c2a6547ab1cf54f"
+        },
+        {
+          "file": "results/Reloaded_Opacity_00001_.png",
+          "sha256": "124eff84530487b22f903ca3ada342b0d16e3b145c3f5087be796a22b612e559"
+        }
+      ]
+    },
+    {
+      "workflow": "27_Join_Alpha",
+      "recorded_run": "alpha_join_reload",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/Reloaded_RGBA_Joined_00001_.png",
+          "sha256": "23e1d4c069b86ac3da8d40ead9969d9baa4da5fdffb142ba31c3ec8618be04be"
+        }
+      ]
+    },
+    {
+      "workflow": "28_Direct_Alpha",
+      "recorded_run": "alpha_direct_extract",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/Reloaded_RGBA_Joined_00001_.png",
+          "sha256": "23e1d4c069b86ac3da8d40ead9969d9baa4da5fdffb142ba31c3ec8618be04be"
+        },
+        {
+          "file": "results/Joined_Direct_Alpha_00001_.png",
+          "sha256": "beb050a0f58e2dcd13281626d2923eff1bdc1f2c4edfe9600c1fac8cc12b5e10"
+        }
+      ]
+    },
+    {
+      "workflow": "29_Alpha_Light_Dark",
+      "recorded_run": "alpha_loader_composite",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png"
+      },
+      "results": [
+        {
+          "file": "results/Reloaded_Opacity_00001_.png",
+          "sha256": "124eff84530487b22f903ca3ada342b0d16e3b145c3f5087be796a22b612e559"
+        },
+        {
+          "file": "results/Reloaded_Transparency_00001_.png",
+          "sha256": "dee166c4676110f509bf2866e7de5c20fd20de4bac31b2f36c2a6547ab1cf54f"
+        },
+        {
+          "file": "results/Reloaded_Lantern_Light_00001_.png",
+          "sha256": "2410ebdeea25d6ac29e34b2f02b5e5353252096f900d89754597f7ee5fec0323"
+        }
+      ]
+    },
+    {
+      "workflow": "30_Alpha_SAM_Comparison",
+      "recorded_run": "lantern_sam_selection",
+      "input_filename_adaptations": {
+        "lantern_native_saved.png": "lantern_native_saved.png",
+        "lantern_saved_over_light.png": "lantern_saved_over_light.png"
+      },
+      "results": [
+        {
+          "file": "results/Lantern_Actual_Alpha_00001_.png",
+          "sha256": "2df4c5b5d9d53066587e78915a90e1eb61cdbfffcf070de6cc25e76ede4cf9a4"
+        },
+        {
+          "file": "results/Lantern_SAM_Selection_00001_.png",
+          "sha256": "68acbf4ba2a4d1cc91c0992d7eb7e0e2b25b31247e5427bf9f90453a8b8698bf"
+        }
+      ]
+    }
+  ],
+  "scope": "Local ComfyUI lesson on Windows.",
+  "images": "Byte-identical source and saved PNG files; no model reruns."
+}
