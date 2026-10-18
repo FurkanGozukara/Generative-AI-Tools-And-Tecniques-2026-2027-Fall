@@ -1,0 +1,80 @@
+0:00 ComfyUI in Colab and structural control
+0:58 Upload, rename and save the notebook
+1:30 Notebook saving versus temporary runtime files
+2:30 Select a GPU and connect the runtime
+3:03 Notebook forms, code and cell controls
+3:44 Install ComfyUI and inspect detected hardware
+4:19 Match diffusion model, encoder and VAE
+4:49 Download models and inspect automatic choices
+6:05 System RAM and GPU memory are separate
+6:20 Choose direct model links and destination folders
+7:02 Run an optional download and inspect its file
+7:26 Start ComfyUI and open the temporary URL
+8:05 Open the matched starter workflow and prompt
+8:32 Generate remotely and watch the live progress
+9:05 Inspect and download the completed image
+9:44 Save and export the editable workflow JSON
+10:16 Upload a reference image to the runtime
+10:59 Upload a video into the input folder
+11:17 Refresh the loader and inspect video playback
+11:39 Reopen a workflow and reconnect its inputs
+11:57 Stop the server before exporting a folder
+12:13 Choose output subfolders and include inputs
+12:46 Create and download the complete result ZIP
+13:18 Inspect ZIP outputs, graphs and the manifest
+14:20 Restart ComfyUI on the same runtime
+15:35 Understand reset, disconnect and file persistence
+16:03 Select and verify a paid A100 allocation
+16:46 Compare automatic model choices across runtimes
+17:02 Terminate the session and verify it ends
+17:40 Update the local environment and restart ComfyUI
+18:51 From references and masks to structural control
+19:24 Trace ControlNet through the conditioning path
+19:41 Distinguish model patches, LoRAs and references
+20:48 Match original Qwen with InstantX Union
+21:05 Download matched model and control weights
+21:44 Install Depth Anything 3 and refresh loaders
+22:35 Fix seed, steps and sampling conditions
+23:17 Inspect the source and align its working size
+24:05 Connect Depth Anything 3 and inference
+25:12 Render grayscale depth before connecting generation
+25:54 Inspect spatial layers and save the map
+26:40 Load the compatible Qwen model family
+26:56 Write the prompt and conditioning branches
+28:02 Connect the union loader and apply node
+29:20 Connect the matching VAE and output path
+30:20 Generate the baseline without structural control
+31:07 Restore depth control with unchanged settings
+31:33 Compare source, depth and both generated images
+32:31 Understand the VAE input and diagnose failures
+33:45 Compare control strengths 0.5, 0.8 and 1
+35:05 Inspect geometry and prompt adherence separately
+36:03 Separate control strength from start and end
+36:47 Generate end 0.3 and end 0.65
+37:51 Compare early release with full-schedule control
+38:49 Choose edges, line detail, depth or pose
+39:50 Install the auxiliary package and run AnyLine
+41:22 Set up SDPose and choose joint drawing
+43:37 Inspect all four maps at the same scale
+43:57 Generate with each structural map type
+46:12 Compare the results against their actual maps
+47:13 Enlarge Canny and adjust its thresholds
+48:24 Compare detailed and simplified edge maps
+48:59 Inspect pose joints against the source photograph
+49:57 Chain depth and pose conditioning correctly
+50:56 Test both controls at full strength
+51:40 Balance depth 0.5 with pose 0.6
+52:23 Compare results and diagnose competing constraints
+53:45 Prompt an explorer and robot in one scene
+54:40 Inspect placement, attributes and editability
+55:50 Generate separate subjects and inspect their quality
+57:16 Extract masks and place the subjects independently
+59:13 Match scale, perspective and contact points
+1:01:14 Repair the visible contact-layer rectangle
+1:01:29 Pad the soft mask with empty space
+1:02:35 Match image and mask sizes before repositioning
+1:03:56 Move the robot while keeping the explorer fixed
+1:04:41 Repair the boot contact and inspect grounding
+1:05:25 Compare single generation with editable composition
+1:06:09 Export subjects, masks and the final graph
+1:07:11 Reopen saved projects and use the learner files

@@ -1,0 +1,89 @@
+{
+  "1": {
+    "inputs": {
+      "image": "explorer_workshop.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 1280,
+      "height": 720,
+      "crop": "center",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "3": {
+    "inputs": {
+      "ckpt_name": "sdpose_wholebody_fp16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "4": {
+    "inputs": {
+      "batch_size": 16,
+      "model": [
+        "3",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "SDPoseKeypointExtractor",
+    "_meta": {
+      "title": "SDPose Keypoint Extractor"
+    }
+  },
+  "5": {
+    "inputs": {
+      "draw_body": true,
+      "draw_hands": true,
+      "draw_face": true,
+      "draw_feet": false,
+      "stick_width": 4,
+      "face_point_size": 3,
+      "score_threshold": 0.3,
+      "draw_head": true,
+      "keypoints": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "SDPoseDrawKeypoints",
+    "_meta": {
+      "title": "SDPose Draw Keypoints"
+    }
+  },
+  "6": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "structural_model": "Original Qwen-Image FP8 e4m3fn with InstantX Union; not Qwen-Image 2.1.",
+  "strength_comparison": [
+    0.5,
+    0.8,
+    1.0
+  ],
+  "schedule_comparison": {
+    "strength": 0.8,
+    "start": 0,
+    "ends": [
+      0.3,
+      0.65,
+      1.0
+    ]
+  },
+  "combined_controls": {
+    "depth_strength": 0.5,
+    "pose_strength": 0.6,
+    "start": 0,
+    "end": 1
+  },
+  "canny_thresholds": [
+    [
+      0.1,
+      0.3
+    ],
+    [
+      0.65,
+      0.9
+    ]
+  ],
+  "exact_parameters": "Read the saved recorded workflows. Prepared recipe graphs are starting templates; Recorded graphs reproduce the demonstrated selections.",
+  "colab": "The supplied Qwen-Image 2.1 notebook teaches cloud operation. Original-Qwen InstantX control graphs need their matching original models and nodes, not the default notebook weights.",
+  "fixed_structural_recipe": {
+    "seed": 314159265,
+    "steps": 30,
+    "cfg": 4,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "denoise": 1,
+    "width": 1280,
+    "height": 720,
+    "speed_lora": false
+  },
+  "seed_note": "The earlier model-selection illustration shows 6062026; the built and actually run structural comparisons use 314159265."
+}

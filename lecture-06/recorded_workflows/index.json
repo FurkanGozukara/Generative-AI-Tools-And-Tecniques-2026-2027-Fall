@@ -1,0 +1,966 @@
+{
+  "version": 1,
+  "date": "2026-10-18",
+  "workflows": [
+    {
+      "id": "anyline_map_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/anyline_map_first.json",
+      "api": "recorded_workflows/anyline_map_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/anyline_map_first/ComfyUI_temp_mnrfm_00001_.png",
+          "sha256": "988af1c35f063d8fa9dcaadc3b446cb9892c96ef2bf0824816835e38505f40be"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/anyline_map_first.json",
+          "sha256": "d45e4e9bf740cc85ad8dd6637851dc66bfc9bffa786a1b240adc8dfdb3ab86de"
+        },
+        {
+          "file": "recorded_workflows/anyline_map_first.api.json",
+          "sha256": "e4d18eb2e453b3e1ea2c9424895377b773df47e7a794b815848bd2dd18c3cf51"
+        }
+      ],
+      "intent": "AnyLine extracts denser line detail from the same source.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "canny_map_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/canny_map_first.json",
+      "api": "recorded_workflows/canny_map_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/canny_map_first/ComfyUI_temp_tyfpf_00001_.png",
+          "sha256": "4e7c1092e8e7c29f2b8b93c735a12690112de90ca46e66115785557aa7556c0a"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/canny_map_first.json",
+          "sha256": "a48b1dfd68ebe01d7ade97b6498c887617bfbc488a5a35a368284e821002d911"
+        },
+        {
+          "file": "recorded_workflows/canny_map_first.api.json",
+          "sha256": "a594191933ae31a07b8df932f7ea4c33be58b14a54074fd6916a80808d517be8"
+        }
+      ],
+      "intent": "Canny preserves image edges, including room boundaries and fine detail.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "canny_quality_initial",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/canny_quality_initial.json",
+      "api": "recorded_workflows/canny_quality_initial.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/canny_quality_initial/ComfyUI_temp_vvnhn_00001_.png",
+          "sha256": "702d731ebee87af6b9337619d95bc9c2e3513a79d6e88e5c32d7694b4e3ba48b"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/canny_quality_initial.json",
+          "sha256": "ddcffd10bdd1122da73164f5726c5701216345f514ab6b24ffecdb63692fe783"
+        },
+        {
+          "file": "recorded_workflows/canny_quality_initial.api.json",
+          "sha256": "cacf0f7cd0ec81f302ca466e830dbac798d8a5dd88598f077bf9af3b02ffe52d"
+        }
+      ],
+      "intent": "Initial threshold map provides the baseline for the demonstrated threshold adjustments.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "canny_threshold_high",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/canny_threshold_high.json",
+      "api": "recorded_workflows/canny_threshold_high.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/canny_threshold_high/ComfyUI_temp_vvnhn_00003_.png",
+          "sha256": "557c90f72de4d7c6b922ac85c12ebe11de4b2ba39986c8e94248e76c260b8fb8"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/canny_threshold_high.json",
+          "sha256": "d9edb30a33b26ddc6b9758a51a7730962c7d24573974fa60dc09e818dc4a5b3f"
+        },
+        {
+          "file": "recorded_workflows/canny_threshold_high.api.json",
+          "sha256": "26df42eb8ed309e15d9149b7a10d71d23d1b26d821351947d730322548d91687"
+        }
+      ],
+      "intent": "High 0.65/0.90 thresholds remove details and some subject contours; not a universal recommendation.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "canny_threshold_low",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/canny_threshold_low.json",
+      "api": "recorded_workflows/canny_threshold_low.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/canny_threshold_low/ComfyUI_temp_vvnhn_00002_.png",
+          "sha256": "84d030b485447d5f37808aba1e69b00f2f7ec7e28d23a741b9edbd756d6f822d"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/canny_threshold_low.json",
+          "sha256": "db13c2968e9ea67c75cfec8ff8b9652fa2b1096b41a6672c03f79f84cb491cc7"
+        },
+        {
+          "file": "recorded_workflows/canny_threshold_low.api.json",
+          "sha256": "4cc5254a4a8425a0b9e2992e1bf919e93b3d241ee01e5681100b618506d6edc9"
+        }
+      ],
+      "intent": "Low 0.10/0.30 thresholds preserve extensive source detail.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "colab_t4_workshop_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/colab_t4_workshop_first.json",
+      "api": "recorded_workflows/colab_t4_workshop_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/colab_t4_workshop_first/T2I_00001_.png",
+          "sha256": "7dc91b6a3f587c24f658653e6c3f2f01fb7195d823caefab7233365bfd301be3"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/colab_t4_workshop_first.json",
+          "sha256": "dcea691c37363b73ad075e674e7b79a55174bb568b8c3c5c33244806f03f6b4e"
+        },
+        {
+          "file": "recorded_workflows/colab_t4_workshop_first.api.json",
+          "sha256": "f641dd4a917dfc935183ad463356655427f95a3470c1aa46234d0ee56bd30f48"
+        }
+      ],
+      "intent": "Successful remote Colab T4 text-to-image output; no speed comparison.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "composition_contact",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/composition_contact.json",
+      "api": "recorded_workflows/composition_contact.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/composition_contact/Explorer_Mask_Clean_00002_.png",
+          "sha256": "a3f054a052c68d13a3a3769d5141add2b3d880e9f7685dc667b19134735c9a51"
+        },
+        {
+          "file": "recorded_results/composition_contact/Composition_00003_.png",
+          "sha256": "d5c7f0b920a4de6cf37998f679f366e641ea7c343f9d99ab6dabd3e9b0f4cdc3"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/composition_contact.json",
+          "sha256": "37fd471f35b981e8c42803353f23e8cdc9f361b762e134fe64ca9458689253d6"
+        },
+        {
+          "file": "recorded_workflows/composition_contact.api.json",
+          "sha256": "18042aca8106e5d6c47b18376b892b4ba7d858edd42f92fe76dc2e0af76b62de"
+        }
+      ],
+      "intent": "Mask cleaning improves the cutout but contact/padding artifacts are still visible and taught.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "composition_contact_final",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/composition_contact_final.json",
+      "api": "recorded_workflows/composition_contact_final.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/composition_contact_final/Explorer_Mask_Clean_00002_.png",
+          "sha256": "a3f054a052c68d13a3a3769d5141add2b3d880e9f7685dc667b19134735c9a51"
+        },
+        {
+          "file": "recorded_results/composition_contact_final/Composition_00006_.png",
+          "sha256": "795ec326e58cbc4d1ef309a7f13e6251017f81de38f044b9a6b568d67312f937"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/composition_contact_final.json",
+          "sha256": "80ba0b4d20a528668c977f7a227c56d4364d09cb38497e0b01554bca378c99b7"
+        },
+        {
+          "file": "recorded_workflows/composition_contact_final.api.json",
+          "sha256": "b98d2ace8f0411edb0381886c24c453b968f949badc0dc17a8f79bc1873ed37e"
+        }
+      ],
+      "intent": "Final independent composition with disclosed lighting/contact limitations, saved and compared with prompt-only generation.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "composition_contact_padded",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/composition_contact_padded.json",
+      "api": "recorded_workflows/composition_contact_padded.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/composition_contact_padded/Explorer_Mask_Clean_00002_.png",
+          "sha256": "a3f054a052c68d13a3a3769d5141add2b3d880e9f7685dc667b19134735c9a51"
+        },
+        {
+          "file": "recorded_results/composition_contact_padded/Composition_00004_.png",
+          "sha256": "3ad6f7c5c33858abea1c1b12d305a4ea5f04a69ae829599d60557ff0db1eccd8"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/composition_contact_padded.json",
+          "sha256": "9002b16d621ce2215a168524eb6fcee83d7694819ad86677d71b32efbe54aa0a"
+        },
+        {
+          "file": "recorded_workflows/composition_contact_padded.api.json",
+          "sha256": "9e74cb2acf5b2a525d0173e5a8631469378116122f4999933c0b10e76df6a5e4"
+        }
+      ],
+      "intent": "Padding the mask changes contact/edge behavior while keeping paired image/mask geometry.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "composition_initial",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/composition_initial.json",
+      "api": "recorded_workflows/composition_initial.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/composition_initial/Explorer_Mask_Clean_00001_.png",
+          "sha256": "dcdffd523b7b60fe2385e891167de177d3d80bb9846f6acfc082d5c0d755f5a8"
+        },
+        {
+          "file": "recorded_results/composition_initial/Composition_00001_.png",
+          "sha256": "74f52b4eb9b6e6aebb0c01635dc38b973045c8b884228d65a320c72769e9a8e3"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/composition_initial.json",
+          "sha256": "91f9f5628af80d84c6396894f3aa6954165135cefe86bacd4d47f0f9cdac653a"
+        },
+        {
+          "file": "recorded_workflows/composition_initial.api.json",
+          "sha256": "506b732f0de7c1403a2edd51dfe6bb94f5c91e63a2e0ab6cbf2458bf1994f20a"
+        }
+      ],
+      "intent": "Initial independent subject/mask placement into the workshop.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "composition_robot_moved",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/composition_robot_moved.json",
+      "api": "recorded_workflows/composition_robot_moved.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/composition_robot_moved/Explorer_Mask_Clean_00002_.png",
+          "sha256": "a3f054a052c68d13a3a3769d5141add2b3d880e9f7685dc667b19134735c9a51"
+        },
+        {
+          "file": "recorded_results/composition_robot_moved/Composition_00005_.png",
+          "sha256": "f1a28e7ee97d24f286a29b9b535ecf8717314d9df8e753b414e331eddfff36a0"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/composition_robot_moved.json",
+          "sha256": "53f4124f9992ed8a7d503b2f71624a2f1aaabbea221a37ac9c8ea8337e125f35"
+        },
+        {
+          "file": "recorded_workflows/composition_robot_moved.api.json",
+          "sha256": "7d0562068dc3204c6d2867e284d49fbe0c82c1cd84a6f5bb71db65926d45240e"
+        }
+      ],
+      "intent": "Moving the robot independently changes its position without resynthesizing the scene.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "composition_scale",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/composition_scale.json",
+      "api": "recorded_workflows/composition_scale.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/composition_scale/Explorer_Mask_Clean_00001_.png",
+          "sha256": "dcdffd523b7b60fe2385e891167de177d3d80bb9846f6acfc082d5c0d755f5a8"
+        },
+        {
+          "file": "recorded_results/composition_scale/Composition_00002_.png",
+          "sha256": "ed69236431d81f106a5c1b4cb4a380deab16eb210068517e76735727d5262c50"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/composition_scale.json",
+          "sha256": "cf7b15c0bf6079edeb76d9120087fc8d528cf3edb6376228a3407fedde3c8a68"
+        },
+        {
+          "file": "recorded_workflows/composition_scale.api.json",
+          "sha256": "98f0b52d732b35a5c26ae06b0e95ae222fde5023d3bc21decd126b4440e10fe0"
+        }
+      ],
+      "intent": "Explorer scale/position adjustment demonstrates numeric layer placement.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "depth_map_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/depth_map_first.json",
+      "api": "recorded_workflows/depth_map_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/depth_map_first/ComfyUI_temp_pmhdg_00001_.png",
+          "sha256": "7aeddbd65ff4ae6891427c02bb29d22d7ba10289ee050cf05588b86a8e3931fb"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/depth_map_first.json",
+          "sha256": "ac3c49b94cf38fd497f6aa282960827eda028ff00d76a312bb67fbe009abcd10"
+        },
+        {
+          "file": "recorded_workflows/depth_map_first.api.json",
+          "sha256": "bb6554c1c547d47aa328248c6682200a9be22baf52641d635b2ee6ac72f250ea"
+        }
+      ],
+      "intent": "Depth Anything 3 encodes the source room and subject in a depth map.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "explorer_mask",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/explorer_mask.json",
+      "api": "recorded_workflows/explorer_mask.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/explorer_mask/Explorer_Mask_00001_.png",
+          "sha256": "dd830627e3477c1a5878ae6982820d7140f09fed1e64adebda8517a90be21dd0"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/explorer_mask.json",
+          "sha256": "6ec222bcbd2fcf23f19ceb65797dd90331d7fd70f26c4451705e57584b395009"
+        },
+        {
+          "file": "recorded_workflows/explorer_mask.api.json",
+          "sha256": "e92f1f88d69750da8c4145520df32769f2d6b6c1fc67a868a46f3cc4aa29dcb3"
+        }
+      ],
+      "intent": "SAM extracts the explorer foreground mask, with edge limitations inspected.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "pose_map_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/pose_map_first.json",
+      "api": "recorded_workflows/pose_map_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/pose_map_first/ComfyUI_temp_mnrfm_00002_.png",
+          "sha256": "2330fcef738f1c6362696ebce590b514944fca30df5beb16ce4f445055c07bc2"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/pose_map_first.json",
+          "sha256": "604a890f3aecbcedfc2fbb4ad1106d31a802db2bec9abee0f97390832ea5857c"
+        },
+        {
+          "file": "recorded_workflows/pose_map_first.api.json",
+          "sha256": "1219f22f2f2e39de18317b88ea5b5353beaecd25c572bf61364f07d3f4f74e4a"
+        }
+      ],
+      "intent": "SDPose body, hand and face keypoints omit the room structure.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen21_background_clean",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen21_background_clean.json",
+      "api": "recorded_workflows/qwen21_background_clean.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen21_background_clean/19_Workshop_Background_00002_.png",
+          "sha256": "679c092b2294d952df1a2d179e1ef3242a7cfec51b200d851cbba58c4d34ad8e"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen21_background_clean.json",
+          "sha256": "799cfd8760e612efcc20ebebdc95d82a7220702d046c5942c7c7038d0964dc1e"
+        },
+        {
+          "file": "recorded_workflows/qwen21_background_clean.api.json",
+          "sha256": "59e46236cc002bd9c88c604348c05843bf240fce38a185dbaafeb6ed7a008066"
+        }
+      ],
+      "intent": "Prepared clean workshop background used in composition; not presented as an on-camera generation.",
+      "on_camera_generation": false
+    },
+    {
+      "id": "qwen21_explorer",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen21_explorer.json",
+      "api": "recorded_workflows/qwen21_explorer.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen21_explorer/17_Explorer_Element_00001_.png",
+          "sha256": "ff37774bd4ec07a1f265d9ddf54f03a4bbaa9e7fd9be43e56a992008841a3096"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen21_explorer.json",
+          "sha256": "97b4c04094139588c5d8802dd752ed073dc2e104d765832c1c3d53a666172c75"
+        },
+        {
+          "file": "recorded_workflows/qwen21_explorer.api.json",
+          "sha256": "6e3a62610bb9f4998929739e05917ca3bb264ace6e57b1a7cde2bb05c114e0f3"
+        }
+      ],
+      "intent": "Separate full-body blue-jacket explorer source for deterministic layer placement.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen21_robot",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen21_robot.json",
+      "api": "recorded_workflows/qwen21_robot.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen21_robot/18_Robot_Element_00001_.png",
+          "sha256": "c7901696c7571ba7d23d579af4f8f07f4aa3933b6afec236b286f89ca743ce53"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen21_robot.json",
+          "sha256": "dc946df6b1f2252905103e7edb5a299fe0a5b9a87cd6bd005706a69b4b12f973"
+        },
+        {
+          "file": "recorded_workflows/qwen21_robot.api.json",
+          "sha256": "f08ed79dee5fddf274b16c6edbca5830e072725326536d730fc4cf61c4e2d808"
+        }
+      ],
+      "intent": "Separate full-body orange robot source for independent layer placement.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen21_spatial_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen21_spatial_first.json",
+      "api": "recorded_workflows/qwen21_spatial_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen21_spatial_first/16_Spatial_Prompt_00001_.png",
+          "sha256": "5d2a7badfb7e5809a7dcbc6d7e9128b65609e64adfc8f1d8c64b211ca4ca1f4d"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen21_spatial_first.json",
+          "sha256": "82b9aac0a4553ce5939e5aecda90e88011064e9797507bb0e82f2d95c3292a02"
+        },
+        {
+          "file": "recorded_workflows/qwen21_spatial_first.api.json",
+          "sha256": "0b3d7af4d9c1279e87587eb8d6b870986e6e8ca8d71f0e8157bc1f3bca4b3665"
+        }
+      ],
+      "intent": "Prompt-only left explorer/right robot composition; directions influence generation but are not pixel coordinates.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_anyline_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_anyline_first.json",
+      "api": "recorded_workflows/qwen_anyline_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_anyline_first/Qwen_AnyLine_00001_.png",
+          "sha256": "7ace8ec274d334a9638c8349b679a7a7d71ae0d0d267ab43e1e0d5fb30439327"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_anyline_first.json",
+          "sha256": "fe4dc222c86fd493162a64e6194bcdb1a45bc741dc47d4d297a64a9b0a8c9e3a"
+        },
+        {
+          "file": "recorded_workflows/qwen_anyline_first.api.json",
+          "sha256": "b51409fd1c84f031e2e7331fd11b458abc81744eca5eb85836720fdd86d3bac9"
+        }
+      ],
+      "intent": "AnyLine-conditioned result retains more workshop equipment contours in this example.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_baseline_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_baseline_first.json",
+      "api": "recorded_workflows/qwen_baseline_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_baseline_first/Qwen_Baseline_00001_.png",
+          "sha256": "9be825f37eecb2f727cc50aab99e40d754224bc636e2ee16754f3240b2d37798"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_baseline_first.json",
+          "sha256": "c3f3c9810389f3bbbe957d89d8565e63cb0750018423629bf1b1aca239ca9c1d"
+        },
+        {
+          "file": "recorded_workflows/qwen_baseline_first.api.json",
+          "sha256": "b0f1ad0453fa9134f7e53f1ca166536e7b56b62d2719ebc8c4e7e853753c8a5a"
+        }
+      ],
+      "intent": "Fixed-seed text-only baseline, shown beside source and depth control.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_canny_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_canny_first.json",
+      "api": "recorded_workflows/qwen_canny_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_canny_first/Qwen_Canny_00001_.png",
+          "sha256": "a26de7df7b6e635e0047bb3b9dffade26c249b6719f1eb4a7f16c0df2df3dc46"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_canny_first.json",
+          "sha256": "137ee16827b9c35e78fd5efd8207a46bf3844d78dd3c7ed852c7e47e6737e75f"
+        },
+        {
+          "file": "recorded_workflows/qwen_canny_first.api.json",
+          "sha256": "7f5f69710e069ce527a4c633dcd94782a22158c3350b2ca33e773f0672cec04f"
+        }
+      ],
+      "intent": "Canny-conditioned result for the same prompt/seed comparison.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_chain_balanced",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_chain_balanced.json",
+      "api": "recorded_workflows/qwen_chain_balanced.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_chain_balanced/Qwen_Chain_0p5_0p6_00001_.png",
+          "sha256": "8d43f8c25468a44ddf5d32a63d84bef9bd8145eb896f246c1445a745b815863e"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_chain_balanced.json",
+          "sha256": "b3dc310d5c7acb1eb9c5cc51d68f6769c8b0c002404c748751abaa3ccc12c68c"
+        },
+        {
+          "file": "recorded_workflows/qwen_chain_balanced.api.json",
+          "sha256": "91f18308ed108665efaf832ca102772977c81c52901594f8d6fbaba3472c37cb"
+        }
+      ],
+      "intent": "Both strengths changed to 0.5/0.6; no isolated per-control causal claim.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_chain_strong",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_chain_strong.json",
+      "api": "recorded_workflows/qwen_chain_strong.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_chain_strong/Qwen_Chain_1p0_1p0_00001_.png",
+          "sha256": "5734ff2a2e1acbc96ae314d40f76d907feacdebbf447fd737b9eccceb2f5787c"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_chain_strong.json",
+          "sha256": "ae5a775d0eb5e992cacf7def9fe492b97a89a0ba54f63a55571267962f09c43b"
+        },
+        {
+          "file": "recorded_workflows/qwen_chain_strong.api.json",
+          "sha256": "30822c465d25f18884cd2c165760cf077b6ef3df8fecf27c1576d726fe35b698"
+        }
+      ],
+      "intent": "Depth and pose at 1.0/1.0, preserving full subject and raised wrist.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_depth_0p8_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_depth_0p8_first.json",
+      "api": "recorded_workflows/qwen_depth_0p8_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_depth_0p8_first/Qwen_Depth_0p8_00001_.png",
+          "sha256": "7bf9e50b3f572f02e97a3efde663e0aea94888dedcb1c83ed181ac0cd856953e"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_depth_0p8_first.json",
+          "sha256": "cb74c83335ac7c95c7b621aedfe25995e9378db02e6005771ebf741f97c97f9e"
+        },
+        {
+          "file": "recorded_workflows/qwen_depth_0p8_first.api.json",
+          "sha256": "3692184b2700a7b79ee23da8d3ef770ff23758b6af9b6ef508c50fe8c315dbb7"
+        }
+      ],
+      "intent": "Depth strength 0.8 at full schedule preserves scene organization more closely than this text-only baseline.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_end_0p3_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_end_0p3_first.json",
+      "api": "recorded_workflows/qwen_end_0p3_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_end_0p3_first/Qwen_End_0p3_00001_.png",
+          "sha256": "893a673d6562352b25f1f47b57847680aa2b9c6f0b50f8c9b2af0ba107e3d8a1"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_end_0p3_first.json",
+          "sha256": "38812a5de8a2dc349e51f2edccdf3be4fe6acc395ff9cb93edb645670c3e70b3"
+        },
+        {
+          "file": "recorded_workflows/qwen_end_0p3_first.api.json",
+          "sha256": "582af8eb454c201565971cd03bb8c0918b49a7a2c31ae4a688f95832d3739ff1"
+        }
+      ],
+      "intent": "Early end 0.30 changes the arm and room arrangement in this fixed-seed example.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_end_0p65_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_end_0p65_first.json",
+      "api": "recorded_workflows/qwen_end_0p65_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_end_0p65_first/Qwen_End_0p65_00001_.png",
+          "sha256": "9bf9273be400cf103457f4e697db5353f03e8458d9e097d76eb327dfdb65f142"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_end_0p65_first.json",
+          "sha256": "4d869b6c0fb897568fdf81ef996c09d8612589d7c2e087ee5418f948eb038822"
+        },
+        {
+          "file": "recorded_workflows/qwen_end_0p65_first.api.json",
+          "sha256": "6cc42f2f160fe308a9284bd76b9bde31721b22e5598500f6bd07891c6dd74fea"
+        }
+      ],
+      "intent": "End 0.65 keeps the complete raised arm and demonstrated pose more closely than 0.30.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_pose_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_pose_first.json",
+      "api": "recorded_workflows/qwen_pose_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_pose_first/Qwen_Pose_00001_.png",
+          "sha256": "65096a70325cc1474e4fb180c90fd33dcac300a2e730a67173f61c67923e297d"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_pose_first.json",
+          "sha256": "3abec9cc5f9224acae68554208d216121d2b791062c12ccd50e93e0712fc6308"
+        },
+        {
+          "file": "recorded_workflows/qwen_pose_first.api.json",
+          "sha256": "0d4542f694fba80674ddf386cb1aa923404d1c74a3817c0c711dc916fbe77537"
+        }
+      ],
+      "intent": "Pose-conditioned result retains a raised arm with simpler room structure; a single example.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_strength_0p5_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_strength_0p5_first.json",
+      "api": "recorded_workflows/qwen_strength_0p5_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_strength_0p5_first/Qwen_Strength_0p5_00001_.png",
+          "sha256": "4393a05663daa9fe0ab49eef750f28312d7c35a404777a385634a07d2b1c594f"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_strength_0p5_first.json",
+          "sha256": "25dd96dd20bf7af8de2fd08ce23cd8eaf41a05b6cc254f3aa9029b0a6eda7154"
+        },
+        {
+          "file": "recorded_workflows/qwen_strength_0p5_first.api.json",
+          "sha256": "2ed54b87d4e4139d10b94feba0a38397cfd9bb9d1978f48c23aeca8c61aa8568"
+        }
+      ],
+      "intent": "Depth strength 0.5 comparison with all other declared settings held constant.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "qwen_strength_1p0_first",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/qwen_strength_1p0_first.json",
+      "api": "recorded_workflows/qwen_strength_1p0_first.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/qwen_strength_1p0_first/Qwen_Strength_1p0_00001_.png",
+          "sha256": "c85d707c9e1bcea8a18c146bdc1acaf7fbd14b516b41a8b08410362289667938"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/qwen_strength_1p0_first.json",
+          "sha256": "a1c2f92c09e01d88f9363972cc0bf82e4d941e8fdab209f1870d200a270b278e"
+        },
+        {
+          "file": "recorded_workflows/qwen_strength_1p0_first.api.json",
+          "sha256": "c1feeee69e67525095dd9e8b0bf6a1a3a85f16671382e87e008f444a65542c6f"
+        }
+      ],
+      "intent": "Depth strength 1.0 comparison with visible pose and scene differences.",
+      "on_camera_generation": true
+    },
+    {
+      "id": "robot_mask",
+      "status": "successful_run",
+      "workflow": "recorded_workflows/robot_mask.json",
+      "api": "recorded_workflows/robot_mask.api.json",
+      "outputs": [
+        {
+          "file": "recorded_results/robot_mask/Robot_Mask_00001_.png",
+          "sha256": "47ea44d03112d0121687ead2840fb0a69670b6e7ab9f21ca050e2cf7add0f0fc"
+        }
+      ],
+      "files": [
+        {
+          "file": "recorded_workflows/robot_mask.json",
+          "sha256": "9bf8ee7cc73fe1241e775c847bb1f658039362e5f25e4c9ab062719923ac9da7"
+        },
+        {
+          "file": "recorded_workflows/robot_mask.api.json",
+          "sha256": "b368afd9a1b32f6f2145aaf8b50bb2d86349eec9815cd1a8d6554d11227f0bff"
+        }
+      ],
+      "intent": "SAM extracts the robot foreground mask for independent placement.",
+      "on_camera_generation": true
+    }
+  ],
+  "input_filenames": [
+    "explorer_element.png",
+    "explorer_mask_raw.png",
+    "explorer_workshop.png",
+    "explorer_workshop_anyline.png",
+    "explorer_workshop_canny.png",
+    "explorer_workshop_depth.png",
+    "explorer_workshop_pose.png",
+    "robot_element.png",
+    "robot_mask.png",
+    "workshop_background.png"
+  ],
+  "node_requirements": [
+    {
+      "node": "AnyLineArtPreprocessor_aux",
+      "module": "custom_nodes.comfyui_controlnet_aux",
+      "category": "ControlNet Preprocessors/Line Extractors",
+      "source": "https://github.com/Fannovel16/comfyui_controlnet_aux",
+      "verification": "Installed node_wrappers/anyline.py NODE_CLASS_MAPPINGS and CATEGORY inspected on 2026-10-18."
+    },
+    {
+      "node": "CLIPLoader",
+      "module": "nodes",
+      "category": "model/loaders"
+    },
+    {
+      "node": "CLIPTextEncode",
+      "module": "nodes",
+      "category": "model/conditioning"
+    },
+    {
+      "node": "Canny",
+      "module": "comfy_extras.nodes_canny",
+      "category": "image/filters"
+    },
+    {
+      "node": "CheckpointLoaderSimple",
+      "module": "nodes",
+      "category": "model/loaders"
+    },
+    {
+      "node": "ControlNetApplyAdvanced",
+      "module": "nodes",
+      "category": "model/conditioning/controlnet"
+    },
+    {
+      "node": "ControlNetLoader",
+      "module": "nodes",
+      "category": "model/loaders"
+    },
+    {
+      "node": "DA3Inference",
+      "module": "comfy_extras.nodes_depth_anything_3",
+      "category": "image/geometry estimation"
+    },
+    {
+      "node": "DA3Render",
+      "module": "comfy_extras.nodes_depth_anything_3",
+      "category": "image/geometry estimation"
+    },
+    {
+      "node": "EmptyFlux2LatentImage",
+      "module": "comfy_extras.nodes_flux",
+      "category": "model/latent/flux"
+    },
+    {
+      "node": "EmptyImage",
+      "module": "nodes",
+      "category": "image"
+    },
+    {
+      "node": "EmptyLatentImage",
+      "module": "nodes",
+      "category": "model/latent"
+    },
+    {
+      "node": "EmptySD3LatentImage",
+      "module": "comfy_extras.nodes_sd3",
+      "category": "model/latent/stable diffusion"
+    },
+    {
+      "node": "FeatherMask",
+      "module": "comfy_extras.nodes_mask",
+      "category": "image/mask"
+    },
+    {
+      "node": "ImageBlur",
+      "module": "comfy_extras.nodes_post_processing",
+      "category": "image/filters"
+    },
+    {
+      "node": "ImageCompositeMasked",
+      "module": "comfy_extras.nodes_mask",
+      "category": "image/compositing"
+    },
+    {
+      "node": "ImageScale",
+      "module": "nodes",
+      "category": "image/upscaling"
+    },
+    {
+      "node": "ImageToMask",
+      "module": "comfy_extras.nodes_mask",
+      "category": "image/mask"
+    },
+    {
+      "node": "KSampler",
+      "module": "nodes",
+      "category": "model/sampling"
+    },
+    {
+      "node": "LoadDA3Model",
+      "module": "comfy_extras.nodes_depth_anything_3",
+      "category": "model/loaders"
+    },
+    {
+      "node": "LoadImage",
+      "module": "nodes",
+      "category": "image"
+    },
+    {
+      "node": "MaskComposite",
+      "module": "comfy_extras.nodes_mask",
+      "category": "image/mask"
+    },
+    {
+      "node": "MaskToImage",
+      "module": "comfy_extras.nodes_mask",
+      "category": "image/mask"
+    },
+    {
+      "node": "ModelSamplingAuraFlow",
+      "module": "comfy_extras.nodes_model_advanced",
+      "category": "model/patch"
+    },
+    {
+      "node": "PreviewImage",
+      "module": "nodes",
+      "category": "image"
+    },
+    {
+      "node": "QwenImage21Cache",
+      "module": "comfy_extras.nodes_qwen",
+      "category": "model/conditioning/qwen image"
+    },
+    {
+      "node": "SAM3_Detect",
+      "module": "comfy_extras.nodes_sam3",
+      "category": "image/detection"
+    },
+    {
+      "node": "SDPoseDrawKeypoints",
+      "module": "comfy_extras.nodes_sdpose",
+      "category": "image/detection"
+    },
+    {
+      "node": "SDPoseKeypointExtractor",
+      "module": "comfy_extras.nodes_sdpose",
+      "category": "image/detection"
+    },
+    {
+      "node": "SaveImage",
+      "module": "nodes",
+      "category": "image"
+    },
+    {
+      "node": "SolidMask",
+      "module": "comfy_extras.nodes_mask",
+      "category": "image/mask"
+    },
+    {
+      "node": "TextEncodeQwenImage21",
+      "module": "comfy_extras.nodes_qwen",
+      "category": "model/conditioning/qwen image"
+    },
+    {
+      "node": "UNETLoader",
+      "module": "nodes",
+      "category": "model/loaders"
+    },
+    {
+      "node": "VAEDecode",
+      "module": "nodes",
+      "category": "model/latent"
+    },
+    {
+      "node": "VAELoader",
+      "module": "nodes",
+      "category": "model/loaders"
+    }
+  ],
+  "note": "Exact workflow and API dictionaries from successful run histories. Results are copied unchanged; intermediate states intentionally retain their visible limitations."
+}

@@ -1,0 +1,83 @@
+{
+  "1": {
+    "inputs": {
+      "image": "explorer_workshop.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 1280,
+      "height": 720,
+      "crop": "center",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "3": {
+    "inputs": {
+      "model_name": "depth_anything_3_mono_large.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "LoadDA3Model",
+    "_meta": {
+      "title": "Load Depth Anything 3"
+    }
+  },
+  "4": {
+    "inputs": {
+      "resolution": 1008,
+      "resize_method": "upper_bound_resize",
+      "mode": "mono",
+      "da3_model": [
+        "3",
+        0
+      ],
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "DA3Inference",
+    "_meta": {
+      "title": "Run Depth Anything 3"
+    }
+  },
+  "5": {
+    "inputs": {
+      "output": "depth",
+      "output.normalization": "v2_style",
+      "output.apply_sky_clip": false,
+      "da3_geometry": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "DA3Render",
+    "_meta": {
+      "title": "Render Depth Anything 3"
+    }
+  },
+  "6": {
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

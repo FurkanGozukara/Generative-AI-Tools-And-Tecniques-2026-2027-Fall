@@ -1,0 +1,749 @@
+{
+  "id": "eb307a0e-81a3-5313-9cba-1962c307afc9",
+  "revision": 0,
+  "last_node_id": 34,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        750
+      ],
+      "size": [
+        480,
+        350
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "explorer_workshop_canny.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "explorer_workshop_canny.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 20,
+      "type": "UNETLoader",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        480,
+        100
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "qwen_image_fp8_e4m3fn.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 21,
+      "type": "ModelSamplingAuraFlow",
+      "pos": [
+        1040,
+        0
+      ],
+      "size": [
+        440,
+        130
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingAuraFlow"
+      },
+      "widgets_values": [
+        3.1,
+        "flow"
+      ],
+      "widgets_values_named": {
+        "shift": 3.1,
+        "sampling": "flow"
+      }
+    },
+    {
+      "id": 22,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        210
+      ],
+      "size": [
+        480,
+        160
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "qwen_image",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "type": "qwen_image",
+        "device": "default"
+      }
+    },
+    {
+      "id": 23,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        430
+      ],
+      "size": [
+        480,
+        100
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            24,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "qwen_image_vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "qwen_image_vae.safetensors"
+      }
+    },
+    {
+      "id": 24,
+      "type": "CLIPTextEncode",
+      "pos": [
+        520,
+        170
+      ],
+      "size": [
+        480,
+        200
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "A cinematic photograph of one adult male explorer wearing a vivid cobalt blue field jacket, tan trousers and rugged boots, standing full body with one arm raised in a futuristic research workshop. A substantial workbench occupies the left foreground, a bright large window is on the right, and an open doorway recedes into the rear wall. Brushed metal equipment, warm practical lighting and cool daylight, realistic materials, clear layered perspective, natural anatomy, richly detailed professional environment."
+      ],
+      "widgets_values_named": {
+        "text": "A cinematic photograph of one adult male explorer wearing a vivid cobalt blue field jacket, tan trousers and rugged boots, standing full body with one arm raised in a futuristic research workshop. A substantial workbench occupies the left foreground, a bright large window is on the right, and an open doorway recedes into the rear wall. Brushed metal equipment, warm practical lighting and cool daylight, realistic materials, clear layered perspective, natural anatomy, richly detailed professional environment."
+      }
+    },
+    {
+      "id": 25,
+      "type": "CLIPTextEncode",
+      "pos": [
+        520,
+        430
+      ],
+      "size": [
+        480,
+        180
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "blurry, distorted anatomy, extra people, extra limbs, text, watermark"
+      ],
+      "widgets_values_named": {
+        "text": "blurry, distorted anatomy, extra people, extra limbs, text, watermark"
+      }
+    },
+    {
+      "id": 28,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        1040,
+        180
+      ],
+      "size": [
+        440,
+        140
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 1280,
+        "height": 720,
+        "batch_size": 1
+      }
+    },
+    {
+      "id": 29,
+      "type": "KSampler",
+      "pos": [
+        1040,
+        400
+      ],
+      "size": [
+        440,
+        340
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 4
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 10
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 11
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        314159265,
+        "fixed",
+        30,
+        4,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 314159265,
+        "control_after_generate": "fixed",
+        "steps": 30,
+        "cfg": 4,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      }
+    },
+    {
+      "id": 30,
+      "type": "VAEDecode",
+      "pos": [
+        1560,
+        900
+      ],
+      "size": [
+        440,
+        120
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 26
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 31,
+      "type": "SaveImage",
+      "pos": [
+        2080,
+        750
+      ],
+      "size": [
+        440,
+        350
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Lecture06/Qwen_Canny"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Lecture06/Qwen_Canny"
+      }
+    },
+    {
+      "id": 32,
+      "type": "ControlNetLoader",
+      "pos": [
+        520.1111450195312,
+        710.4444274902344
+      ],
+      "size": [
+        479.33331298828125,
+        110
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "Qwen-Image-InstantX-ControlNet-Union.safetensors"
+      ],
+      "widgets_values_named": {
+        "control_net_name": "Qwen-Image-InstantX-ControlNet-Union.safetensors"
+      }
+    },
+    {
+      "id": 33,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        1040.111083984375,
+        790.4444580078125
+      ],
+      "size": [
+        439.3333740234375,
+        239.77783203125
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 8
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 9
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 6
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        0.8,
+        0,
+        1
+      ],
+      "widgets_values_named": {
+        "strength": 0.8,
+        "start_percent": 0,
+        "end_percent": 1
+      }
+    },
+    {
+      "id": 34,
+      "type": "LoadImage",
+      "pos": [
+        1553.7117614746094,
+        460.22225189208984
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "explorer_workshop_depth.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "explorer_workshop_depth.png",
+        "upload": "image"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      22,
+      0,
+      24,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      22,
+      0,
+      25,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      20,
+      0,
+      21,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      21,
+      0,
+      29,
+      0,
+      "MODEL"
+    ],
+    [
+      5,
+      28,
+      0,
+      29,
+      3,
+      "LATENT"
+    ],
+    [
+      6,
+      32,
+      0,
+      33,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      8,
+      24,
+      0,
+      33,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      9,
+      25,
+      0,
+      33,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      10,
+      33,
+      0,
+      29,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      11,
+      33,
+      1,
+      29,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      24,
+      23,
+      0,
+      33,
+      4,
+      "VAE"
+    ],
+    [
+      25,
+      23,
+      0,
+      30,
+      1,
+      "VAE"
+    ],
+    [
+      26,
+      29,
+      0,
+      30,
+      0,
+      "LATENT"
+    ],
+    [
+      27,
+      30,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      1,
+      0,
+      33,
+      3,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -835.5563354492188,
+        -512.2223510742188
+      ]
+    },
+    "lesson_recipe": {
+      "status": "prepared_not_run",
+      "notes": [
+        "Unconnected starter for visible construction of the Qwen ControlNet route."
+      ]
+    },
+    "frontendVersion": "1.55.18"
+  },
+  "version": 0.4
+}

@@ -19,9 +19,10 @@ Start with Windows setup and your first local image. Then progress through image
 - **[Lecture 3 guide and companion files](lecture-03/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_03_Companion_Files.zip)
 - **[Lecture 4 guide and companion files](lecture-04/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_04_Companion_Files.zip)
 - **[Lecture 5 guide and companion files](lecture-05/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/download/lecture-05/Lecture_05_Companion_Files.zip) (186 MB, from the [Lecture 5 release](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/tag/lecture-05))
+- **[Lecture 6 guide and companion files](lecture-06/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_06_Companion_Files.zip) · [Open notebook in Colab](https://colab.research.google.com/github/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/blob/main/lecture-06/colab/Qwen-Image-2.1_ComfyUI_Colab.ipynb) (video link coming after publication)
 - [Download checksums and extraction instructions](downloads/README.md)
 
-Lectures 1–5 are available now, each with its video and companion materials. Lectures 6–14 below are the planned sequence; their materials will be added as each lecture is released. Each ZIP contains learner resources and the video description; videos, installers and model weights are separate.
+Lectures 1–5 have published videos and companion materials. Lecture 6 learner materials and the latest Colab notebook are available now; its video link will be added after publication. Lectures 7–14 are the planned sequence. Each ZIP contains learner resources and the video description; videos, installers and model weights are separate.
 
 ## Course roadmap — 14 lectures
 
@@ -32,7 +33,7 @@ Lectures 1–5 are available now, each with its video and companion materials. L
 | 3 | Text-to-Image: Prompting, Models, LoRAs & Precision | [Watch](https://youtu.be/A6s6Qhl9YBk) · [Companion files](lecture-03/README.md) |
 | 4 | AI Image Editing & Instruction-Based Transformation | [Watch](https://youtu.be/abWxRSQFQz8) · [Companion files](lecture-04/README.md) |
 | 5 | Masks, Inpainting, Outpainting, Segmentation & Compositing | [Watch](https://youtu.be/DJcgVASlg38) · [Companion files](lecture-05/README.md) |
-| 6 | ControlNet, Depth, Pose & Composition Control | Planned |
+| 6 | ComfyUI in Colab, ControlNet, Depth, Pose & Composition Control | [Companion files](lecture-06/README.md) · [Colab notebook](https://colab.research.google.com/github/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/blob/main/lecture-06/colab/Qwen-Image-2.1_ComfyUI_Colab.ipynb) |
 | 7 | Upscaling, Restoration, Detailing & Image Delivery | Planned |
 | 8 | Workflow Engineering, Automation, APIs & Custom Nodes | Planned |
 | 9 | LoRA Training, Datasets, Captioning & Personalization | Planned |
@@ -45,6 +46,8 @@ Lectures 1–5 are available now, each with its video and companion materials. L
 ## How to use the repository
 
 The emoji-formatted video descriptions with their chapters ([Lecture 1](lecture-01/youtube_description.txt), 78; [Lecture 2](lecture-02/youtube_description.txt), 18; [Lecture 3](lecture-03/youtube_description.txt), 25; [Lecture 4](lecture-04/youtube_description.txt), 15; [Lecture 5](lecture-05/youtube_description.txt), 83) and the [playlist description](playlist_description.txt) are available as plain text. The published video titles ([Lecture 1](lecture-01/youtube_title.txt), [2](lecture-02/youtube_title.txt), [3](lecture-03/youtube_title.txt), [4](lecture-04/youtube_title.txt), [5](lecture-05/youtube_title.txt)) and the [playlist title](playlist_title.txt) are saved alongside them.
+
+Lecture 6 also includes its [prepared description and 80 chapters](lecture-06/youtube_description.txt).
 
 Follow the lectures in order, or return to an individual guide when you need a particular setup step. Each lecture folder keeps its command sheets and workflow assets together. In Lecture 1, run commands one at a time in **Windows Command Prompt**, in the folder named by the instructions.
 

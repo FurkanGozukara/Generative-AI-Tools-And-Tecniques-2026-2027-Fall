@@ -1,0 +1,445 @@
+{
+  "1": {
+    "inputs": {
+      "image": "workshop_background.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Workshop background"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "explorer_element.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Explorer source"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": "explorer_mask_raw.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Explorer raw mask"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "robot_element.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Robot source"
+    }
+  },
+  "5": {
+    "inputs": {
+      "image": "robot_mask.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Robot mask"
+    }
+  },
+  "6": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 480,
+      "height": 640,
+      "crop": "disabled",
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Explorer image: paired dimensions"
+    }
+  },
+  "7": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 480,
+      "height": 640,
+      "crop": "disabled",
+      "image": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Explorer mask: paired dimensions"
+    }
+  },
+  "8": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "9": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 320,
+      "height": 320,
+      "crop": "disabled",
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Robot image: paired dimensions"
+    }
+  },
+  "10": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 320,
+      "height": 320,
+      "crop": "disabled",
+      "image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Robot mask: paired dimensions"
+    }
+  },
+  "11": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "12": {
+    "inputs": {
+      "x": 95,
+      "y": 40,
+      "resize_source": false,
+      "destination": [
+        "30",
+        0
+      ],
+      "source": [
+        "6",
+        0
+      ],
+      "mask": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Place explorer + aligned mask"
+    }
+  },
+  "13": {
+    "inputs": {
+      "x": 850,
+      "y": 350,
+      "resize_source": false,
+      "destination": [
+        "12",
+        0
+      ],
+      "source": [
+        "9",
+        0
+      ],
+      "mask": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Place robot + aligned mask"
+    }
+  },
+  "14": {
+    "inputs": {
+      "filename_prefix": "W06/Composition",
+      "images": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Editable composition result"
+    }
+  },
+  "15": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "16": {
+    "inputs": {
+      "value": 1.0,
+      "width": 40,
+      "height": 40
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Only the stray island: 40 x 40"
+    }
+  },
+  "17": {
+    "inputs": {
+      "x": 570,
+      "y": 150,
+      "operation": "subtract",
+      "destination": [
+        "15",
+        0
+      ],
+      "source": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "Remove isolated mask patch"
+    }
+  },
+  "18": {
+    "inputs": {
+      "mask": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "W06/Explorer_Mask_Clean",
+      "images": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Preserve corrected explorer mask"
+    }
+  },
+  "20": {
+    "inputs": {
+      "value": 0.45,
+      "width": 320,
+      "height": 64
+    },
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Subtle contact opacity"
+    }
+  },
+  "21": {
+    "inputs": {
+      "left": 160,
+      "top": 32,
+      "right": 160,
+      "bottom": 32,
+      "mask": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "FeatherMask",
+    "_meta": {
+      "title": "Soft falloff on all four edges"
+    }
+  },
+  "22": {
+    "inputs": {
+      "mask": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
+  },
+  "23": {
+    "inputs": {
+      "blur_radius": 15,
+      "sigma": 8.0,
+      "image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "ImageBlur",
+    "_meta": {
+      "title": "Smooth contact treatment"
+    }
+  },
+  "24": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 210,
+      "height": 40,
+      "crop": "disabled",
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Explorer contact footprint"
+    }
+  },
+  "25": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 260,
+      "height": 45,
+      "crop": "disabled",
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Robot contact footprint"
+    }
+  },
+  "26": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "27": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "28": {
+    "inputs": {
+      "width": 210,
+      "height": 40,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "Contact color"
+    }
+  },
+  "29": {
+    "inputs": {
+      "x": 215,
+      "y": 639,
+      "resize_source": false,
+      "destination": [
+        "1",
+        0
+      ],
+      "source": [
+        "28",
+        0
+      ],
+      "mask": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Explorer contact placement"
+    }
+  },
+  "30": {
+    "inputs": {
+      "x": 880,
+      "y": 583,
+      "resize_source": false,
+      "destination": [
+        "29",
+        0
+      ],
+      "source": [
+        "31",
+        0
+      ],
+      "mask": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Robot contact placement"
+    }
+  },
+  "31": {
+    "inputs": {
+      "width": 260,
+      "height": 45,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "Contact color"
+    }
+  }
+}
