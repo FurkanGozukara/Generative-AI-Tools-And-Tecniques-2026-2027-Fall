@@ -2,7 +2,7 @@
 
 We begin with Windows setup, Python, CUDA and your first locally generated image. You do not need previous Python or command-line experience to start. The course then progresses through image creation and editing, workflow automation, LoRA training, video, speech, music and 3D asset generation.
 
-🎯 You will learn how to choose models and settings, control composition, edit specific areas, improve image quality, build reusable workflows, prepare training data, manage GPU memory, diagnose failures and evaluate your results. Local and cloud execution options are discussed alongside practical licensing and source-tracking considerations.
+🎯 You will learn how to choose models and settings, control composition, edit specific areas, improve image quality, build reusable workflows, prepare training data, manage GPU memory, diagnose failures and evaluate your results. Local and cloud execution options are discussed alongside source tracking.
 
 🗺️ COURSE ROADMAP — 14 LECTURES
 Lecture 1: Windows Setup, ComfyUI Installation & Your First AI Image
@@ -18,7 +18,7 @@ Lecture 10: AI Video Generation: Foundations & GPU Performance
 Lecture 11: Video Control, Character Animation & Longer Videos
 Lecture 12: Audio, Speech, Voice & Music Generation
 Lecture 13: Image-to-3D & Textured Asset Generation
-Lecture 14: Quality Evaluation, Licensing, Provenance & Production Delivery
+Lecture 14: Quality Evaluation, Provenance & Production Delivery
 
 The course covers techniques such as prompting, diffusion, model precision, LoRAs, ControlNet, segmentation, inpainting, outpainting, upscaling, API automation and character animation. Image, video, speech, music and 3D examples show how these ideas connect across different types of media.
 
@@ -30,6 +30,8 @@ Start with Lecture 1 and follow the playlist in order. Each lecture builds on ea
 ▶️ Watch Lecture 3: [ https://youtu.be/A6s6Qhl9YBk ]
 ▶️ Watch Lecture 4: [ https://youtu.be/abWxRSQFQz8 ]
 ▶️ Watch Lecture 5: [ https://youtu.be/DJcgVASlg38 ]
+▶️ Watch Lecture 6: [ https://www.youtube.com/watch?v=h4-F5Jx-HQo ]
+▶️ Watch Lecture 7: [ https://www.youtube.com/watch?v=mZ37pzoRrsI ]
 📦 Course repository & lecture companion files: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
 Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
 ComfyUI installer (optional): [ https://www.patreon.com/posts/105023709 ]

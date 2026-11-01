@@ -1,3 +1,5 @@
+▶️ Watch Lecture 6: [ https://www.youtube.com/watch?v=h4-F5Jx-HQo ]
+
 Run ComfyUI in Colab, then direct structure and composition with ControlNet, depth, edges, pose and masks.
 
 🔗 Links:

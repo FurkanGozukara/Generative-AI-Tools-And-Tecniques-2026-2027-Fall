@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lecture": "Generative AI Full Course - Lecture 7: Upscaling, Restoration & Professional Delivery",
+  "lecture": "Generative AI Full Course - Lecture 7: FaceDetailer Max Size 512 vs 1024 - Keep the Same Face",
   "note": "Every file of this companion with its SHA-256; model weights and installers are linked in MODELS.md, not included.",
   "files": [
     {
@@ -95,8 +95,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 14848,
-      "sha256": "3f64da53a35df7d563b7bd5a92d3c98b06501c0d88148cceef358c0f67ef0055"
+      "bytes": 16023,
+      "sha256": "3228f3e32ed2dc45e28c9a04cd6d2a61f5e62eaf7e9a8b4110f4636163103bcb"
     },
     {
       "file": "chapters.txt",
@@ -410,13 +410,13 @@
     },
     {
       "file": "youtube_description.txt",
-      "bytes": 4829,
-      "sha256": "3b35766649851673fbfe550c62d6ce0add35f9b4c7fea896f339e085ff351921"
+      "bytes": 4902,
+      "sha256": "c8dacdc36a171d00cc8b159ed80496ca0fb4a249145437248a50a91013eac8e7"
     },
     {
       "file": "youtube_title.txt",
-      "bytes": 87,
-      "sha256": "b7d36dbc0ad46a28b92cc05a08c5f8da35770a04d57fd8628ac0a6810763b62a"
+      "bytes": 94,
+      "sha256": "b9ccdbf67ee2cab8b4936e2867c016cde3e309edab8a79e694dd3bd1e195fb19"
     }
   ]
 }

@@ -1,12 +1,14 @@
 # Lecture 6 — Structure, composition and ComfyUI in Colab
 
-**Week 6 learner materials are available. The video link will be added after publication.**
+**Generative AI Full Course - Lecture 6: Stack Depth + Pose for Structural Control**
+
+▶️ **[Watch Lecture 6](https://www.youtube.com/watch?v=h4-F5Jx-HQo)** · 📺 **[Full course playlist](https://www.youtube.com/playlist?list=PLUMEJUep1hiI)**
 
 [Download the complete companion ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_06_Companion_Files.zip) · [Open the latest notebook in Colab](https://colab.research.google.com/github/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/blob/main/lecture-06/colab/Qwen-Image-2.1_ComfyUI_Colab.ipynb) · [Download notebook](colab/Qwen-Image-2.1_ComfyUI_Colab.ipynb)
 
 The 69:13 lecture covers the complete Colab T4 route, A100 differences, depth/edge/pose control, combined conditioning and independent masked composition. Extract the ZIP and open `lecture-06/README.md`. The same latest notebook is included here and in the ZIP; it has no saved runtime outputs. In Colab, save your own copy before editing. Follow [the Colab guide](colab/README.md) for the demonstrated upload route and runtime steps.
 
-The [80 chapters](chapters.txt), [prepared video description](youtube_description.txt) and [prepared title](youtube_title.txt) are included. Model weights and the video are separate. Check individual file hashes in [SHA256SUMS.txt](SHA256SUMS.txt).
+The [80 chapters](chapters.txt), [video description](youtube_description.txt) and [video title](youtube_title.txt) are included. Model weights and the video are separate. Check individual file hashes in [SHA256SUMS.txt](SHA256SUMS.txt).
 
 Start with [the Colab guide](colab/README.md) for the cloud route, or use your working local ComfyUI installation from earlier lectures. The recorded local application was ComfyUI 0.41.0 on October 18, 2026. These files preserve that demonstration; newer software may change menus or results.
 
@@ -60,4 +62,90 @@ The final composition lets the explorer and robot move independently through sep
 
 The Colab notebook saves its document separately from its temporary runtime. Export results, inputs you need and workflow JSONs before terminating or changing runtimes. The included notebook is the canonical copy whose code cells were checked against the downloaded demonstration copy. Use the detailed guide for setup, model downloads, cloudflared access, individual downloads, ZIP export and termination.
 
-Model weights are not bundled. Follow the linked owners' download and license terms. GPU allocation and free-runtime eligibility can change; the observed T4 session is not a promise of future availability.
+Download model weights from the linked publishers. GPU allocation and free-runtime eligibility can change; the observed T4 session is not a promise of future availability.
+
+
+## Watch by chapter
+
+| Time | Chapter |
+|---|---|
+| [0:00](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=0s) | ComfyUI in Colab and structural control |
+| [0:58](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=58s) | Upload, rename and save the notebook |
+| [1:30](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=90s) | Notebook saving versus temporary runtime files |
+| [2:30](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=150s) | Select a GPU and connect the runtime |
+| [3:03](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=183s) | Notebook forms, code and cell controls |
+| [3:44](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=224s) | Install ComfyUI and inspect detected hardware |
+| [4:19](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=259s) | Match diffusion model, encoder and VAE |
+| [4:49](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=289s) | Download models and inspect automatic choices |
+| [6:05](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=365s) | System RAM and GPU memory are separate |
+| [6:20](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=380s) | Choose direct model links and destination folders |
+| [7:02](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=422s) | Run an optional download and inspect its file |
+| [7:26](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=446s) | Start ComfyUI and open the temporary URL |
+| [8:05](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=485s) | Open the matched starter workflow and prompt |
+| [8:32](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=512s) | Generate remotely and watch the live progress |
+| [9:05](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=545s) | Inspect and download the completed image |
+| [9:44](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=584s) | Save and export the editable workflow JSON |
+| [10:16](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=616s) | Upload a reference image to the runtime |
+| [10:59](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=659s) | Upload a video into the input folder |
+| [11:17](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=677s) | Refresh the loader and inspect video playback |
+| [11:39](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=699s) | Reopen a workflow and reconnect its inputs |
+| [11:57](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=717s) | Stop the server before exporting a folder |
+| [12:13](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=733s) | Choose output subfolders and include inputs |
+| [12:46](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=766s) | Create and download the complete result ZIP |
+| [13:18](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=798s) | Inspect ZIP outputs, graphs and the manifest |
+| [14:20](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=860s) | Restart ComfyUI on the same runtime |
+| [15:35](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=935s) | Understand reset, disconnect and file persistence |
+| [16:03](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=963s) | Select and verify a paid A100 allocation |
+| [16:46](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1006s) | Compare automatic model choices across runtimes |
+| [17:02](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1022s) | Terminate the session and verify it ends |
+| [17:40](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1060s) | Update the local environment and restart ComfyUI |
+| [18:51](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1131s) | From references and masks to structural control |
+| [19:24](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1164s) | Trace ControlNet through the conditioning path |
+| [19:41](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1181s) | Distinguish model patches, LoRAs and references |
+| [20:48](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1248s) | Match original Qwen with InstantX Union |
+| [21:05](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1265s) | Download matched model and control weights |
+| [21:44](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1304s) | Install Depth Anything 3 and refresh loaders |
+| [22:35](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1355s) | Fix seed, steps and sampling conditions |
+| [23:17](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1397s) | Inspect the source and align its working size |
+| [24:05](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1445s) | Connect Depth Anything 3 and inference |
+| [25:12](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1512s) | Render grayscale depth before connecting generation |
+| [25:54](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1554s) | Inspect spatial layers and save the map |
+| [26:40](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1600s) | Load the compatible Qwen model family |
+| [26:56](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1616s) | Write the prompt and conditioning branches |
+| [28:02](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1682s) | Connect the union loader and apply node |
+| [29:20](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1760s) | Connect the matching VAE and output path |
+| [30:20](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1820s) | Generate the baseline without structural control |
+| [31:07](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1867s) | Restore depth control with unchanged settings |
+| [31:33](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1893s) | Compare source, depth and both generated images |
+| [32:31](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=1951s) | Understand the VAE input and diagnose failures |
+| [33:45](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2025s) | Compare control strengths 0.5, 0.8 and 1 |
+| [35:05](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2105s) | Inspect geometry and prompt adherence separately |
+| [36:03](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2163s) | Separate control strength from start and end |
+| [36:47](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2207s) | Generate end 0.3 and end 0.65 |
+| [37:51](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2271s) | Compare early release with full-schedule control |
+| [38:49](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2329s) | Choose edges, line detail, depth or pose |
+| [39:50](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2390s) | Install the auxiliary package and run AnyLine |
+| [41:22](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2482s) | Set up SDPose and choose joint drawing |
+| [43:37](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2617s) | Inspect all four maps at the same scale |
+| [43:57](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2637s) | Generate with each structural map type |
+| [46:12](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2772s) | Compare the results against their actual maps |
+| [47:13](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2833s) | Enlarge Canny and adjust its thresholds |
+| [48:24](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2904s) | Compare detailed and simplified edge maps |
+| [48:59](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2939s) | Inspect pose joints against the source photograph |
+| [49:57](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=2997s) | Chain depth and pose conditioning correctly |
+| [50:56](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3056s) | Test both controls at full strength |
+| [51:40](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3100s) | Balance depth 0.5 with pose 0.6 |
+| [52:23](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3143s) | Compare results and diagnose competing constraints |
+| [53:45](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3225s) | Prompt an explorer and robot in one scene |
+| [54:40](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3280s) | Inspect placement, attributes and editability |
+| [55:50](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3350s) | Generate separate subjects and inspect their quality |
+| [57:16](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3436s) | Extract masks and place the subjects independently |
+| [59:13](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3553s) | Match scale, perspective and contact points |
+| [1:01:14](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3674s) | Repair the visible contact-layer rectangle |
+| [1:01:29](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3689s) | Pad the soft mask with empty space |
+| [1:02:35](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3755s) | Match image and mask sizes before repositioning |
+| [1:03:56](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3836s) | Move the robot while keeping the explorer fixed |
+| [1:04:41](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3881s) | Repair the boot contact and inspect grounding |
+| [1:05:25](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3925s) | Compare single generation with editable composition |
+| [1:06:09](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=3969s) | Export subjects, masks and the final graph |
+| [1:07:11](https://www.youtube.com/watch?v=h4-F5Jx-HQo&t=4031s) | Reopen saved projects and use the learner files |

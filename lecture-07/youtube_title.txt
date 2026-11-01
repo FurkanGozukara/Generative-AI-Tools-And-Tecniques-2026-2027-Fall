@@ -1,1 +1,1 @@
-Generative AI Full Course - Lecture 7: Upscaling, Restoration & Professional Delivery
+Generative AI Full Course - Lecture 7: FaceDetailer Max Size 512 vs 1024 - Keep the Same Face

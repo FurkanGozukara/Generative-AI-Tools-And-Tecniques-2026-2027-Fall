@@ -1,3 +1,5 @@
+▶️ Watch Lecture 7: [ https://www.youtube.com/watch?v=mZ37pzoRrsI ]
+
 Turn a good AI generation into a file you can deliver. In ComfyUI, take one 1024 px image to 4K with Lanczos, Real-ESRGAN, tiled diffusion and SeedVR2, repair faces and colour drift, colorize a 1961 NASA photo and measure what changed, export a 16-bit print master to a written specification and check every file with ImageMagick and ExifTool.
 
 🔗 Links:

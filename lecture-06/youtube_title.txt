@@ -1,1 +1,1 @@
-Generative AI Full Course - Lecture 6: ComfyUI in Colab + ControlNet
+Generative AI Full Course - Lecture 6: Stack Depth + Pose for Structural Control

@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "utc": "2026-10-18T23:21:50.377869+00:00",
+  "utc": "2026-11-01T15:36:20.140664+00:00",
   "scope": "Lecture 6 course distribution: recorded workflows, original results, inputs, latest clean notebook and learner guides. GitHub links and chapter/publication text added; model weights and video are separate.",
   "files": [
+    {
+      "file": "Comparison_Settings.json",
+      "bytes": 1206,
+      "sha256": "8d686f1213ec1d7a5aa1232adeffa907538c339f05f72ae30382c0938e521a79"
+    },
+    {
+      "file": "README.md",
+      "bytes": 16645,
+      "sha256": "70e99bfb036f7684c728b3544e0d460174645edb17f2c97e93da7c7e3ce65555"
+    },
     {
       "file": "chapters.txt",
       "bytes": 3967,
@@ -17,11 +27,6 @@
       "file": "colab/README.md",
       "bytes": 5310,
       "sha256": "6bcfeee087fcbfa23ab68fb2d64064df8da36260121389de43c95d8f48d35536"
-    },
-    {
-      "file": "Comparison_Settings.json",
-      "bytes": 1206,
-      "sha256": "8d686f1213ec1d7a5aa1232adeffa907538c339f05f72ae30382c0938e521a79"
     },
     {
       "file": "inputs/explorer_element.png",
@@ -82,11 +87,6 @@
       "file": "inputs/workshop_background.png",
       "bytes": 1503278,
       "sha256": "679c092b2294d952df1a2d179e1ef3242a7cfec51b200d851cbba58c4d34ad8e"
-    },
-    {
-      "file": "README.md",
-      "bytes": 7667,
-      "sha256": "214e1b7604d4a20a841cfdb5b5217f632c2dc52145ced839b3eea4a75e6612bf"
     },
     {
       "file": "recorded_results/anyline_map_first/ComfyUI_temp_mnrfm_00001_.png",
@@ -625,13 +625,13 @@
     },
     {
       "file": "youtube_description.txt",
-      "bytes": 4994,
-      "sha256": "4885e9b680cc97cbcf9934adb58843a55aaa9c6d32e690fd6520011058727f0e"
+      "bytes": 5067,
+      "sha256": "40b71e836e1b1c55e6b3936fdc36578f6a2cbc56de71bbda4084bfaf410e71ae"
     },
     {
       "file": "youtube_title.txt",
-      "bytes": 69,
-      "sha256": "31be131ff619211c9fc40586e8f9aaf641a42d2a118c17389e18358f982ee78a"
+      "bytes": 81,
+      "sha256": "91a821ac7a14b631c42776fd9fed2bae31dc7b3ac21996bd510690beca0b9589"
     }
   ]
 }
