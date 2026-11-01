@@ -1,0 +1,413 @@
+{
+  "1": {
+    "inputs": {
+      "image": "explorer_anchor.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": [
+        "2:59",
+        0
+      ]
+    },
+    "class_type": "SplitImageWithAlpha",
+    "_meta": {
+      "title": "Split Image with Alpha"
+    }
+  },
+  "4": {
+    "inputs": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "5": {
+    "inputs": {
+      "shift": 3.0,
+      "sampling": "flow",
+      "model": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "ModelSamplingAuraFlow"
+    }
+  },
+  "6": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "7": {
+    "inputs": {
+      "vae_name": "LectureTwo\\ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "8": {
+    "inputs": {
+      "text": "Close-up of a man in his forties with short dark hair, a neatly trimmed grey-flecked beard, brown eyes, friendly expression, natural skin texture, photorealistic",
+      "clip": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "9": {
+    "inputs": {
+      "conditioning": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "Conditioning Zero Out"
+    }
+  },
+  "10": {
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "11": {
+    "inputs": {
+      "guide_size": 512.0,
+      "guide_size_for": true,
+      "max_size": 1024.0,
+      "seed": 42,
+      "steps": 8,
+      "cfg": 1.0,
+      "sampler_name": "res_multistep",
+      "scheduler": "simple",
+      "denoise": 0.25,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.5,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 3.0,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 0,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 20,
+      "tiled_encode": false,
+      "tiled_decode": false,
+      "image": [
+        "3",
+        0
+      ],
+      "model": [
+        "5",
+        0
+      ],
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "bbox_detector": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "FaceDetailer"
+    }
+  },
+  "12": {
+    "inputs": {
+      "method": "reinhard_lab",
+      "source_stats": "per_frame",
+      "strength": 1.0,
+      "image_target": [
+        "11",
+        0
+      ],
+      "image_ref": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ColorTransfer",
+    "_meta": {
+      "title": "Transfer Color"
+    }
+  },
+  "13": {
+    "inputs": {
+      "seed": 7,
+      "strength": 0.02,
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "ImageAddNoise",
+    "_meta": {
+      "title": "Add Noise to Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "source": "sRGB",
+      "destination": "sRGB",
+      "image": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "ImageColorSpace",
+    "_meta": {
+      "title": "Convert Image Color Space"
+    }
+  },
+  "15": {
+    "inputs": {
+      "filename_prefix": "Lecture07/delivery",
+      "format": "png",
+      "format.bit_depth": "8-bit",
+      "format.input_color_space": "sRGB",
+      "images": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "SaveImageAdvanced",
+    "_meta": {
+      "title": "Save Image (Advanced)"
+    }
+  },
+  "2:48": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 128,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "pixels": [
+        "2:58",
+        0
+      ],
+      "vae": [
+        "2:51",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeTiled",
+    "_meta": {
+      "title": "VAE Encode (Tiled)",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:50": {
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "alpha": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "JoinImageWithAlpha",
+    "_meta": {
+      "title": "Join Image with Alpha",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:51": {
+    "inputs": {
+      "vae_name": "seedvr2_ema_vae_fp16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:52": {
+    "inputs": {
+      "unet_name": "seedvr2_3b_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:54": {
+    "inputs": {
+      "seed": 959948902156062,
+      "steps": 1,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "2:52",
+        0
+      ],
+      "positive": [
+        "2:61",
+        0
+      ],
+      "negative": [
+        "2:61",
+        1
+      ],
+      "latent_image": [
+        "2:48",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:55": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 128,
+      "temporal_size": 4096,
+      "temporal_overlap": 8,
+      "samples": [
+        "2:54",
+        0
+      ],
+      "vae": [
+        "2:51",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:57": {
+    "inputs": {
+      "resize_type": "scale by multiplier",
+      "resize_type.multiplier": 2.0,
+      "scale_method": "lanczos",
+      "input": [
+        "2:50",
+        0
+      ]
+    },
+    "class_type": "ResizeImageMaskNode",
+    "_meta": {
+      "title": "Resize Image/Mask",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:58": {
+    "inputs": {
+      "resized_images": [
+        "2:57",
+        0
+      ]
+    },
+    "class_type": "SeedVR2Preprocess",
+    "_meta": {
+      "title": "Pre-Process SeedVR2 Input",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:59": {
+    "inputs": {
+      "color_correction_method": "none",
+      "images": [
+        "2:55",
+        0
+      ],
+      "original_resized_images": [
+        "2:57",
+        0
+      ]
+    },
+    "class_type": "SeedVR2PostProcessing",
+    "_meta": {
+      "title": "Post-Process SeedVR2 Output",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  },
+  "2:61": {
+    "inputs": {
+      "model": [
+        "2:52",
+        0
+      ],
+      "vae_conditioning": [
+        "2:48",
+        0
+      ]
+    },
+    "class_type": "SeedVR2Conditioning",
+    "_meta": {
+      "title": "Apply SeedVR2 Conditioning",
+      "cnr_id": "comfy-core",
+      "ver": "0.27.0"
+    }
+  }
+}

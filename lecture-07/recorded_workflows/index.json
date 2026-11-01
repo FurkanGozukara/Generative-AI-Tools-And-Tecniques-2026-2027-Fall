@@ -1,0 +1,809 @@
+{
+  "version": 1,
+  "recorded": "2026-10-26",
+  "note": "Every run recorded in Lecture 7, in lecture order. The .json files are the graphs exactly as queued (open them with Workflow > Open); the .api.json files are the same runs as API prompts. Output paths are relative to ComfyUI/output; \"loads\" names the files each graph reads from ComfyUI/input (or output, marked [output]).",
+  "runs": [
+    {
+      "id": "03_watchmaker_1024",
+      "chapter": "03",
+      "chapter_title": "Generate a 1024 pixel test image with Z-Image Turbo",
+      "chapter_starts_at": "2:52",
+      "intent": "The 1024 x 1024 Z-Image Turbo test image, seed 2026: the source of every route.",
+      "workflow": "recorded_workflows/03_watchmaker_1024.json",
+      "api": "recorded_workflows/03_watchmaker_1024.api.json",
+      "loads": [],
+      "outputs": [
+        {
+          "file": "Lecture07/watchmaker_00001_.png",
+          "sha256": "029fef8a64ff972ad3c674032ad02e28bb9dd37e59a119bc770ff00ecc48d8fd",
+          "size": [
+            1024,
+            1024
+          ],
+          "packaged": "recorded_results/03_watchmaker_1024/watchmaker_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ConditioningZeroOut",
+        "EmptySD3LatentImage",
+        "KSampler",
+        "ModelSamplingAuraFlow",
+        "SaveImage",
+        "UNETLoader",
+        "VAEDecode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "04_lanczos_4096",
+      "chapter": "04",
+      "chapter_title": "Lanczos resize: the honest 4K baseline",
+      "chapter_starts_at": "3:55",
+      "intent": "Plain Lanczos resize to 4096 x 4096: the honest baseline.",
+      "workflow": "recorded_workflows/04_lanczos_4096.json",
+      "api": "recorded_workflows/04_lanczos_4096.api.json",
+      "loads": [],
+      "outputs": [
+        {
+          "file": "Lecture07/watchmaker_00001_.png",
+          "sha256": "029fef8a64ff972ad3c674032ad02e28bb9dd37e59a119bc770ff00ecc48d8fd",
+          "size": [
+            1024,
+            1024
+          ],
+          "packaged": "written by an earlier run (03_watchmaker_1024); not saved again"
+        },
+        {
+          "file": "Lecture07/lanczos_00001_.png",
+          "sha256": "2101072262ce738fb3e3419b91f41b54a585a05ad7b865b1ae1338f07e4b4348",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "recorded_results/04_lanczos_4096/lanczos_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ConditioningZeroOut",
+        "EmptySD3LatentImage",
+        "ImageScale",
+        "KSampler",
+        "ModelSamplingAuraFlow",
+        "SaveImage",
+        "UNETLoader",
+        "VAEDecode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "05_gan_4096",
+      "chapter": "05",
+      "chapter_title": "GAN upscaler: download and run Real-ESRGAN 4x",
+      "chapter_starts_at": "5:16",
+      "intent": "Real-ESRGAN x4plus through Upscale Image (using Model): 4096 x 4096.",
+      "workflow": "recorded_workflows/05_gan_4096.json",
+      "api": "recorded_workflows/05_gan_4096.api.json",
+      "loads": [],
+      "outputs": [
+        {
+          "file": "Lecture07/lanczos_00001_.png",
+          "sha256": "2101072262ce738fb3e3419b91f41b54a585a05ad7b865b1ae1338f07e4b4348",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "written by an earlier run (04_lanczos_4096); not saved again"
+        },
+        {
+          "file": "Lecture07/watchmaker_00001_.png",
+          "sha256": "029fef8a64ff972ad3c674032ad02e28bb9dd37e59a119bc770ff00ecc48d8fd",
+          "size": [
+            1024,
+            1024
+          ],
+          "packaged": "written by an earlier run (03_watchmaker_1024); not saved again"
+        },
+        {
+          "file": "Lecture07/gan_00001_.png",
+          "sha256": "b44095b49d316ed5b862a021244be1600f45f9663aeb780ce6b676e5b493b33f",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "recorded_results/05_gan_4096/gan_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ConditioningZeroOut",
+        "EmptySD3LatentImage",
+        "ImageScale",
+        "ImageUpscaleWithModel",
+        "KSampler",
+        "ModelSamplingAuraFlow",
+        "SaveImage",
+        "UNETLoader",
+        "UpscaleModelLoader",
+        "VAEDecode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "06_tiles_4096",
+      "chapter": "06",
+      "chapter_title": "Tiled diffusion with core tile list nodes",
+      "chapter_starts_at": "7:28",
+      "intent": "Tiled diffusion: 1024 px tiles, overlap 128, KSampler denoise 0.3 per tile, merged to 4096 x 4096.",
+      "workflow": "recorded_workflows/06_tiles_4096.json",
+      "api": "recorded_workflows/06_tiles_4096.api.json",
+      "loads": [],
+      "outputs": [
+        {
+          "file": "Lecture07/lanczos_00001_.png",
+          "sha256": "2101072262ce738fb3e3419b91f41b54a585a05ad7b865b1ae1338f07e4b4348",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "written by an earlier run (04_lanczos_4096); not saved again"
+        },
+        {
+          "file": "Lecture07/gan_00001_.png",
+          "sha256": "b44095b49d316ed5b862a021244be1600f45f9663aeb780ce6b676e5b493b33f",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "written by an earlier run (05_gan_4096); not saved again"
+        },
+        {
+          "file": "Lecture07/watchmaker_00001_.png",
+          "sha256": "029fef8a64ff972ad3c674032ad02e28bb9dd37e59a119bc770ff00ecc48d8fd",
+          "size": [
+            1024,
+            1024
+          ],
+          "packaged": "written by an earlier run (03_watchmaker_1024); not saved again"
+        },
+        {
+          "file": "Lecture07/tiles_00001_.png",
+          "sha256": "47948be447d7dccd7cebfa4bb58a306a41ec0976fe24bb57a5958497ee02c8bf",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "recorded_results/06_tiles_4096/tiles_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ConditioningZeroOut",
+        "EmptySD3LatentImage",
+        "ImageMergeTileList",
+        "ImageScale",
+        "ImageUpscaleWithModel",
+        "KSampler",
+        "ModelSamplingAuraFlow",
+        "SaveImage",
+        "SplitImageToTileList",
+        "UNETLoader",
+        "UpscaleModelLoader",
+        "VAEDecode",
+        "VAEEncode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "07_seedvr2_4096",
+      "chapter": "07",
+      "chapter_title": "SeedVR2 one-step restoration from the official template",
+      "chapter_starts_at": "10:46",
+      "intent": "SeedVR2 3B INT8 one-step restoration of the watchmaker, multiplier 4.",
+      "workflow": "recorded_workflows/07_seedvr2_4096.json",
+      "api": "recorded_workflows/07_seedvr2_4096.api.json",
+      "loads": [
+        "Lecture07/watchmaker_00001_.png [output]"
+      ],
+      "outputs": [
+        {
+          "file": "seedvr2_after/image_00001_.png",
+          "sha256": "2da9a51d4a977cc0b691fc1914d2063cbf70c588e1fdb12a54711e50655d6948",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "recorded_results/07_seedvr2_4096/image_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "ImageCompare",
+        "JoinImageWithAlpha",
+        "KSampler",
+        "LoadImage",
+        "ResizeImageMaskNode",
+        "SaveImage",
+        "SeedVR2Conditioning",
+        "SeedVR2PostProcessing",
+        "SeedVR2Preprocess",
+        "UNETLoader",
+        "VAEDecodeTiled",
+        "VAEEncodeTiled",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "09_latent_2048",
+      "chapter": "09",
+      "chapter_title": "Tiled VAE decode: same latent, lower memory",
+      "chapter_starts_at": "15:16",
+      "intent": "The watchmaker at 2048 x 2048 kept as a latent by Save Latent (moved into ComfyUI's input folder on camera).",
+      "workflow": "recorded_workflows/09_latent_2048.json",
+      "api": "recorded_workflows/09_latent_2048.api.json",
+      "loads": [],
+      "outputs": [
+        {
+          "file": "latents/watchmaker_2048_00001_.latent",
+          "sha256": "eec41d80473a467b596fe7a147614e3c29cce47c8231366ce326f23405772341",
+          "size": null,
+          "packaged": "recorded_results/09_latent_2048/watchmaker_2048_00001_.latent"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ConditioningZeroOut",
+        "EmptySD3LatentImage",
+        "KSampler",
+        "ModelSamplingAuraFlow",
+        "SaveLatent",
+        "UNETLoader"
+      ]
+    },
+    {
+      "id": "09_decode_full",
+      "chapter": "09",
+      "chapter_title": "Tiled VAE decode: same latent, lower memory",
+      "chapter_starts_at": "15:16",
+      "intent": "The saved latent decoded by the ordinary VAE Decode.",
+      "workflow": "recorded_workflows/09_decode_full.json",
+      "api": "recorded_workflows/09_decode_full.api.json",
+      "loads": [
+        "watchmaker_2048_00001_.latent"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/decode_full_00001_.png",
+          "sha256": "90fbbe63e3da6416d812afa43eeab9a2f7f28fba996412199a6c6e15d6583385",
+          "size": [
+            2048,
+            2048
+          ],
+          "packaged": "recorded_results/09_decode_full/decode_full_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "LoadLatent",
+        "SaveImage",
+        "VAEDecode",
+        "VAEDecodeTiled",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "09_decode_tiled",
+      "chapter": "09",
+      "chapter_title": "Tiled VAE decode: same latent, lower memory",
+      "chapter_starts_at": "15:16",
+      "intent": "The same latent decoded by VAE Decode (Tiled), tile size 512, overlap 64.",
+      "workflow": "recorded_workflows/09_decode_tiled.json",
+      "api": "recorded_workflows/09_decode_tiled.api.json",
+      "loads": [
+        "watchmaker_2048_00001_.latent"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/decode_tiled_00001_.png",
+          "sha256": "f37d2da8736d54819a7545a0f680c2ed2841eed21f5c391ed9b845af538e4e3b",
+          "size": [
+            2048,
+            2048
+          ],
+          "packaged": "recorded_results/09_decode_tiled/decode_tiled_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "LoadLatent",
+        "SaveImage",
+        "VAEDecode",
+        "VAEDecodeTiled",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "11_detailer_default_sizes",
+      "chapter": "11",
+      "chapter_title": "FaceDetailer: why the working size matters",
+      "chapter_starts_at": "21:05",
+      "intent": "FaceDetailer with its default sizes (guide size 512, max size 1024), denoise 0.4.",
+      "workflow": "recorded_workflows/11_detailer_default_sizes.json",
+      "api": "recorded_workflows/11_detailer_default_sizes.api.json",
+      "loads": [
+        "explorer_anchor.png"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/detailer_00001_.png",
+          "sha256": "771f73471335bb5b584610c90c5844e3c5d2967af9dadb7a1e81d1df2578a154",
+          "size": [
+            1344,
+            768
+          ],
+          "packaged": "recorded_results/11_detailer_default_sizes/detailer_00001_.png"
+        },
+        {
+          "file": "Lecture07/detailer_crop_00001_.png",
+          "sha256": "c52351f2cc29794f1a97915986c25b939d87cb6ffd11597ceca3fe3fc18bc30e",
+          "size": [
+            192,
+            270
+          ],
+          "packaged": "recorded_results/11_detailer_default_sizes/detailer_crop_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ConditioningZeroOut",
+        "FaceDetailer",
+        "LoadImage",
+        "ModelSamplingAuraFlow",
+        "SaveImage",
+        "UNETLoader",
+        "UltralyticsDetectorProvider",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "11_detailer_max_size_512",
+      "chapter": "11",
+      "chapter_title": "FaceDetailer: why the working size matters",
+      "chapter_starts_at": "21:05",
+      "intent": "The same FaceDetailer run with max size 512.",
+      "workflow": "recorded_workflows/11_detailer_max_size_512.json",
+      "api": "recorded_workflows/11_detailer_max_size_512.api.json",
+      "loads": [
+        "explorer_anchor.png"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/detailer_00002_.png",
+          "sha256": "6ff35e6652dc908286bdf39fcb53dec7047f672927a5dcff9d6ee2b6014a02a1",
+          "size": [
+            1344,
+            768
+          ],
+          "packaged": "recorded_results/11_detailer_max_size_512/detailer_00002_.png"
+        },
+        {
+          "file": "Lecture07/detailer_crop_00002_.png",
+          "sha256": "1245a53f6ca248fa9aa04660121b57a7b506d18f4a7ba928303c69d6736d5bee",
+          "size": [
+            192,
+            270
+          ],
+          "packaged": "recorded_results/11_detailer_max_size_512/detailer_crop_00002_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ConditioningZeroOut",
+        "FaceDetailer",
+        "LoadImage",
+        "ModelSamplingAuraFlow",
+        "SaveImage",
+        "UNETLoader",
+        "UltralyticsDetectorProvider",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "12_face_repair",
+      "chapter": "12",
+      "chapter_title": "Qwen face repair and Transfer Color drift fix",
+      "chapter_starts_at": "23:52",
+      "intent": "Qwen-Image 2.1 crop-and-stitch face repair of the painted face region.",
+      "workflow": "recorded_workflows/12_face_repair.json",
+      "api": "recorded_workflows/12_face_repair.api.json",
+      "loads": [
+        "clipspace-painted-masked-1792997247621.png [input]"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/face_repair_00001_.png",
+          "sha256": "462cbf57635cd8e7e4e586518d804613eaf5d4019f76f000a6b2040bf0dcb327",
+          "size": [
+            1344,
+            768
+          ],
+          "packaged": "recorded_results/12_face_repair/face_repair_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "InpaintCropImproved",
+        "InpaintStitchImproved",
+        "KSampler",
+        "LoadImage",
+        "SaveImage",
+        "SplitImageWithAlpha",
+        "TextEncodeQwenImage21",
+        "UNETLoader",
+        "VAEDecode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "12_face_repair_transfer_color",
+      "chapter": "12",
+      "chapter_title": "Qwen face repair and Transfer Color drift fix",
+      "chapter_starts_at": "23:52",
+      "intent": "The same repair with Transfer Color (histogram) between the split and the stitch.",
+      "workflow": "recorded_workflows/12_face_repair_transfer_color.json",
+      "api": "recorded_workflows/12_face_repair_transfer_color.api.json",
+      "loads": [
+        "clipspace-painted-masked-1792997247621.png"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/face_repair_00002_.png",
+          "sha256": "2cfb13d1100292c2e65f324992c410a910ba36e2e090787552ffd6c9ca39f272",
+          "size": [
+            1344,
+            768
+          ],
+          "packaged": "recorded_results/12_face_repair_transfer_color/face_repair_00002_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "ColorTransfer",
+        "InpaintCropImproved",
+        "InpaintStitchImproved",
+        "KSampler",
+        "LoadImage",
+        "SaveImage",
+        "SplitImageWithAlpha",
+        "TextEncodeQwenImage21",
+        "UNETLoader",
+        "VAEDecode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "13_colorize",
+      "chapter": "13",
+      "chapter_title": "Colorize a 1961 NASA photo and check what changed",
+      "chapter_starts_at": "26:43",
+      "intent": "Qwen-Image 2.1 colorization of the black-and-white NASA photograph, resolution 1536.",
+      "workflow": "recorded_workflows/13_colorize.json",
+      "api": "recorded_workflows/13_colorize.api.json",
+      "loads": [
+        "mercury7_bw.png"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/colorized_00001_.png",
+          "sha256": "a2911a32ed41147c26b3ae120d6a41a69868abc87ff20169f9a3aa2f82bce760",
+          "size": [
+            1728,
+            1376
+          ],
+          "packaged": "recorded_results/13_colorize/colorized_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "ImageBlend",
+        "ImageToMask",
+        "KSampler",
+        "LoadImage",
+        "MaskToImage",
+        "SaveImage",
+        "TextEncodeQwenImage21",
+        "ThresholdMask",
+        "UNETLoader",
+        "VAEDecode",
+        "VAEEncode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "14_print_master_with_alpha",
+      "chapter": "14",
+      "chapter_title": "Destination spec, color space and 16-bit export",
+      "chapter_starts_at": "29:54",
+      "intent": "SeedVR2 restoration saved by Save Image (Advanced) as a 16-bit sRGB PNG: the export still carries the alpha channel.",
+      "workflow": "recorded_workflows/14_print_master_with_alpha.json",
+      "api": "recorded_workflows/14_print_master_with_alpha.api.json",
+      "loads": [
+        "Lecture07/watchmaker_00001_.png [output]"
+      ],
+      "outputs": [
+        {
+          "file": "seedvr2_after/image_00002_.png",
+          "sha256": "fe1e8bb2abf2c7d00d62f416cd52c98cd51e3e7fcdfca9d429ee80a47464269c",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": null,
+          "reason": "the same SeedVR2 stage re-run inside this graph; the chapter 07 result is packaged"
+        },
+        {
+          "file": "Lecture07/print_master_00001.png",
+          "sha256": "dd03482589af29bebec9ad56e3c74ff783933e46d54685879b2757622385b90a",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": null,
+          "reason": "16-bit 4096 x 4096 print master (65-75 MB): run this graph to rebuild it"
+        }
+      ],
+      "node_classes": [
+        "ImageColorSpace",
+        "ImageCompare",
+        "JoinImageWithAlpha",
+        "KSampler",
+        "LoadImage",
+        "ResizeImageMaskNode",
+        "SaveImage",
+        "SaveImageAdvanced",
+        "SeedVR2Conditioning",
+        "SeedVR2PostProcessing",
+        "SeedVR2Preprocess",
+        "UNETLoader",
+        "VAEDecodeTiled",
+        "VAEEncodeTiled",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "14_print_master_rgb",
+      "chapter": "14",
+      "chapter_title": "Destination spec, color space and 16-bit export",
+      "chapter_starts_at": "29:54",
+      "intent": "The same export after Split Image with Alpha: RGB without alpha.",
+      "workflow": "recorded_workflows/14_print_master_rgb.json",
+      "api": "recorded_workflows/14_print_master_rgb.api.json",
+      "loads": [
+        "Lecture07/watchmaker_00001_.png [output]"
+      ],
+      "outputs": [
+        {
+          "file": "seedvr2_after/image_00002_.png",
+          "sha256": "fe1e8bb2abf2c7d00d62f416cd52c98cd51e3e7fcdfca9d429ee80a47464269c",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "written by an earlier run (14_print_master_with_alpha); not saved again"
+        },
+        {
+          "file": "Lecture07/print_master_00002.png",
+          "sha256": "d9f8c86f553e7a3204facd532415799fed9144bb0283121df3ca5471db32cd1b",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": null,
+          "reason": "16-bit 4096 x 4096 print master (65-75 MB): run this graph to rebuild it"
+        }
+      ],
+      "node_classes": [
+        "ImageColorSpace",
+        "ImageCompare",
+        "JoinImageWithAlpha",
+        "KSampler",
+        "LoadImage",
+        "ResizeImageMaskNode",
+        "SaveImage",
+        "SaveImageAdvanced",
+        "SeedVR2Conditioning",
+        "SeedVR2PostProcessing",
+        "SeedVR2Preprocess",
+        "SplitImageWithAlpha",
+        "UNETLoader",
+        "VAEDecodeTiled",
+        "VAEEncodeTiled",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "14_print_master_linear_mismatch",
+      "chapter": "14",
+      "chapter_title": "Destination spec, color space and 16-bit export",
+      "chapter_starts_at": "29:54",
+      "intent": "Convert Image Color Space set to linear while the saver stays at sRGB: the darker, mismatched file.",
+      "workflow": "recorded_workflows/14_print_master_linear_mismatch.json",
+      "api": "recorded_workflows/14_print_master_linear_mismatch.api.json",
+      "loads": [
+        "Lecture07/watchmaker_00001_.png [output]"
+      ],
+      "outputs": [
+        {
+          "file": "seedvr2_after/image_00002_.png",
+          "sha256": "fe1e8bb2abf2c7d00d62f416cd52c98cd51e3e7fcdfca9d429ee80a47464269c",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": "written by an earlier run (14_print_master_with_alpha); not saved again"
+        },
+        {
+          "file": "Lecture07/print_master_00003.png",
+          "sha256": "7e26afe1e749371cefe71bee6954998b7fe8a02592f4bd98ed8183e7564998c7",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": null,
+          "reason": "16-bit 4096 x 4096 print master (65-75 MB): run this graph to rebuild it"
+        }
+      ],
+      "node_classes": [
+        "ImageColorSpace",
+        "ImageCompare",
+        "JoinImageWithAlpha",
+        "KSampler",
+        "LoadImage",
+        "ResizeImageMaskNode",
+        "SaveImage",
+        "SaveImageAdvanced",
+        "SeedVR2Conditioning",
+        "SeedVR2PostProcessing",
+        "SeedVR2Preprocess",
+        "SplitImageWithAlpha",
+        "UNETLoader",
+        "VAEDecodeTiled",
+        "VAEEncodeTiled",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "15_print_master_client",
+      "chapter": "15",
+      "chapter_title": "What the file tells a stranger: metadata and the client launcher",
+      "chapter_starts_at": "33:31",
+      "intent": "The corrected export run again on the server started by the client launch file (--disable-metadata).",
+      "workflow": "recorded_workflows/15_print_master_client.json",
+      "api": "recorded_workflows/15_print_master_client.api.json",
+      "loads": [
+        "Lecture07/watchmaker_00001_.png [output]"
+      ],
+      "outputs": [
+        {
+          "file": "seedvr2_after/image_00003_.png",
+          "sha256": "35bdaf369f822ff95acf8ade1113d6ea86b2cc4760e8f53e7848f83947db9e60",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": null,
+          "reason": "the same SeedVR2 stage re-run inside this graph; the chapter 07 result is packaged"
+        },
+        {
+          "file": "Lecture07/print_master_00004.png",
+          "sha256": "ff62c24a6d575e80599b47ba556f64d20e7bb140a528af569696c975c0a0f71a",
+          "size": [
+            4096,
+            4096
+          ],
+          "packaged": null,
+          "reason": "16-bit 4096 x 4096 print master (65-75 MB): run this graph to rebuild it"
+        }
+      ],
+      "node_classes": [
+        "ImageColorSpace",
+        "ImageCompare",
+        "JoinImageWithAlpha",
+        "KSampler",
+        "LoadImage",
+        "ResizeImageMaskNode",
+        "SaveImage",
+        "SaveImageAdvanced",
+        "SeedVR2Conditioning",
+        "SeedVR2PostProcessing",
+        "SeedVR2Preprocess",
+        "SplitImageWithAlpha",
+        "UNETLoader",
+        "VAEDecodeTiled",
+        "VAEEncodeTiled",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "16_chart_real_esrgan",
+      "chapter": "16",
+      "chapter_title": "The chart test: AI upscaler vs ImageMagick Lanczos",
+      "chapter_starts_at": "35:07",
+      "intent": "Real-ESRGAN x4 on the 640 x 400 chart: 2560 x 1600 with changed digits.",
+      "workflow": "recorded_workflows/16_chart_real_esrgan.json",
+      "api": "recorded_workflows/16_chart_real_esrgan.api.json",
+      "loads": [
+        "chart_orders_640.png"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/chart_gan_00001_.png",
+          "sha256": "acf0a3400ac8cf0b88377da2ebf59a4c644884434c78a3dc4fb1b65c10da35d5",
+          "size": [
+            2560,
+            1600
+          ],
+          "packaged": "recorded_results/16_chart_real_esrgan/chart_gan_00001_.png"
+        }
+      ],
+      "node_classes": [
+        "ImageUpscaleWithModel",
+        "LoadImage",
+        "SaveImage",
+        "UpscaleModelLoader"
+      ]
+    },
+    {
+      "id": "17_delivery_chain",
+      "chapter": "17",
+      "chapter_title": "The complete delivery chain and final verification",
+      "chapter_starts_at": "36:40",
+      "intent": "The delivery chain on the client server: SeedVR2 x2, FaceDetailer denoise 0.25, Transfer Color reinhard_lab, Add Noise 0.02, 8-bit sRGB PNG.",
+      "workflow": "recorded_workflows/17_delivery_chain.json",
+      "api": "recorded_workflows/17_delivery_chain.api.json",
+      "loads": [
+        "explorer_anchor.png"
+      ],
+      "outputs": [
+        {
+          "file": "Lecture07/delivery_00001.png",
+          "sha256": "9c7b563bc4520454f161d9703a3b300fa47ffce5e4f1f18f0971d2e4781b63ff",
+          "size": [
+            2688,
+            1536
+          ],
+          "packaged": "recorded_results/17_delivery_chain/delivery_00001.png"
+        }
+      ],
+      "node_classes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "ColorTransfer",
+        "ConditioningZeroOut",
+        "FaceDetailer",
+        "ImageAddNoise",
+        "ImageColorSpace",
+        "JoinImageWithAlpha",
+        "KSampler",
+        "LoadImage",
+        "ModelSamplingAuraFlow",
+        "ResizeImageMaskNode",
+        "SaveImageAdvanced",
+        "SeedVR2Conditioning",
+        "SeedVR2PostProcessing",
+        "SeedVR2Preprocess",
+        "SplitImageWithAlpha",
+        "UNETLoader",
+        "UltralyticsDetectorProvider",
+        "VAEDecodeTiled",
+        "VAEEncodeTiled",
+        "VAELoader"
+      ]
+    }
+  ]
+}

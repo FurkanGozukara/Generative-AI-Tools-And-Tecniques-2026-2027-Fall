@@ -1,0 +1,18 @@
+0:00 Sharp but wrong: what this lecture fixes
+1:07 Update ComfyUI and start it with the course launcher
+2:52 Generate a 1024 pixel test image with Z-Image Turbo
+3:55 Lanczos resize: the honest 4K baseline
+5:16 GAN upscaler: download and run Real-ESRGAN 4x
+7:28 Tiled diffusion with core tile list nodes
+10:46 SeedVR2 one-step restoration from the official template
+13:58 Compare four routes: preserve or invent?
+15:16 Tiled VAE decode: same latent, lower memory
+18:07 Check ImageMagick, install exiftool, add it to PATH
+21:05 FaceDetailer: why the working size matters
+23:52 Qwen face repair and Transfer Color drift fix
+26:43 Colorize a 1961 NASA photo and check what changed
+29:54 Destination spec, color space and 16-bit export
+33:31 What the file tells a stranger: metadata and the client launcher
+35:07 The chart test: AI upscaler vs ImageMagick Lanczos
+36:40 The complete delivery chain and final verification
+38:39 Recap and next lecture

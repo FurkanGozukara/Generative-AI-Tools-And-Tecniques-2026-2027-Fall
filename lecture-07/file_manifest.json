@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "lecture": "Generative AI Full Course - Lecture 7: Upscaling, Restoration & Professional Delivery",
+  "note": "Every file of this companion with its SHA-256; model weights and installers are linked in MODELS.md, not included.",
+  "files": [
+    {
+      "file": "Lecture07_Files/Lecture07_prompts.txt",
+      "bytes": 2414,
+      "sha256": "3d06ada6ca92be1c92fe01e16e3e70efc33668a09275766333949e5767fa2bf1"
+    },
+    {
+      "file": "Lecture07_Files/gpu_memory.bat",
+      "bytes": 266,
+      "sha256": "30df66444ec31ccbed4355a8248a5d5389650462891a99d3905649e94d1ec86c"
+    },
+    {
+      "file": "Lecture07_Files/images/chart_orders_640.png",
+      "bytes": 13903,
+      "sha256": "040df6c559e78b016a02908842d4c85c9a25ecfdb6fb0e9a773954fd024a3112"
+    },
+    {
+      "file": "Lecture07_Files/images/explorer_anchor.png",
+      "bytes": 888004,
+      "sha256": "72599cbc1319b7b84d24cb1d0cdedac497cf4d6d4206f194e6713a49009de4cc"
+    },
+    {
+      "file": "Lecture07_Files/images/mercury7_nasa_s61-01250_color.jpg",
+      "bytes": 1057180,
+      "sha256": "82afe91bf34f91afe7255b48be8224a6e839c2e42dec591d55e2c7dbcf8d1a6b"
+    },
+    {
+      "file": "Lecture07_Files/launchers/run_comfyui.bat",
+      "bytes": 127,
+      "sha256": "370f0209343cc7beaf86701b02695dbb778dc2ef6ec356b691f63301a1af9524"
+    },
+    {
+      "file": "Lecture07_Files/launchers/run_comfyui_CLIENT.bat",
+      "bytes": 167,
+      "sha256": "4d81578df33f54a854d4fd946e3d1ce0222469a8b4489420befc5a670ca21868"
+    },
+    {
+      "file": "Lecture07_Files/workflows/Qwen_image_edit_lecture04.json",
+      "bytes": 12712,
+      "sha256": "3aa013e244cf76ada398e33cd5a753883fba644aa1e13bc7e2850ed733e06e19"
+    },
+    {
+      "file": "Lecture07_Files/workflows/SeedVR2_3B_image_upscale_template.json",
+      "bytes": 22983,
+      "sha256": "eb608d6d8e3a960160a13a0af564f383d6592c987259bd46ce11d19e089dccb7"
+    },
+    {
+      "file": "Lecture07_Files/workflows/chart_test.json",
+      "bytes": 2608,
+      "sha256": "4cbbd66568919dc100164df398639d5272950b4bd8f857f12ca808c58986b88a"
+    },
+    {
+      "file": "Lecture07_Files/workflows/delivery_chain.json",
+      "bytes": 30984,
+      "sha256": "000100727ebce71bbb1e4f326041344d41ad7cbf47d2f0aa1fd5c244e4fc27e8"
+    },
+    {
+      "file": "Lecture07_Files/workflows/delivery_chain_recipe.json",
+      "bytes": 41966,
+      "sha256": "663e8585f911de645906323b8f2c9717a38b38bfda1e735e549149b0c60aeaf6"
+    },
+    {
+      "file": "Lecture07_Files/workflows/face_detailer.json",
+      "bytes": 9586,
+      "sha256": "11a40114c601e5b1d7afc6b305b20795d5da992ad795a1669f162385fba0cd67"
+    },
+    {
+      "file": "Lecture07_Files/workflows/lecture02_workflow.json",
+      "bytes": 7195,
+      "sha256": "a999fcbe9e01b4ea6aa0b0bfafd8b826879ba3e44621074843d946e5d5b17108"
+    },
+    {
+      "file": "Lecture07_Files/workflows/qwen_face_repair.json",
+      "bytes": 9916,
+      "sha256": "9ca294ca58c6136e2fac9e5ccfd43be00c2f353efc70e30a72d3bfbfdefff170"
+    },
+    {
+      "file": "Lecture07_Files/workflows/tiled_vae_1_save_latent.json",
+      "bytes": 5956,
+      "sha256": "63b6965aa5087f02cd2ca0e35f59ebbca5885c054b816abc779a7a9e1ed69bcd"
+    },
+    {
+      "file": "Lecture07_Files/workflows/tiled_vae_2_decode.json",
+      "bytes": 3902,
+      "sha256": "69c74b63a54abd432918bffa5e1ba9d1e49fad31464e269afdc6cdd960271934"
+    },
+    {
+      "file": "MODELS.md",
+      "bytes": 6161,
+      "sha256": "1d9b0f712dc796dbd84193622e23979d6fd4437c4dec2d1570f0f0893b78fe14"
+    },
+    {
+      "file": "README.md",
+      "bytes": 14848,
+      "sha256": "3f64da53a35df7d563b7bd5a92d3c98b06501c0d88148cceef358c0f67ef0055"
+    },
+    {
+      "file": "chapters.txt",
+      "bytes": 963,
+      "sha256": "ac6a9661d173931cc71108696b4c17ea9b56b3c05ef64d96cdbcb519ef31f665"
+    },
+    {
+      "file": "commands.md",
+      "bytes": 8543,
+      "sha256": "0e47ff54e203fcb0b8654706c65cb5d3ca439ce9429f40e992d3fdd42f525d67"
+    },
+    {
+      "file": "recorded_inputs/clipspace-painted-masked-1792997247621.png",
+      "bytes": 1026439,
+      "sha256": "32af0136ffbe2a05bbfbeebb3e00332beecb1c54a3545f9f5dfd407efd6d7d0f"
+    },
+    {
+      "file": "recorded_results/03_watchmaker_1024/watchmaker_00001_.png",
+      "bytes": 1440998,
+      "sha256": "029fef8a64ff972ad3c674032ad02e28bb9dd37e59a119bc770ff00ecc48d8fd"
+    },
+    {
+      "file": "recorded_results/04_lanczos_4096/lanczos_00001_.png",
+      "bytes": 10132066,
+      "sha256": "2101072262ce738fb3e3419b91f41b54a585a05ad7b865b1ae1338f07e4b4348"
+    },
+    {
+      "file": "recorded_results/05_gan_4096/gan_00001_.png",
+      "bytes": 17560645,
+      "sha256": "b44095b49d316ed5b862a021244be1600f45f9663aeb780ce6b676e5b493b33f"
+    },
+    {
+      "file": "recorded_results/06_tiles_4096/tiles_00001_.png",
+      "bytes": 16643559,
+      "sha256": "47948be447d7dccd7cebfa4bb58a306a41ec0976fe24bb57a5958497ee02c8bf"
+    },
+    {
+      "file": "recorded_results/07_seedvr2_4096/image_00001_.png",
+      "bytes": 22850654,
+      "sha256": "2da9a51d4a977cc0b691fc1914d2063cbf70c588e1fdb12a54711e50655d6948"
+    },
+    {
+      "file": "recorded_results/09_decode_full/decode_full_00001_.png",
+      "bytes": 6090383,
+      "sha256": "90fbbe63e3da6416d812afa43eeab9a2f7f28fba996412199a6c6e15d6583385"
+    },
+    {
+      "file": "recorded_results/09_decode_tiled/decode_tiled_00001_.png",
+      "bytes": 6044705,
+      "sha256": "f37d2da8736d54819a7545a0f680c2ed2841eed21f5c391ed9b845af538e4e3b"
+    },
+    {
+      "file": "recorded_results/09_latent_2048/watchmaker_2048_00001_.latent",
+      "bytes": 4201144,
+      "sha256": "eec41d80473a467b596fe7a147614e3c29cce47c8231366ce326f23405772341"
+    },
+    {
+      "file": "recorded_results/11_detailer_default_sizes/detailer_00001_.png",
+      "bytes": 931790,
+      "sha256": "771f73471335bb5b584610c90c5844e3c5d2967af9dadb7a1e81d1df2578a154"
+    },
+    {
+      "file": "recorded_results/11_detailer_default_sizes/detailer_crop_00001_.png",
+      "bytes": 88418,
+      "sha256": "c52351f2cc29794f1a97915986c25b939d87cb6ffd11597ceca3fe3fc18bc30e"
+    },
+    {
+      "file": "recorded_results/11_detailer_max_size_512/detailer_00002_.png",
+      "bytes": 931906,
+      "sha256": "6ff35e6652dc908286bdf39fcb53dec7047f672927a5dcff9d6ee2b6014a02a1"
+    },
+    {
+      "file": "recorded_results/11_detailer_max_size_512/detailer_crop_00002_.png",
+      "bytes": 88735,
+      "sha256": "1245a53f6ca248fa9aa04660121b57a7b506d18f4a7ba928303c69d6736d5bee"
+    },
+    {
+      "file": "recorded_results/12_face_repair/face_repair_00001_.png",
+      "bytes": 929932,
+      "sha256": "462cbf57635cd8e7e4e586518d804613eaf5d4019f76f000a6b2040bf0dcb327"
+    },
+    {
+      "file": "recorded_results/12_face_repair_transfer_color/face_repair_00002_.png",
+      "bytes": 930357,
+      "sha256": "2cfb13d1100292c2e65f324992c410a910ba36e2e090787552ffd6c9ca39f272"
+    },
+    {
+      "file": "recorded_results/13_colorize/colorized_00001_.png",
+      "bytes": 4347861,
+      "sha256": "a2911a32ed41147c26b3ae120d6a41a69868abc87ff20169f9a3aa2f82bce760"
+    },
+    {
+      "file": "recorded_results/16_chart_real_esrgan/chart_gan_00001_.png",
+      "bytes": 980434,
+      "sha256": "acf0a3400ac8cf0b88377da2ebf59a4c644884434c78a3dc4fb1b65c10da35d5"
+    },
+    {
+      "file": "recorded_results/17_delivery_chain/delivery_00001.png",
+      "bytes": 8442942,
+      "sha256": "9c7b563bc4520454f161d9703a3b300fa47ffce5e4f1f18f0971d2e4781b63ff"
+    },
+    {
+      "file": "recorded_results/commands/chart_lanczos_400.png",
+      "bytes": 211248,
+      "sha256": "994c9e4863daadffd83920f5f8205051c5b23cca61d5f62b0901ec8967bf139b"
+    },
+    {
+      "file": "recorded_results/commands/mercury7_bw.png",
+      "bytes": 3224394,
+      "sha256": "a7ec82078ef15663e208b414a742aea58699c7d369aa20a316c0b777cfcc5a27"
+    },
+    {
+      "file": "recorded_results/commands/mercury7_recombined.png",
+      "bytes": 8933028,
+      "sha256": "28eda62c5e51f2beb1f65017955f261f8c359b2290c14717399f605cca15b720"
+    },
+    {
+      "file": "recorded_workflows/03_watchmaker_1024.api.json",
+      "bytes": 2578,
+      "sha256": "de0edb8fe7513bb892e933f92854dc4df86432bd1efe482fdf18062c7caf4b8a"
+    },
+    {
+      "file": "recorded_workflows/03_watchmaker_1024.json",
+      "bytes": 8796,
+      "sha256": "42d3c3311998693fa586b607262f0374b404e3299c88c8d6d150db0a4a7a6e1b"
+    },
+    {
+      "file": "recorded_workflows/04_lanczos_4096.api.json",
+      "bytes": 3066,
+      "sha256": "d56645565f2177972c965726bce12334c91600244d294914fdc8bb5df8407102"
+    },
+    {
+      "file": "recorded_workflows/04_lanczos_4096.json",
+      "bytes": 10455,
+      "sha256": "cc80defb742320dfc90be4074edaf0186eeee130356f4e6160dedd1be9202291"
+    },
+    {
+      "file": "recorded_workflows/05_gan_4096.api.json",
+      "bytes": 3716,
+      "sha256": "d57eb1826f6f8fa11d7a424e9ea3e084155cca6e52dd0577d3ba4c9fb6a9555a"
+    },
+    {
+      "file": "recorded_workflows/05_gan_4096.json",
+      "bytes": 12766,
+      "sha256": "27a7dddd920072212bac4d4f05eb3b46fd7e0d2fb5fd087054417292240c2d07"
+    },
+    {
+      "file": "recorded_workflows/06_tiles_4096.api.json",
+      "bytes": 5378,
+      "sha256": "abf2fa07eb6fd9824af522154726f1bdb1e1fc33d6dd6a6fc6d7641edb758930"
+    },
+    {
+      "file": "recorded_workflows/06_tiles_4096.json",
+      "bytes": 18668,
+      "sha256": "5e20bbe8a8409c52eabce7fe3b643b62f85babc218cf64d69f30adca30f85605"
+    },
+    {
+      "file": "recorded_workflows/07_seedvr2_4096.api.json",
+      "bytes": 4262,
+      "sha256": "9cab06e8363c26b7f5142065dff31fdc7ee02a052af64c5fcecc2e773b923923"
+    },
+    {
+      "file": "recorded_workflows/07_seedvr2_4096.json",
+      "bytes": 33209,
+      "sha256": "70d762406babc831844e25fd91dc8c7f4cb673f289f9ce70f628af0d4a52551a"
+    },
+    {
+      "file": "recorded_workflows/09_decode_full.api.json",
+      "bytes": 1090,
+      "sha256": "b1e32d6979cd61c6a07a6a9fb7c3f9c40e52406b0eec62327313bb83e25aa1af"
+    },
+    {
+      "file": "recorded_workflows/09_decode_full.json",
+      "bytes": 4909,
+      "sha256": "ba67fa99234faaddcf55f000f98ef2c5607a19fd68253257b7266bb190fb56e7"
+    },
+    {
+      "file": "recorded_workflows/09_decode_tiled.api.json",
+      "bytes": 1091,
+      "sha256": "b9a9b89bd6fa08624a23884cb7ce415428ec68d5e4d4e8128e413048bd928abe"
+    },
+    {
+      "file": "recorded_workflows/09_decode_tiled.json",
+      "bytes": 4909,
+      "sha256": "31f63ce6a06e400ee2e9a49e03c45c84eb8003f105631c045a7222c79c8f707f"
+    },
+    {
+      "file": "recorded_workflows/09_latent_2048.api.json",
+      "bytes": 2207,
+      "sha256": "92c74bff8075199f7d24eb75aaaa4f5b468e235eaaad6b1f42dbec2412b91e8d"
+    },
+    {
+      "file": "recorded_workflows/09_latent_2048.json",
+      "bytes": 7412,
+      "sha256": "1789d0b1ef850e12a0e254364406b2d6553474b1be994442de44c6ef57660d1c"
+    },
+    {
+      "file": "recorded_workflows/11_detailer_default_sizes.api.json",
+      "bytes": 3417,
+      "sha256": "2893a782eab1781bae3eb57ff9ae96e4d455c44c1b0d0d527a14339525285656"
+    },
+    {
+      "file": "recorded_workflows/11_detailer_default_sizes.json",
+      "bytes": 12090,
+      "sha256": "95d3e1b16e2825850505ed62c41e33aaf5e8460add3d4d77a3745121f5fa6b41"
+    },
+    {
+      "file": "recorded_workflows/11_detailer_max_size_512.api.json",
+      "bytes": 3416,
+      "sha256": "f97947cfa8935582404bb05c0f9207dca1c65fe6456a1bfd46a53706651db0a3"
+    },
+    {
+      "file": "recorded_workflows/11_detailer_max_size_512.json",
+      "bytes": 12088,
+      "sha256": "166f6e9dfc3c7e69f98cff74e6a251122337b5ce027d88c7049a993d63be72f1"
+    },
+    {
+      "file": "recorded_workflows/12_face_repair.api.json",
+      "bytes": 3779,
+      "sha256": "11fe1610221b6f1b21da93f8c14b26572122240e86e8cd894bbb84858c6f6690"
+    },
+    {
+      "file": "recorded_workflows/12_face_repair.json",
+      "bytes": 12576,
+      "sha256": "56cdd7d8a32a91ec2b277361b6e77d69cee291068f2f75f08c83e10c835f85a4"
+    },
+    {
+      "file": "recorded_workflows/12_face_repair_transfer_color.api.json",
+      "bytes": 4093,
+      "sha256": "1b5875617f2ca5137dc7784d0cb3e57b3f6ec2bbcb180dca2f5f27a8957a38b2"
+    },
+    {
+      "file": "recorded_workflows/12_face_repair_transfer_color.json",
+      "bytes": 13640,
+      "sha256": "9bb6fd402799ce3037904f6936600ca691d9c01307bb6c1df91a56315c03f274"
+    },
+    {
+      "file": "recorded_workflows/13_colorize.api.json",
+      "bytes": 3432,
+      "sha256": "c8c704a9ada27cf19443f8a3579f9ebdd1e95726d8eefbbd10cd5d5abfe696e5"
+    },
+    {
+      "file": "recorded_workflows/13_colorize.json",
+      "bytes": 14610,
+      "sha256": "6c8d722a151f0d5564b0fe237b810503cce10ea6f79e17c0a7b52167396afa99"
+    },
+    {
+      "file": "recorded_workflows/14_print_master_linear_mismatch.api.json",
+      "bytes": 5036,
+      "sha256": "6090309e7ce80e14fc0238ddf54f8248ac22b30fd35a49f82dfbd81496e91b05"
+    },
+    {
+      "file": "recorded_workflows/14_print_master_linear_mismatch.json",
+      "bytes": 35762,
+      "sha256": "75d7c24affeb207c2f6a68f3db8ef1c7c84e4242643b40bbfed3f851b32e5d77"
+    },
+    {
+      "file": "recorded_workflows/14_print_master_rgb.api.json",
+      "bytes": 5034,
+      "sha256": "2747f1e09dece4ec683f27a37d9693aea51c888e05a6fd8d3e11a44023f97a78"
+    },
+    {
+      "file": "recorded_workflows/14_print_master_rgb.json",
+      "bytes": 35758,
+      "sha256": "eb3073c087c8d5bd5c6f0d9f1203e91c3ac1071fb13a581cd77ce1391c4012ad"
+    },
+    {
+      "file": "recorded_workflows/14_print_master_with_alpha.api.json",
+      "bytes": 4845,
+      "sha256": "a22372fcb9f737f739c658213eef5067489150115e6ef46d5c2b92adc5a34603"
+    },
+    {
+      "file": "recorded_workflows/14_print_master_with_alpha.json",
+      "bytes": 34976,
+      "sha256": "233aeb8d782d06585d687e3d01a35aea7f447b9fe0e9c1e8ec0cf90688e65312"
+    },
+    {
+      "file": "recorded_workflows/15_print_master_client.api.json",
+      "bytes": 5034,
+      "sha256": "2747f1e09dece4ec683f27a37d9693aea51c888e05a6fd8d3e11a44023f97a78"
+    },
+    {
+      "file": "recorded_workflows/15_print_master_client.json",
+      "bytes": 35758,
+      "sha256": "eb3073c087c8d5bd5c6f0d9f1203e91c3ac1071fb13a581cd77ce1391c4012ad"
+    },
+    {
+      "file": "recorded_workflows/16_chart_real_esrgan.api.json",
+      "bytes": 809,
+      "sha256": "dd57b469e852436679d86f8b149d1d3510b459a9816f23d59d2e1f65f8f7b67f"
+    },
+    {
+      "file": "recorded_workflows/16_chart_real_esrgan.json",
+      "bytes": 3301,
+      "sha256": "7b779d3664df022adb52d00f900f3e693655170d526ccdebcdf83220aae23146"
+    },
+    {
+      "file": "recorded_workflows/17_delivery_chain.api.json",
+      "bytes": 7699,
+      "sha256": "12493c107de75b64f5df100425ba2d0e0d5cd65c44944c96fc7cb75bab185a15"
+    },
+    {
+      "file": "recorded_workflows/17_delivery_chain.json",
+      "bytes": 41967,
+      "sha256": "362add2e2c4c78665c288fc608281f156f147dd12c5d1ee608689b4586baf220"
+    },
+    {
+      "file": "recorded_workflows/index.json",
+      "bytes": 26039,
+      "sha256": "296bc927200a71727024f0681a70e2e6de2ae56bb1b6e2cd7ad783a7614428ea"
+    },
+    {
+      "file": "youtube_description.txt",
+      "bytes": 4829,
+      "sha256": "3b35766649851673fbfe550c62d6ce0add35f9b4c7fea896f339e085ff351921"
+    },
+    {
+      "file": "youtube_title.txt",
+      "bytes": 87,
+      "sha256": "b7d36dbc0ad46a28b92cc05a08c5f8da35770a04d57fd8628ac0a6810763b62a"
+    }
+  ]
+}

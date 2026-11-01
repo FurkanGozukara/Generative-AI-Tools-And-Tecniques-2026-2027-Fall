@@ -1,0 +1,48 @@
+Turn a good AI generation into a file you can deliver. In ComfyUI, take one 1024 px image to 4K with Lanczos, Real-ESRGAN, tiled diffusion and SeedVR2, repair faces and colour drift, colorize a 1961 NASA photo and measure what changed, export a 16-bit print master to a written specification and check every file with ImageMagick and ExifTool.
+
+🔗 Links:
+
+Windows AI requirements guide: [ https://www.patreon.com/posts/111553210 ]
+
+📦 Full course resource repository: [ https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall ]
+
+📺 Full course playlist: [ https://www.youtube.com/playlist?list=PLUMEJUep1hiI ]
+
+SECourses Discord: [ https://discord.com/invite/software-engineering-courses-secourses-772774097734074388 ]
+
+🎯 Learn how to update ComfyUI and start it with a course launcher, build a Lanczos resize, a Real-ESRGAN x4 route and a tiled diffusion pass with the core tile list nodes, run SeedVR2 from ComfyUI's official template, and compare all four at the same zoom: preserve or invent? Then save one latent and decode it with VAE Decode and VAE Decode (Tiled) while watching GPU memory, install ImageMagick and ExifTool, fix a small face with FaceDetailer, repair a face with Qwen-Image 2.1 crop and stitch plus Transfer Color, colorize a photo and keep its original luminance, write a destination specification, export a 16-bit sRGB PNG with Save Image Advanced, read the prompt and workflow hidden in a PNG, switch to a --disable-metadata client launcher and run the full restore, detail, colour match, grain and save chain.
+
+📊 Measured on camera: Real-ESRGAN x4 turned the label 5,862 into 5,002 (1,893 into 1,003 and 2,581 into 2,681) on a 640 × 400 chart, while ImageMagick's -filter Lanczos -resize 400% kept 5,862. Decoding the same latent of a 2048 × 2048 Z-Image Turbo image on an RTX 5090, nvidia-smi showed the whole GPU's used memory, 1,509 to 1,637 MiB at rest, peaking at 12,261 MiB with VAE Decode (Prompt executed in 1.39 seconds, VAE load included) and at 3,338 MiB with VAE Decode (Tiled), 512 px tiles with 64 px overlap (Prompt executed in 2.75 seconds). FaceDetailer sampled the explorer's 192 × 270 face crop at 728 × 1024 with its default sizes and at 364 × 512 with max size 512. ImageMagick's RMSE against the black-and-white original: 0.00993996 for the colorized photo recombined with its original luminance, 0.0925738 for the regenerated image. ExifTool read the first print master as 4096x4096, 16-bit, RGB with Alpha, the second as RGB after Split Image with Alpha, and the delivery as 2688x1536, 8-bit RGB with no Prompt or Workflow.
+
+✅ Before you deliver: write the destination first (pixel size, colour space, bit depth, alpha, metadata), set Convert Image Color Space and the saver's input colour space to the same value, read every number and letter at full size, label colorized photographs as colorized, and keep the recipe JSON beside the files when the delivered image carries no workflow.
+
+🧩 Z-Image Turbo, Real-ESRGAN x4plus, SeedVR2 3B INT8, VAE Decode (Tiled), Impact Pack FaceDetailer, Qwen-Image 2.1, Inpaint Crop and Stitch, Transfer Color, Convert Image Color Space, Save Image Advanced, ImageMagick 7.1.1 and ExifTool 13.59.
+Use the chapters to jump to each route, comparison, repair and delivery check.
+
+⏱️ Chapters:
+0:00 Sharp but wrong: what this lecture fixes
+1:07 Update ComfyUI and start it with the course launcher
+2:52 Generate a 1024 pixel test image with Z-Image Turbo
+3:55 Lanczos resize: the honest 4K baseline
+5:16 GAN upscaler: download and run Real-ESRGAN 4x
+7:28 Tiled diffusion with core tile list nodes
+10:46 SeedVR2 one-step restoration from the official template
+13:58 Compare four routes: preserve or invent?
+15:16 Tiled VAE decode: same latent, lower memory
+18:07 Check ImageMagick, install exiftool, add it to PATH
+21:05 FaceDetailer: why the working size matters
+23:52 Qwen face repair and Transfer Color drift fix
+26:43 Colorize a 1961 NASA photo and check what changed
+29:54 Destination spec, color space and 16-bit export
+33:31 What the file tells a stranger: metadata and the client launcher
+35:07 The chart test: AI upscaler vs ImageMagick Lanczos
+36:40 The complete delivery chain and final verification
+38:39 Recap and next lecture
+
+Music: Cali by ItsWatR; Tokyo Cafe by TVARI; Relaxation 04 by Lily J; Infinity by Arulo; Vastness by Andrew Ev; Smooth Jazz by Francisco Alvear; Electro Beat Bgm Ver. 2 by Ncone.
+
+Materials include the course notes with every prompt and command, both launchers, the course workflows and images, the recorded graphs and the original results. Download model weights separately.
+
+💬 Ask in the comments or Discord. Support SECourses on Patreon for more guides and resources.
+
+#ComfyUI #AIUpscaling #SeedVR2

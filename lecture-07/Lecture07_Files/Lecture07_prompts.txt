@@ -1,0 +1,40 @@
+Lecture 7 prompts
+
+Watchmaker test image (Z-Image Turbo, 1024 x 1024, seed 2026):
+A craftsman in his fifties with a short grey beard and rolled-up sleeves repairing an antique brass pocket watch at a cluttered wooden workbench, magnifying loupe, tiny gears and screws, warm lamp light, shelves of tools behind him, photorealistic, fine detail
+
+Colorization instruction (Qwen-Image 2.1 edit):
+Colorize this photo with natural colours. Preserve the composition, faces, text and fine structure.
+
+Commands (Command Prompt in Lecture07_Files\images)
+
+Black and white version of the NASA photograph:
+magick mercury7_nasa_s61-01250_color.jpg -colorspace Gray mercury7_bw.png
+
+Original luminance with the colours of the colorized image (Luminize compose):
+magick ..\..\ComfyUI_Week01\output\Lecture07\colorized_00001_.png -alpha off -resize 3000x2398! mercury7_bw.png -compose Luminize -composite mercury7_recombined.png
+
+Luminance difference from the black and white original (RMSE, 0 = identical):
+magick ( mercury7_recombined.png -colorspace Gray ) mercury7_bw.png -metric RMSE -compare -format "%[distortion]\n" info:
+magick ( ..\..\ComfyUI_Week01\output\Lecture07\colorized_00001_.png -alpha off -resize 3000x2398! -colorspace Gray ) mercury7_bw.png -metric RMSE -compare -format "%[distortion]\n" info:
+
+Print master destination (Lecture 7 delivery):
+4096 x 4096 px, sRGB, 16-bit PNG, no alpha, no workflow in the file
+
+Check the export (ExifTool, same Command Prompt):
+exiftool -f -ImageSize -BitDepth -ColorType -ProfileDescription ..\..\ComfyUI_Week01\output\Lecture07\print_master_*.png
+
+Metadata of the first export (ExifTool, same Command Prompt):
+exiftool -a -G1 ..\..\ComfyUI_Week01\output\Lecture07\watchmaker_00001_.png
+
+Client launch file (run_comfyui_CLIENT.bat): the same start with one extra flag
+venv\Scripts\python.exe main.py --enable-manager --port 8189 --reserve-vram 3 --disable-metadata
+
+The same check on the client export:
+exiftool -a -G1 ..\..\ComfyUI_Week01\output\Lecture07\print_master_00004.png
+
+Chart enlarged four times with Lanczos (ImageMagick, same Command Prompt):
+magick chart_orders_640.png -filter Lanczos -resize 400% chart_lanczos_400.png
+
+Check the delivery against its specification (ExifTool, same Command Prompt):
+exiftool -f -ImageSize -BitDepth -ColorType -Prompt -Workflow ..\..\ComfyUI_Week01\output\Lecture07\delivery_00001.png

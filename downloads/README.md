@@ -52,6 +52,14 @@ Because of its size, this ZIP is attached to the [Lecture 5 release](https://git
 
 Extract the ZIP, then open `lecture-06/README.md`. It contains the latest clean Colab notebook and guide, 31 actual recorded workflow recipes, their original results, required inputs including the video-upload example, model links, comparison settings, 80 chapters and prepared publication text. The same notebook can be [opened directly in Colab](https://colab.research.google.com/github/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/blob/main/lecture-06/colab/Qwen-Image-2.1_ComfyUI_Colab.ipynb). Save your own copy before editing. The video link will be added after publication; model weights and the video are separate.
 
+## Lecture 7
+
+**[Download Lecture_07_Companion_Files.zip](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/download/lecture-07/Lecture_07_Companion_Files.zip)** (about 118 MB)
+
+Extract the ZIP, then open `lecture-07/README.md`. It contains the course notes with every prompt and command, both ComfyUI launchers, course workflows, 19 recorded workflow recipes in editable and API forms, the required inputs, original results, model links, 18 chapters, title and video description. The guides and workflows can also be browsed in [lecture-07/](../lecture-07/README.md). Model weights are separate downloads.
+
+This ZIP is attached to the [Lecture 7 release](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/tag/lecture-07) because of its size. Its checksum is listed in [SHA256SUMS.txt](SHA256SUMS.txt).
+
 ## Check a download
 
 The [SHA256SUMS.txt](SHA256SUMS.txt) file gives each ZIP's SHA-256 hash. In **PowerShell**, run this command from the folder containing your download:
@@ -60,6 +68,6 @@ The [SHA256SUMS.txt](SHA256SUMS.txt) file gives each ZIP's SHA-256 hash. In **Po
 Get-FileHash -LiteralPath '.\Lecture_01_Companion_Files.zip' -Algorithm SHA256
 ```
 
-Compare the returned hash with the published checksum; pass the matching Lecture 2, 3, 4, 5 or 6 filename to the same command for those downloads. Each extracted folder's `SHA256SUMS.txt` also lists the individual companion-file hashes. Hashes are case-insensitive. To check a particular extracted file, pass its path to the same command.
+Compare the returned hash with the published checksum; pass the matching Lecture 2, 3, 4, 5, 6 or 7 filename to the same command for those downloads. Each extracted folder's `SHA256SUMS.txt` also lists the individual companion-file hashes. Hashes are case-insensitive. To check a particular extracted file, pass its path to the same command.
 
 For the immutable source of a particular revision, open the repository's commit history and browse the desired commit. The `main` download link points to the current companion revision.
