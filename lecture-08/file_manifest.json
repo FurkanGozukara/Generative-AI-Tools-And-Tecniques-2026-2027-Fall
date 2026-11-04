@@ -1,0 +1,150 @@
+{
+  "lecture": 8,
+  "files": [
+    {
+      "path": "Lecture08_commands.txt",
+      "bytes": 1437,
+      "sha256": "df005e5a0b1afbb091919ab37babafff76180949d351de8c17edbd1eb8b971a6"
+    },
+    {
+      "path": "MODELS.md",
+      "bytes": 2212,
+      "sha256": "caac90314381007dd9c37084361069441d08f98e83000dea6d6ab5a45fd34f4c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5743,
+      "sha256": "8a91e30e48b1bd9ac04c9457d1d8820a431f9c17aa8b9df21f1ee936af823128"
+    },
+    {
+      "path": "api/README.md",
+      "bytes": 3048,
+      "sha256": "10cdf7c94fea41fb305c909e183b41532d234c0279f8a5834d1bde7c847d7560"
+    },
+    {
+      "path": "api/inspect_api_workflow.py",
+      "bytes": 1719,
+      "sha256": "c2f2b17b6bc1185a49d3cb7245971ed1f1ca9c18afe6d96e073c7acfe94286bc"
+    },
+    {
+      "path": "api/prompts.txt",
+      "bytes": 292,
+      "sha256": "80f72ad435953f8360a849d351d8b4b40162bc10fad324249adb2c54c34281ea"
+    },
+    {
+      "path": "api/queue_api_prompts.py",
+      "bytes": 6008,
+      "sha256": "0772d046a108d90d44338fb5c98deaef4a3a3444f1b6ee126d147515fbe7fec4"
+    },
+    {
+      "path": "api/submit_api_workflow.py",
+      "bytes": 5956,
+      "sha256": "445a100acfd498e1423507ad464d1af501eb306695b4cb02c348e2e0226c5b7f"
+    },
+    {
+      "path": "api/watchmaker_API.json",
+      "bytes": 3244,
+      "sha256": "cce934a161ca7cb15244ea5718ec2b96e3bad7249be8437947243a8cd3fb62ab"
+    },
+    {
+      "path": "chapters.txt",
+      "bytes": 625,
+      "sha256": "3993a62fb472576d1d0bcba3596d8bc6e0a70770a94016d2f9be0942fcd75b6c"
+    },
+    {
+      "path": "commands.md",
+      "bytes": 3016,
+      "sha256": "b32ccaa5a041e86a340fa3d18f777f211616f90d268a80f3bda6990e66a67cf3"
+    },
+    {
+      "path": "environment/L08_snapshot.json",
+      "bytes": 5831,
+      "sha256": "7f56289697fcb5774d03d0833112dac59b4d655379ec8ea5c624f088b41c44bc"
+    },
+    {
+      "path": "environment/Lecture08_core_commit.txt",
+      "bytes": 41,
+      "sha256": "51e992a24f8ba458e2942594b3e83fcb6ef1434381c31f8f18498b2409afae23"
+    },
+    {
+      "path": "environment/Lecture08_requirements_lock.txt",
+      "bytes": 3143,
+      "sha256": "9508b5d7b52e567e8ed36b700ef0298b5a2260f16856e2db784548197072d427"
+    },
+    {
+      "path": "environment/README.md",
+      "bytes": 801,
+      "sha256": "5e3fe9aefef6b3b3f3090ee812e0cb7c727be5dfd46361661c18bf90bd6533e5"
+    },
+    {
+      "path": "exports/watchmaker app.json",
+      "bytes": 18190,
+      "sha256": "cf703dfa2b04d4a5fe849f75c56a9e925b701327e57fd142beddf580f1313146"
+    },
+    {
+      "path": "inputs/clipspace-painted-masked-1792997247621.png",
+      "bytes": 1026439,
+      "sha256": "32af0136ffbe2a05bbfbeebb3e00332beecb1c54a3545f9f5dfd407efd6d7d0f"
+    },
+    {
+      "path": "inputs/explorer_anchor.png",
+      "bytes": 888004,
+      "sha256": "72599cbc1319b7b84d24cb1d0cdedac497cf4d6d4206f194e6713a49009de4cc"
+    },
+    {
+      "path": "launchers/run_isolated_no_custom_nodes.bat",
+      "bytes": 126,
+      "sha256": "5b102f2b57d10f2f84a60b2cc8e439511b88da025e4a95b221edf09e6182cf1f"
+    },
+    {
+      "path": "launchers/run_isolated_one_pack.bat",
+      "bytes": 191,
+      "sha256": "4d9eeff652dd9e397e558782aaf8695af9ef3e1d80c02b18cb7ae9c05ec9381b"
+    },
+    {
+      "path": "results/README.md",
+      "bytes": 985,
+      "sha256": "8d5b1803e0c443d3cc4d972c6ad62a22633c6d6ba98a07dd12ab7306611d9a38"
+    },
+    {
+      "path": "results/api_delivery.png",
+      "bytes": 4137590,
+      "sha256": "5a50665f1297e6f7b2f29db17ef4c87cdc0208e5c135639f96d4e35c955167b7"
+    },
+    {
+      "path": "results/app_delivery.png",
+      "bytes": 4279608,
+      "sha256": "c657c8078518caea7bb9b1e1dabf3285240a0e2e39a868135efd5ef25e12f4b7"
+    },
+    {
+      "path": "results/queue_1.png",
+      "bytes": 4137589,
+      "sha256": "61f20ca77491aaff060d725a3b6b884b118e066c31d8e7bd81fbbf8f24cea48f"
+    },
+    {
+      "path": "results/queue_2.png",
+      "bytes": 4175937,
+      "sha256": "6e90d58cfd4b5be94c96fca4b3f6095ed13384df65ee3c4f15a56b6c86ef237b"
+    },
+    {
+      "path": "results/queue_outcomes.json",
+      "bytes": 925,
+      "sha256": "c20f650d5f336fbfa34e2e3238dd78fdd544dbb3b0ae9a22d8980a18d969412c"
+    },
+    {
+      "path": "results/watercolor.png",
+      "bytes": 1351640,
+      "sha256": "a878778939391e9865b455ca1db08ed635bc54f63844b5dd51219b96d111462e"
+    },
+    {
+      "path": "workflows/seven_weeks_everything.json",
+      "bytes": 59860,
+      "sha256": "be60833c2c6f9eeae5f0dc2534c693e6192715211b726e5fa0bdeb7cf40801f7"
+    },
+    {
+      "path": "workflows/watchmaker_delivery.json",
+      "bytes": 25191,
+      "sha256": "2e917db4686f8f1bae4038049249690245060f3762a5babde1327b35d2968c6d"
+    }
+  ]
+}

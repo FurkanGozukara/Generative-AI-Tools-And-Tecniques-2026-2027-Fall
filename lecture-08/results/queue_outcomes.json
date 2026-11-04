@@ -1,0 +1,30 @@
+[
+  {
+    "job": 1,
+    "prompt": "A lighthouse keeper polishing a brass lamp in a lantern room, evening light, photorealistic",
+    "prefix": "Lecture08/queue_1",
+    "prompt_id": "c281a9a1-bda2-4c56-b8cf-4579af496efe",
+    "outcome": "completed",
+    "files": [
+      "job1_queue_1_00001_.png"
+    ]
+  },
+  {
+    "job": 2,
+    "prompt": "An old bookbinder stitching a leather journal at a wooden desk, warm window light, photorealistic",
+    "prefix": "Lecture08/queue_2",
+    "prompt_id": "03ccec3f-e4e8-4465-9537-2cf050ca5366",
+    "outcome": "completed",
+    "files": [
+      "job2_queue_2_00001_.png"
+    ]
+  },
+  {
+    "job": 3,
+    "prompt": "A clockmaker's shop window at night, rows of pocket watches, reflections on the glass, photorealistic",
+    "prefix": "Lecture08/queue_3",
+    "prompt_id": "bed6f68a-047f-4c00-a2a0-437c9e630bf7",
+    "outcome": "cancelled",
+    "files": []
+  }
+]

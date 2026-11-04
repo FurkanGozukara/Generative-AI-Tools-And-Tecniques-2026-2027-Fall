@@ -60,6 +60,12 @@ Extract the ZIP, then open `lecture-07/README.md`. It contains the course notes 
 
 This ZIP is attached to the [Lecture 7 release](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/tag/lecture-07) because of its size. Its checksum is listed in [SHA256SUMS.txt](SHA256SUMS.txt).
 
+## Lecture 8
+
+**[Download Lecture_08_Companion_Files.zip](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_08_Companion_Files.zip)**
+
+Extract the ZIP, then open `lecture-08/README.md`. It contains the crowded starting graph, the delivery subgraph, exported app, actual API export, three Python client scripts, prompts, input images, original results, isolation launchers, environment records and 13 chapters. The [guide](../lecture-08/README.md) explains model selections and the recorded folder paths. Model weights and software installations are separate. The video link will be added when public.
+
 ## Check a download
 
 The [SHA256SUMS.txt](SHA256SUMS.txt) file gives each ZIP's SHA-256 hash. In **PowerShell**, run this command from the folder containing your download:
@@ -68,6 +74,6 @@ The [SHA256SUMS.txt](SHA256SUMS.txt) file gives each ZIP's SHA-256 hash. In **Po
 Get-FileHash -LiteralPath '.\Lecture_01_Companion_Files.zip' -Algorithm SHA256
 ```
 
-Compare the returned hash with the published checksum; pass the matching Lecture 2, 3, 4, 5, 6 or 7 filename to the same command for those downloads. Each extracted folder's `SHA256SUMS.txt` also lists the individual companion-file hashes. Hashes are case-insensitive. To check a particular extracted file, pass its path to the same command.
+Compare the returned hash with the published checksum; pass the matching Lecture 2, 3, 4, 5, 6, 7 or 8 filename to the same command for those downloads. Each extracted folder's `SHA256SUMS.txt` also lists the individual companion-file hashes. Hashes are case-insensitive. To check a particular extracted file, pass its path to the same command.
 
 For the immutable source of a particular revision, open the repository's commit history and browse the desired commit. The `main` download link points to the current companion revision.

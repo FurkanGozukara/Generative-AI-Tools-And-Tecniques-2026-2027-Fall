@@ -23,9 +23,10 @@ Start with Windows setup and your first local image. Then progress through image
 - **[Lecture 5 guide and companion files](lecture-05/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/download/lecture-05/Lecture_05_Companion_Files.zip) (186 MB, from the [Lecture 5 release](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/tag/lecture-05))
 - **[Lecture 6 guide and companion files](lecture-06/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_06_Companion_Files.zip) · [Open notebook in Colab](https://colab.research.google.com/github/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/blob/main/lecture-06/colab/Qwen-Image-2.1_ComfyUI_Colab.ipynb)
 - **[Lecture 7 guide and companion files](lecture-07/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/releases/download/lecture-07/Lecture_07_Companion_Files_20261101.zip) (about 118 MB)
+- **[Lecture 8 guide and companion files](lecture-08/README.md)** · [Download ZIP](https://github.com/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/raw/refs/heads/main/downloads/Lecture_08_Companion_Files.zip)
 - [Download checksums and extraction instructions](downloads/README.md)
 
-Lectures 1–7 have published videos and companion materials. Lecture 6 includes the latest Colab notebook; Lecture 7 includes the recorded upscaling and restoration workflows and original results. Lectures 8–14 are the planned sequence. Each ZIP contains learner resources and the video description; videos, installers and model weights are separate.
+Lectures 1–7 have published videos and companion materials. Lecture 6 includes the latest Colab notebook; Lecture 7 includes the recorded upscaling and restoration workflows and original results. Lecture 8 materials are available for workflow engineering, API clients and isolation; its video link will follow. Lectures 9–14 are the planned sequence. Each ZIP contains learner resources; videos, installers and model weights are separate.
 
 ## Course roadmap — 14 lectures
 
@@ -38,7 +39,7 @@ Lectures 1–7 have published videos and companion materials. Lecture 6 includes
 | 5 | Masks, Inpainting, Outpainting, Segmentation & Compositing | [Watch](https://youtu.be/DJcgVASlg38) · [Companion files](lecture-05/README.md) |
 | 6 | ComfyUI in Colab, ControlNet, Depth, Pose & Composition Control | [Watch](https://www.youtube.com/watch?v=h4-F5Jx-HQo) · [Companion files](lecture-06/README.md) · [Colab notebook](https://colab.research.google.com/github/FurkanGozukara/Generative-AI-Tools-And-Tecniques-2026-2027-Fall/blob/main/lecture-06/colab/Qwen-Image-2.1_ComfyUI_Colab.ipynb) |
 | 7 | Upscaling, Restoration, Detailing & Image Delivery | [Watch](https://www.youtube.com/watch?v=mZ37pzoRrsI) · [Companion files](lecture-07/README.md) |
-| 8 | Workflow Engineering, Automation, APIs & Custom Nodes | Planned |
+| 8 | Workflow Engineering, Automation, APIs & Custom Nodes | [Companion files](lecture-08/README.md) · Video to follow |
 | 9 | LoRA Training, Datasets, Captioning & Personalization | Planned |
 | 10 | AI Video Generation: Foundations & GPU Performance | Planned |
 | 11 | Video Control, Character Animation & Longer Videos | Planned |

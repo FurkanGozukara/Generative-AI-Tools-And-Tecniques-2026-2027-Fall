@@ -1,0 +1,18 @@
+Lecture 8 commands - copy one line at a time
+
+1) Python client, in G:\educational_videos\Lecture08_Files\api
+G:\educational_videos\ComfyUI_Week01\venv\Scripts\activate
+python inspect_api_workflow.py watchmaker_API.json
+python submit_api_workflow.py watchmaker_API.json --prompt-node 5 --text "A lighthouse keeper polishing a brass lamp in a lantern room, evening light, photorealistic" --server http://127.0.0.1:8189 --dry-run
+python submit_api_workflow.py watchmaker_API.json --prompt-node 5 --text "A lighthouse keeper polishing a brass lamp in a lantern room, evening light, photorealistic" --server http://127.0.0.1:8189
+python queue_api_prompts.py watchmaker_API.json --prompt-node 5 --save-node 10 --prompts prompts.txt --server http://127.0.0.1:8189 --cancel-last
+
+2) Node pack triage, in G:\educational_videos\ComfyUI_Week01\custom_nodes\comfyui-impact-pack
+findstr /s /n /i "subprocess download_url eval( exec(" *.py
+
+3) Dependency record, in G:\educational_videos\ComfyUI_Week01 with venv active
+git rev-parse HEAD > Lecture08_core_commit.txt
+python -m pip freeze > Lecture08_requirements_lock.txt
+
+4) The isolated test copy (G:\educational_videos\ComfyUI_Isolated_Test) runs on port 8190; send it the same job
+python submit_api_workflow.py watchmaker_API.json --prompt-node 5 --text "A lighthouse keeper polishing a brass lamp in a lantern room, evening light, photorealistic" --server http://127.0.0.1:8190

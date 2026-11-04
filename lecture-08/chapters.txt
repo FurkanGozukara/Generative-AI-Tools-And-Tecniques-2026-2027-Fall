@@ -1,0 +1,13 @@
+0:00 Seven lectures of nodes: what this lecture fixes
+0:47 Update ComfyUI and start the server
+1:33 Four questions about a sixty-seven node graph
+2:27 Package the upscale chain as a subgraph
+4:28 Run less: partial execution, bypass, mute and the cache
+5:52 Turn a workflow into an app form
+8:22 Export the API format and read it
+9:34 Drive ComfyUI from Python: a dry run and one real job
+13:43 A small queue: three prompts and one cancellation
+15:35 Live schemas beat stale advice
+17:25 Supply-chain triage: what a node pack can do
+22:04 Read the log, then recover through isolation
+25:04 Recap and next lecture
